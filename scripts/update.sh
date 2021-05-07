@@ -15,3 +15,4 @@ fi
 
 "${SCRIPT_DIR}"/update-x86.py "$PATH_TO_SIMDE" "${SCRIPT_DIR}/../data/iig.xml" > "${SCRIPT_DIR}/../x86.md"
 "${SCRIPT_DIR}"/update-neon.py "$PATH_TO_SIMDE" "${SCRIPT_DIR}/../data/neon-funcs.txt" > "${SCRIPT_DIR}/../neon.md"
+"${SCRIPT_DIR}"/update-avx512.py "$PATH_TO_SIMDE" "${SCRIPT_DIR}/../data/avx512-funcs.txt" > "${SCRIPT_DIR}/../avx512.md"
