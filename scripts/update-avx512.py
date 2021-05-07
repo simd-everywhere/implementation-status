@@ -5,6 +5,24 @@ from pprint import pprint
 from glob import glob
 import os, sys
 
+exception_list = ["broadcast", "cast", "compress", "cvt", "expand", "extract", "gather", "scatter", "insert", "load", "madd", "mov", "rcp", "rsqrt", "sll", "sra", "srl", "shr", "shl", "store", "zext", "set", "rol", "ror", "k", "4", "dpwssd", "sad", "dpb"]
+
+def group_extra(family):
+    for key in exception_list:
+        if key != "gather" and key != "k" and key!= "4":
+            if family.find(key)>-1:
+                family = key
+        elif key == "gather":
+            if family.find("gather")>-1:
+                family = family[family.find(key):]
+        elif key == "k":
+            if family[0:1].find("k")>-1:
+                family = "kbits"
+        else:
+            if family[0:1].find("4")>-1:
+                family = family[1:]
+    return family
+
 functions = {}
 tot = 0
 files = []
@@ -38,68 +56,8 @@ for function in all_functions:
             family = family.split("_", 1)[1]
 
     family = family.split("_")[0]
+    family = group_extra(family)
 
-    if family[0:10].find("broadcast")>-1:
-        family = family[0:9]
-    if family[0:4].find("cast")>-1:
-        family = family[0:4]
-    if family[0:8].find("compress")>-1:
-        family = family[0:8]
-    if family[0:3].find("cvt")>-1:
-        family = family[0:3]
-    if family[0:6].find("expand")>-1:
-        family = family[0:6]
-    if family[0:7].find("extract")>-1:
-        family = family[0:7]
-    if family.find("gather")>-1:
-        family = family[family.find("gather"):]
-    if family.find("scatter")>-1:
-        family = "scatter"
-    if family[0:6].find("insert")>-1:
-        family = "insert"
-    if family[0:4].find("load")>-1:
-        family = "load"
-    if family[0:4].find("madd")>-1:
-        family = "madd"
-    if family[0:3].find("mov")>-1:
-        family = "mov"
-    if family[0:3].find("rcp")>-1:
-        family = "rcp"
-    if family[0:5].find("rsqrt")>-1:
-        family = "rsqrt"
-    if family[0:3].find("sll")>-1:
-        family = "sll"
-    if family[0:3].find("sra")>-1:
-        family = "sra"
-    if family[0:3].find("srl")>-1:
-        family = "srl"
-    if family[0:3].find("shr")>-1:
-        family = "shr"
-    if family[0:3].find("shl")>-1:
-        family = "shl"
-    if family[0:5].find("store")>-1:
-        family = "store"
-    if family[0:4].find("zext")>-1:
-        family = "zext"
-    if family[0:3].find("set")>-1:
-        family = "set"
-    if family[0:3].find("rol")>-1:
-        family = "rol"
-    if family[0:3].find("ror")>-1:
-        family = "ror"
-    if family[0:1].find("k")>-1:
-        family = "kbits"
-    if family[0:1].find("4")>-1:
-        family = family[1:]
-    if family[0:6].find("dpwssd")>-1:
-        family = "dpwssd"
-    if family.find("sad")>-1:
-        family = "sad"
-    if family[0:3].find("dpb")>-1:
-        family = "dpb"
-    
-    
-    
     if family in families:
         families[family].append(funcData)
     else:
