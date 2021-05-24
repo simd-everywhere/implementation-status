@@ -1,4 +1,4 @@
-# !/bin/python3
+#!/bin/python3
 
 from lxml import etree
 from pprint import pprint
@@ -50,7 +50,7 @@ for function in all_functions:
     if family[0:5].find("mask") > -1:
         if len(family.split("_",1))>1:
             family = family.split("_", 1)[1]
-            
+
     if family[0:9].find("prefetch") > -1:
         if len(family.split("_",1))>1:
             family = family.split("_", 1)[1]
@@ -89,4 +89,3 @@ for i in families:
                 print(" ] ", end = "")
             print(j["name"])
     print("")
-
