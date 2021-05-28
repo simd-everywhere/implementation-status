@@ -39,72 +39,9 @@
  - [x] [ceqz](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vceqz)
  - [x] [cge](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vcge)
  - [x] [cgez](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vcgez)
- - [ ] [cgt](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vcgt)
-   - [x] vcgt_f32
-   - [x] vcgt_f64
-   - [x] vcgtq_f32
-   - [x] vcgtq_f64
-   - [x] vcgtq_s16
-   - [x] vcgtq_s32
-   - [x] vcgtq_s64
-   - [x] vcgtq_s8
-   - [x] vcgtq_u16
-   - [x] vcgtq_u32
-   - [x] vcgtq_u64
-   - [x] vcgtq_u8
-   - [x] vcgt_s16
-   - [x] vcgt_s32
-   - [x] vcgt_s64
-   - [x] vcgt_s8
-   - [x] vcgt_u16
-   - [x] vcgt_u32
-   - [x] vcgt_u64
-   - [x] vcgt_u8
-   - [ ] vcgtd_f64
-   - [ ] vcgtd_s64
-   - [ ] vcgtd_u64
-   - [ ] vcgts_f32
- - [ ] [cgtz](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vcgtz)
-   - [x] vcgtz_f32
-   - [x] vcgtz_f64
-   - [x] vcgtzq_f32
-   - [x] vcgtzq_f64
-   - [x] vcgtzq_s16
-   - [x] vcgtzq_s32
-   - [x] vcgtzq_s64
-   - [x] vcgtzq_s8
-   - [x] vcgtz_s16
-   - [x] vcgtz_s32
-   - [x] vcgtz_s64
-   - [x] vcgtz_s8
-   - [ ] vcgtzd_f64
-   - [ ] vcgtzd_s64
-   - [ ] vcgtzs_f32
- - [ ] [cle](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vcle)
-   - [x] vcle_f32
-   - [x] vcle_f64
-   - [x] vcleq_f32
-   - [x] vcleq_f64
-   - [x] vcleq_s16
-   - [x] vcleq_s32
-   - [x] vcleq_s64
-   - [x] vcleq_s8
-   - [x] vcleq_u16
-   - [x] vcleq_u32
-   - [x] vcleq_u64
-   - [x] vcleq_u8
-   - [x] vcle_s16
-   - [x] vcle_s32
-   - [x] vcle_s64
-   - [x] vcle_s8
-   - [x] vcle_u16
-   - [x] vcle_u32
-   - [x] vcle_u64
-   - [x] vcle_u8
-   - [ ] vcled_f64
-   - [ ] vcled_s64
-   - [ ] vcled_u64
-   - [ ] vcles_f32
+ - [x] [cgt](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vcgt)
+ - [x] [cgtz](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vcgtz)
+ - [x] [cle](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vcle)
  - [ ] [clez](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vclez)
    - [x] vclez_f32
    - [x] vclez_f64
@@ -234,15 +171,7 @@
  - [ ] [cvtx](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vcvtx)
  - [ ] [cvtx_high](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vcvtx_high)
  - [ ] [div](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vdiv)
- - [ ] [dot_lane](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vdot_lane)
-   - [x] vdot_laneq_s32
-   - [x] vdot_laneq_u32
-   - [x] vdot_lane_s32
-   - [x] vdot_lane_u32
-   - [ ] vdotq_laneq_s32
-   - [ ] vdotq_laneq_u32
-   - [ ] vdotq_lane_s32
-   - [ ] vdotq_lane_u32
+ - [x] [dot_lane](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vdot_lane)
  - [x] [dot](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vdot)
  - [ ] [dup_lane](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vdup_lane)
    - [x] vdup_lane_f32
@@ -350,6 +279,26 @@
    - [x] vld1_u64
    - [x] vld1_u8
  - [ ] [ld1_lane](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vld1_lane)
+   - [ ] vld1_lane_f32
+   - [ ] vld1_lane_f64
+   - [x] vld1_lane_s16
+   - [x] vld1_lane_s32
+   - [ ] vld1_lane_s64
+   - [x] vld1_lane_s8
+   - [x] vld1_lane_u16
+   - [x] vld1_lane_u32
+   - [ ] vld1_lane_u64
+   - [x] vld1_lane_u8
+   - [ ] vld1q_lane_f32
+   - [ ] vld1q_lane_f64
+   - [x] vld1q_lane_s16
+   - [x] vld1q_lane_s32
+   - [ ] vld1q_lane_s64
+   - [x] vld1q_lane_s8
+   - [x] vld1q_lane_u16
+   - [x] vld1q_lane_u32
+   - [ ] vld1q_lane_u64
+   - [x] vld1q_lane_u8
  - [ ] [ld2](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vld2)
    - [ ] vld2_dup_f32
    - [ ] vld2_dup_f64
@@ -476,6 +425,26 @@
    - [x] vld4_u64
    - [x] vld4_u8
  - [ ] [ld4_lane](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vld4_lane)
+   - [ ] vld4_lane_f32
+   - [ ] vld4_lane_f64
+   - [x] vld4_lane_s16
+   - [x] vld4_lane_s32
+   - [ ] vld4_lane_s64
+   - [x] vld4_lane_s8
+   - [x] vld4_lane_u16
+   - [x] vld4_lane_u32
+   - [ ] vld4_lane_u64
+   - [x] vld4_lane_u8
+   - [ ] vld4q_lane_f32
+   - [ ] vld4q_lane_f64
+   - [ ] vld4q_lane_s16
+   - [ ] vld4q_lane_s32
+   - [ ] vld4q_lane_s64
+   - [ ] vld4q_lane_s8
+   - [ ] vld4q_lane_u16
+   - [ ] vld4q_lane_u32
+   - [ ] vld4q_lane_u64
+   - [ ] vld4q_lane_u8
  - [x] [max](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vmax)
  - [x] [maxnm](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vmaxnm)
  - [ ] [maxnmv](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vmaxnmv)
@@ -723,7 +692,7 @@
  - [ ] [qdmlsl_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqdmlsl_n)
  - [ ] [qdmlsl](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqdmlsl)
  - [ ] [qdmulh_lane](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqdmulh_lane)
- - [ ] [qdmulh_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqdmulh_n)
+ - [x] [qdmulh_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqdmulh_n)
  - [ ] [qdmulh](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqdmulh)
    - [x] vqdmulhq_s16
    - [x] vqdmulhq_s32
@@ -784,9 +753,9 @@
    - [x] vqrdmulhs_s32
  - [ ] [qrshl](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqrshl)
  - [ ] [qrshrn_high_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqrshrn_high_n)
- - [ ] [qrshrn_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqrshrn_n)
+ - [x] [qrshrn_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqrshrn_n)
  - [ ] [qrshrun_high_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqrshrun_high_n)
- - [ ] [qrshrun_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqrshrun_n)
+ - [x] [qrshrun_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqrshrun_n)
  - [ ] [qshl_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqshl_n)
  - [ ] [qshl](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqshl)
    - [x] vqshlq_s16
@@ -1185,7 +1154,7 @@
    - [ ] vrshld_s64
    - [ ] vrshld_u64
  - [ ] [rshrn_high_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vrshrn_high_n)
- - [ ] [rshrn_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vrshrn_n)
+ - [x] [rshrn_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vrshrn_n)
  - [x] [rshr_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vrshr_n)
  - [ ] [rsqrte](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vrsqrte)
    - [x] vrsqrte_f32
@@ -1361,8 +1330,8 @@
  - [x] [zip2](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vzip2)
  - [x] [zip](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vzip)
 
-123/300 (41%) of function families are fully implemented. Another 39 (13%) are partially implemented.
+131/300 (43%) of function families are fully implemented. Another 37 (12%) are partially implemented.
 
-Overall, 1978/3193 (61%) of functions are implemented.
+Overall, 2028/3193 (63%) of functions are implemented.
 
 Note: this list does not include 897 functions for poly types or 16-bit floats; SIMDe doesn't support those yet.
