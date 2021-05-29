@@ -3,89 +3,146 @@
 from lxml import etree
 from pprint import pprint
 from glob import glob
-import os, sys
+import os, sys, re, pprint
+from functools import cmp_to_key
 
-exception_list = ["broadcast", "cast", "compress", "cvt", "expand", "extract", "gather", "scatter", "insert", "load", "madd", "mov", "rcp", "rsqrt", "sll", "sra", "srl", "shr", "shl", "store", "zext", "set", "rol", "ror", "k", "4", "dpwssd", "sad", "dpb"]
+pp = pprint.PrettyPrinter(indent=4)
 
-def group_extra(family):
-    for key in exception_list:
-        if key != "gather" and key != "k" and key!= "4":
-            if family.find(key)>-1:
-                family = key
-        elif key == "gather":
-            if family.find("gather")>-1:
-                family = family[family.find(key):]
-        elif key == "k":
-            if family[0:1].find("k")>-1:
-                family = "kbits"
-        else:
-            if family[0:1].find("4")>-1:
-                family = family[1:]
-    return family
+special_cases = [
+    {
+        "name": "zext",
+        "pattern": re.compile('^zext')
+    },
+    {
+        "name": "cast",
+        "pattern": re.compile('^cast(ps|pd|si)(128|256|512)$')
+    },
+    {
+        "name": "cvt_round",
+        "pattern": re.compile('^cvt_round')
+    }
+]
 
-functions = {}
-tot = 0
 files = []
 for file in glob(os.path.join(sys.argv[1], 'simde/x86/avx512/*.h')):
     files.append(open(file).read())
 
-all_functions = open(sys.argv[2]).read().split('\n')
+iig = etree.parse(sys.argv[2]);
 
+cpuids = sorted(set(iig.xpath('//intrinsics_list/intrinsic[@tech="AVX-512"]/CPUID/text()')))
 families = {}
-for function in all_functions:
+techs = {}
+functions = []
+
+func_name_re = re.compile('^_mm(256|512)?_(?:(mask|maskz)_)?([a-zA-Z0-9_]+?)_([a-zA-Z0-9]+?)(_mask)?$')
+
+for function in iig.xpath('//intrinsics_list/intrinsic[@tech="AVX-512"]'):
     funcData = {
-        "name": function,
-        "implemented": False
+        "name": function.xpath('@name')[0].strip(),
+        "implemented": False,
+        "techs": function.xpath('CPUID/text()'),
+        "family": "Unknown",
     }
 
+    nameMatch = func_name_re.match(funcData["name"])
+    if nameMatch != None:
+        funcData["width"] = nameMatch.group(1)
+        if funcData["width"] == None:
+            funcData["width"] = "128"
+        funcData["mask"] = nameMatch.group(2)
+        if funcData["mask"] == None:
+            funcData["mask"] = ""
+        funcData["family"] = nameMatch.group(3)
+        funcData["type"] = nameMatch.group(4)
+
+        for special_case in special_cases:
+            m = special_case["pattern"].match(funcData["family"])
+            if m != None:
+                funcData["family"] = special_case["name"]
+
     for header in files:
-        if header.find(funcData["name"]) >= 0:
+        if header.find("simde" + funcData["name"]) >= 0:
             funcData["implemented"] = True
-    family = ""
-    if funcData["name"].find("_mm") > -1 :
-        family = funcData["name"].split('_', 2)[2]
-    else:
-        family = funcData["name"].split('_', 1)[1]
 
-    if family[0:5].find("mask") > -1:
-        if len(family.split("_",1))>1:
-            family = family.split("_", 1)[1]
+    if not funcData["family"] in families:
+        families[funcData["family"]] = []
 
-    if family[0:9].find("prefetch") > -1:
-        if len(family.split("_",1))>1:
-            family = family.split("_", 1)[1]
+    for tech in funcData["techs"]:
+        if not tech in techs:
+            techs[tech] = { "implemented": 0, "total": 0 }
 
-    family = family.split("_")[0]
-    family = group_extra(family)
+        techs[tech]["total"] += 1
+        if funcData["implemented"]:
+            techs[tech]["implemented"] += 1
 
-    if family in families:
-        families[family].append(funcData)
-    else:
-        families[family] = [funcData]
+    families[funcData["family"]].append(funcData)
+    functions.append(funcData)
 
-# f = open("../avx512.md", 'w')
+families = dict(sorted(families.items(), key=lambda item: item[0]))
 
-for i in families:
-    implemented = 0
-    for j in families[i]:
-        if j["implemented"] == True:
-            tot+=1
-            implemented +=1
-    if implemented!= len(families[i]):
-        print(' - [ ] ['+str(i)+']',end = "")
-    else:
-        print(' - [x] ['+str(i)+']',end = "")
-    if i != "kbits":
-        print("(https://software.intel.com/sites/landingpage/IntrinsicsGuide/#techs=AVX_512&expand=2306,2439&text="+str(i)+')')
-    else:
-        print("(https://software.intel.com/sites/landingpage/IntrinsicsGuide/#techs=AVX_512&expand=2306,2439&text=_k)")
-    print("Implemented: " + str(implemented) + " out of " + str(len(families[i])) + " (" + str("{:.2f}".format(100*implemented/(len(families[i]))))+ "%)")
-    if implemented!=len(families[i]):
-        for j in families[i]:
-            print("   - [", end = "")
-            if j["implemented"]:
-                print("x] ", end = "")
-            else:
-                print(" ] ", end = "")
-            print(j["name"])
-    print("")
+# pp.pprint(families)
+# pp.pprint(techs)
+
+print("# Summary\n")
+
+total_functions_implemented = 0
+total_functions = 0
+for func in functions:
+    total_functions += 1
+    if func["implemented"]:
+        total_functions_implemented += 1
+
+print("Of the %d functions currently in AVX-512, SIMDe implements %d (%.2f%%):\n" % (total_functions, total_functions_implemented, ((float(total_functions_implemented) / float(total_functions)) * 100.0)))
+
+print("|      Technology     | Implemented | Total | Percent Complete |")
+print("| ------------------- | ----------- | ----- | ---------------- |")
+for tech in techs.keys():
+    print('| %19s' % tech, end=' |')
+    print(' %11d' % techs[tech]["implemented"], end=' |')
+    print(' %5d' % techs[tech]["total"], end=' |')
+
+    progress = (float(techs[tech]["implemented"]) / float(techs[tech]["total"])) * 100.0
+    print(' %15.2f%% |' % progress)
+
+print('\nNote that some functions require multiple AVX-512 extension (*e.g.*, AVX512F and AVX512VL.')
+
+print('\n# Families\n')
+
+def family_cmp(a, b):
+    if ("width" in a) and ("width" in b):
+        if a["width"] != b["width"]:
+            return int(a["width"]) - int(b["width"])
+
+    if ("type" in a) and ("type" in b):
+        if a["type"] != b["type"]:
+            return a["type"] < b["type"]
+
+    if ("mask" in a) and ("mask" in b):
+        return len(a["mask"]) - len(b["mask"])
+
+    return 0
+family_cmp_key = cmp_to_key(family_cmp)
+
+for family_name in families.keys():
+    print('## ' + family_name + '\n')
+
+    family = families[family_name]
+
+    family_implemented = 0
+    family_total = 0
+    for func in family:
+        family_total += 1
+        if func["implemented"]:
+            family_implemented += 1
+
+    print("%d of %d (%.2f%%) implmented.\n" % (family_implemented, family_total, ((float(family_implemented) / float(family_total)) * 100.0)))
+
+    family.sort(key=family_cmp_key)
+
+    for func in family:
+        is_implemented = ' '
+        if func["implemented"]:
+            is_implemented = 'x'
+        print(" * [%c] [%s](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=%s&techs=AVX_512)" % (is_implemented, func["name"], func["name"]))
+
+    print('')
