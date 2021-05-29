@@ -20,12 +20,48 @@ special_cases = [
     {
         "name": "cvt_round",
         "pattern": re.compile('^cvt_round')
+    },
+    {
+        "name": "cvt",
+        "pattern": re.compile('^cvt(ps|pd|epi|epu)(8|16|32|64)?$')
+    },
+    {
+        "name": "cvti",
+        "pattern": re.compile('^cvti(8|16|32|64)?$')
+    },
+    {
+        "name": "cvt_storeu",
+        "pattern": re.compile('^cvtepi(8|16|32|64)_storeu$')
+    },
+    {
+        "name": "cvts",
+        "pattern": re.compile('^cvtsepi')
+    },
+    {
+        "name": "cvtt",
+        "pattern": re.compile('^cvtt(pd|ph|ps|sd|ss)$')
+    },
+    {
+        "name": "cvtt_round",
+        "pattern": re.compile('^cvtt_round(pd|ph|ps|sd|ss)$')
+    },
+    {
+        "name": "cvtus",
+        "pattern": re.compile('^cvtusepi(8|16|32|64)$')
+    },
+    {
+        "name": "cvtus_storeu",
+        "pattern": re.compile('^cvtusepi(8|16|32|64)_storeu$')
+    },
+    {
+        "name": "extract",
+        "pattern": re.compile('^extract(i|f)(32x4|32x8|64x2|64x4)')
     }
 ]
 
-files = []
+files = {}
 for file in glob(os.path.join(sys.argv[1], 'simde/x86/avx512/*.h')):
-    files.append(open(file).read())
+    files[os.path.splitext(os.path.basename(file))[0]] = open(file).read()
 
 iig = etree.parse(sys.argv[2]);
 
@@ -34,7 +70,7 @@ families = {}
 techs = {}
 functions = []
 
-func_name_re = re.compile('^_mm(256|512)?_(?:(mask|maskz)_)?([a-zA-Z0-9_]+?)_([a-zA-Z0-9]+?)(_mask)?$')
+func_name_re = re.compile('^_mm(256|512)?_(?:(mask[z23]?)_)?([a-zA-Z0-9_]+?)_([a-zA-Z0-9]+?)(_mask)?$')
 
 for function in iig.xpath('//intrinsics_list/intrinsic[@tech="AVX-512"]'):
     funcData = {
@@ -60,9 +96,14 @@ for function in iig.xpath('//intrinsics_list/intrinsic[@tech="AVX-512"]'):
             if m != None:
                 funcData["family"] = special_case["name"]
 
-    for header in files:
-        if header.find("simde" + funcData["name"]) >= 0:
-            funcData["implemented"] = True
+    if (funcData["family"]) in files:
+        if files[funcData["family"]].find("simde" + funcData["name"]) >= 0:
+            funcData["implemented"] = funcData["family"]
+    if funcData["implemented"] == False:
+        for header in files.keys():
+            if files[header].find("simde" + funcData["name"]) >= 0:
+                funcData["implemented"] = header
+                break
 
     if not funcData["family"] in families:
         families[funcData["family"]] = []
@@ -141,8 +182,15 @@ for family_name in families.keys():
 
     for func in family:
         is_implemented = ' '
-        if func["implemented"]:
+        if func["implemented"] != False:
             is_implemented = 'x'
-        print(" * [%c] [%s](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=%s&techs=AVX_512)" % (is_implemented, func["name"], func["name"]))
+        print(" * [%c] [%s](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=%s&techs=AVX_512)" % (is_implemented, func["name"], func["name"]), end='')
+        if func["implemented"] != False:
+            if func["implemented"] != func["family"]:
+                print(' (in %s.h)' % func["implemented"])
+            else:
+                print('')
+        else:
+            print('')
 
     print('')
