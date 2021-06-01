@@ -6,7 +6,7 @@
  - [x] [abd](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vabd)
  - [x] [abs](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vabs)
  - [ ] [addhn_high](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vaddhn_high)
- - [ ] [addhn](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vaddhn)
+ - [x] [addhn](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vaddhn)
  - [x] [addl_high](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vaddl_high)
  - [x] [addl](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vaddl)
  - [x] [addlv](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vaddlv)
@@ -1330,8 +1330,8 @@
  - [x] [zip2](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vzip2)
  - [x] [zip](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vzip)
 
-131/300 (43%) of function families are fully implemented. Another 37 (12%) are partially implemented.
+132/300 (44%) of function families are fully implemented. Another 37 (12%) are partially implemented.
 
-Overall, 2028/3193 (63%) of functions are implemented.
+Overall, 2034/3193 (63%) of functions are implemented.
 
 Note: this list does not include 897 functions for poly types or 16-bit floats; SIMDe doesn't support those yet.
