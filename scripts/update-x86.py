@@ -14,6 +14,8 @@ for file in glob(os.path.join(sys.argv[1], 'simde/x86/avx512/*.h')):
     files.append(open(file).read())
 
 all_functions = etree.parse(sys.argv[2]).xpath('//intrinsics_list/intrinsic[starts-with(@name,"_mm")]')
+all_functions_implemented = 0
+
 for function in all_functions:
     funcData = {
         "name": function.xpath('@name')[0],
@@ -41,10 +43,11 @@ for cpuid in functions.keys():
         num_functions = num_functions + 1
         if func["implemented"]:
             implemented = implemented + 1
+            all_functions_implemented = all_functions_implemented + 1
 
     percent_implemented = (float(implemented) / float(num_functions)) * 100.0
 
-    print("# " + cpuid + "\n")
+    print("## " + cpuid + "\n")
 
     print("Implemented: %d of %d (%.2f%%)\n" % (implemented, num_functions, percent_implemented))
 
@@ -54,3 +57,8 @@ for cpuid in functions.keys():
         else:
             print(" * [ ] " + func["name"])
     print("")
+
+print("# Summary\n")
+
+# (float(len(all_functions)) / float(all_functions_implemented)) * 100.0
+print("There are a total of %d SIMD functions on x86, %d (%.2f%%) of which have been implemented in SIMDe so far." % (len(all_functions), all_functions_implemented, (float(all_functions_implemented) / float(len(all_functions))) * 100.0))
