@@ -1409,25 +1409,7 @@
  - [x] [trn1](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vtrn1)
  - [x] [trn2](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vtrn2)
  - [x] [trn](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vtrn)
- - [ ] [tst](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vtst)
-   - [x] vtstq_s16
-   - [x] vtstq_s32
-   - [x] vtstq_s64
-   - [x] vtstq_s8
-   - [x] vtstq_u16
-   - [x] vtstq_u32
-   - [x] vtstq_u64
-   - [x] vtstq_u8
-   - [x] vtst_s16
-   - [x] vtst_s32
-   - [x] vtst_s64
-   - [x] vtst_s8
-   - [x] vtst_u16
-   - [x] vtst_u32
-   - [x] vtst_u64
-   - [x] vtst_u8
-   - [ ] vtstd_s64
-   - [ ] vtstd_u64
+ - [x] [tst](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vtst)
  - [x] [uqadd](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vuqadd)
  - [ ] [usdot_lane](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vusdot_lane)
  - [ ] [usdot](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vusdot)
@@ -1440,8 +1422,8 @@
  - [x] [zip2](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vzip2)
  - [x] [zip](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vzip)
 
-144/300 (48%) of function families are fully implemented. Another 38 (12%) are partially implemented.
+145/300 (48%) of function families are fully implemented. Another 37 (12%) are partially implemented.
 
-Overall, 2167/3330 (65%) of functions are implemented.
+Overall, 2169/3330 (65%) of functions are implemented.
 
 Note: this list does not include 961 functions for poly types or 16-bit floats; SIMDe doesn't support those yet.
