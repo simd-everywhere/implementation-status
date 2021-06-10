@@ -760,7 +760,7 @@
    - [ ] vqshls_n_u32
    - [x] vqshls_s32
    - [x] vqshls_u32
- - [ ] [qshlu_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqshlu_n)
+ - [x] [qshlu_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqshlu_n)
  - [ ] [qshrn_high_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqshrn_high_n)
  - [x] [qshrn_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqshrn_n)
  - [ ] [qshrun_high_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqshrun_high_n)
@@ -1422,8 +1422,8 @@
  - [x] [zip2](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vzip2)
  - [x] [zip](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vzip)
 
-145/300 (48%) of function families are fully implemented. Another 37 (12%) are partially implemented.
+146/300 (48%) of function families are fully implemented. Another 37 (12%) are partially implemented.
 
-Overall, 2169/3330 (65%) of functions are implemented.
+Overall, 2177/3330 (65%) of functions are implemented.
 
 Note: this list does not include 961 functions for poly types or 16-bit floats; SIMDe doesn't support those yet.
