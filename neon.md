@@ -7,7 +7,7 @@ SIMDe does not currently support 16-bit floating point types or polynomial types
 # Functions by Architecture
 
 | Architecture | Functions | Functions with supported types | Implemented by SIMDe | Percent implemented |
-| --: | --: | --: | --: |
+|--------------|----------:|-------------------------------:|---------------------:|--------------------:|
 |        ARMv7 |      3411 |                           2807 |                 2281 |              81.26% |
 |        ARMv8 |      4290 |                           2980 |                 2329 |              78.15% |
 |      AArch64 |      6670 |                           4969 |                 3336 |              67.14% |
@@ -16,7 +16,7 @@ SIMDe does not currently support 16-bit floating point types or polynomial types
 
 There are 390 function families in NEON (based on how we define families).  Discounting functions which use unsupported types, SIMDe has completely implemented 221 (56.67%) and partially implemented another 38 (9.74%).
 
-## Inomplete Families
+## Incomplete Families
 
 There are currently 38 incomplete families.
 

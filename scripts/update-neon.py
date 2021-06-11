@@ -130,7 +130,7 @@ def group_intrin(intrin, force=False):
         family_name = family_name[:-1]
       else:
         return False
-    
+
     if base_name[-1] == 'b' and name_components[-1] in ["s8", "u8"]:
       return False
     elif base_name[-1] == 'w' and name_components[-1] in ["s16", "u16", "f16", "bf16"]:
@@ -171,7 +171,7 @@ def group_intrin(intrin, force=False):
         "implemented": 0,
         "unsupported": 0
       }
-    
+
     architectures[arch]["total"] = architectures[arch]["total"] + 1
     if intrin["skip"]:
       architectures[arch]["unsupported"] = architectures[arch]["unsupported"] + 1
@@ -226,7 +226,7 @@ print("SIMDe does not currently support 16-bit floating point types or polynomia
 print("# Functions by Architecture\n")
 
 print('| Architecture | Functions | Functions with supported types | Implemented by SIMDe | Percent implemented |')
-print('| --: | --: | --: | --: |')
+print('|--------------|----------:|-------------------------------:|---------------------:|--------------------:|')
 for arch in architectures.keys():
   print('| ', end='')
   if arch == "v7":
@@ -270,7 +270,7 @@ print("There are %d function families in NEON (based on how we define families).
   (float(len(incompleteFamilies)) / float(len(families))) * 100.0
 ))
 
-print("## Inomplete Families\n")
+print("## Incomplete Families\n")
 
 print("There are currently %d incomplete families.\n" % len(incompleteFamilies))
 
@@ -329,4 +329,3 @@ for family_name in completeFamilies:
     print(' (%d functions with unsupported types)' % family["unsupported"])
   else:
     print('')
-
