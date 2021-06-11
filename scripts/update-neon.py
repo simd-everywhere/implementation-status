@@ -208,7 +208,20 @@ with open(sys.argv[2]) as fp:
 
 # Okay, now everything should be where we want it.
 
-print("SIMDe does not currently support 16-bit floating point types or polynomial types, so they are excluded from this list (though separate totals are also provided to be transparent about what was skipped.  We do plan to support these types in the future.\n")
+print("# Summary\n")
+
+
+
+print("TL;DR: SIMDe currently implements %d out of %d (%.2f%%) NEON functions.  If you don't count 16-bit floats and poly types, it's %d / %d (%.2f%%).\n" % (
+  architectures["A64"]["implemented"],
+  architectures["A64"]["total"],
+  ((float(architectures["A64"]["implemented"]) / float(architectures["A64"]["total"])) * 100.0),
+  architectures["A64"]["implemented"],
+  architectures["A64"]["total"] - architectures["A64"]["unsupported"],
+  ((float(architectures["A64"]["implemented"]) / (float(architectures["A64"]["total"] - architectures["A64"]["unsupported"]))) * 100.0),
+))
+
+print("SIMDe does not currently support 16-bit floating point types or polynomial types, so they are excluded from this list (though separate totals are often provided to be transparent about what was skipped.  We do plan to support these types in the future.\n")
 
 print("# Functions by Architecture\n")
 
@@ -249,7 +262,7 @@ for family_name in sorted(families):
 
 print("# Families\n")
 
-print("There are %d function families in NEON (based on how we define families).  Discounting functions which use unsupported types, SIMDe has completely implemented %d (%.2f%%) and partially implemented another %d (%.2f%%)\n" % (
+print("There are %d function families in NEON (based on how we define families).  Discounting functions which use unsupported types, SIMDe has completely implemented %d (%.2f%%) and partially implemented another %d (%.2f%%).\n" % (
   len(families),
   len(completeFamilies),
   (float(len(completeFamilies)) / float(len(families))) * 100.0,
