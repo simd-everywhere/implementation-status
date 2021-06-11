@@ -184,13 +184,6 @@ for family_name in families.keys():
         is_implemented = ' '
         if func["implemented"] != False:
             is_implemented = 'x'
-        print(" * [%c] [%s](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=%s&techs=AVX_512)" % (is_implemented, func["name"], func["name"]), end='')
-        if func["implemented"] != False:
-            if func["implemented"] != func["family"]:
-                print(' (in %s.h)' % func["implemented"])
-            else:
-                print('')
-        else:
-            print('')
+        print(" * [%c] [%s](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=%s&techs=AVX_512)" % (is_implemented, func["name"], func["name"]))
 
     print('')
