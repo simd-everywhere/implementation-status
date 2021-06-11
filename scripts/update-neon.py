@@ -1,107 +1,319 @@
 #!/bin/python3
 
-import re, os, sys
+import os, sys, glob, json, pprint, re
 
+# The NEON intrinsics JSON file doesn't separate functions how we would
+# like; the same operation
+
+data = []
 families = {}
+architectures = {}
+familyNames = {}
+unsupportedTypes = {
+  "poly": [],
+  "f16": [],
+  "bf16": []
+}
 
-skipped_functions = 0
+family_overrides = {
+  'vpmaxqd_f64': 'pmax',
+  'vpminqd_f64': 'pmin',
+  'vpmaxnmqd_f64': 'pmaxnm',
+  'vpminnmqd_f64': 'pminnm',
+  'vrecpxs_f32': 'recp',
+  'vrecpxd_f64': 'recp',
+  'vldrq_p128': 'ldr',
+  'vstrq_p128': 'str',
+  'vaeseq_u8': 'aes',
+  'vaesdq_u8': 'aes',
+  'vaesmcq_u8': 'aes',
+  'vaesimcq_u8': 'aes',
+  'vsha1cq_u32': 'sha1',
+  'vsha1pq_u32': 'sha1',
+  'vsha1mq_u32': 'sha1',
+  'vsha1su0q_u32': 'sha1',
+  'vsha1su1q_u32': 'sha1',
+  'vsha256hq_u32': 'sha256',
+  'vsha256h2q_u32': 'sha256',
+  'vsha256su0q_u32': 'sha256',
+  'vsha256su1q_u32': 'sha256',
+  'vsha512hq_u64': 'sha512',
+  'vsha512h2q_u64': 'sha512',
+  'vsha512su0q_u64': 'sha512',
+  'vsha512su1q_u64': 'sha512',
+  'veor3q_u8': 'eor3',
+  'vrax1q_u64': 'rax',
+  'vxarq_u64': 'xar',
+  'vbcaxq_u8': 'bcax',
+  'vsm3ss1q_u32': 'sm3',
+  'vsm3tt1aq_u32': 'sm3',
+  'vsm3tt1bq_u32': 'sm3',
+  'vsm3tt2aq_u32': 'sm3',
+  'vsm3tt2bq_u32': 'sm3',
+  'vsm3partw1q_u32': 'sm3',
+  'vsm3partw2q_u32': 'sm3',
+  'vsm4eq_u32': 'sm4',
+  'vsm4ekeyq_u32': 'sm4',
+  'vmmlaq_s32': 'mmla',
+  'vusmmlaq_s32': 'mmla',
+  'vbfmmlaq_f32': 'mmla',
+  'vbfmlalbq_f32': 'fmlal',
+  'vbfmlaltq_f32': 'fmlal',
+  'vbfmlalbq_lane_f32': 'fmlal_lane',
+  'vbfmlaltq_lane_f32': 'fmlal_lane',
+  'vbfmlalbq_laneq_f32': 'fmlal_lane',
+  'vbfmlaltq_laneq_f32': 'fmlal_lane',
+  'vcvtq_low_f32_bf16': 'cvt_low'
+}
 
-if len(sys.argv) < 3:
-    sys.exit('Usage: ' + sys.argv[0] + ' /path/to/simde /path/to/neon-funcs.txt')
+pp = pprint.PrettyPrinter(indent=2)
+
+patterns = {
+  "family_shortener": re.compile('^([a-z0-9]+)([a-z0-9])(_.+)?$')
+}
+
+files = {}
+for file in glob.glob(os.path.join(sys.argv[1], 'simde/arm/neon/*.h')):
+    files[os.path.splitext(os.path.basename(file))[0]] = open(file).read()
+
+# The question we're trying to answer here is (for example) vceq_u8 the
+# 128-bit version of vce_u8, or the 64-bit version of vceqq_u8?  In
+# order to do this we make two passes; the first time we ignore the
+# anything ending with "q" *except* for anything ending in "qq" (which
+# we know will be a 128-bit version of the single-q family).  Then we
+# can go through in a second pass and check to see which family already
+# exists.
+def group_intrin(intrin, force=False):
+  # print("\n" + intrin["name"] + "...")
+  # pp.pprint(intrin)
+
+  name_components = intrin["name"].split("_")
+  base_name = name_components[0]
+
+  # __crc* functions
+  if len(base_name) == 0:
+    return True;
+
+  assert base_name[0] == 'v'
+
+  family_name = base_name[1:]
+
+  for component in name_components[1:]:
+    unsupportedType = False
+
+    if component in ['s8', 'u8', 's16', 'u16', 's32', 'u32', 's64', 'u64', 'f32', 'f64']:
+      pass
+    elif component in ['p8', 'p16', 'p32', 'p64', 'p128']:
+      unsupportedTypes["poly"].append(intrin)
+      intrin["skip"] = True
+    elif component in ['f16', 'bf16']:
+      unsupportedTypes[component].append(intrin)
+      intrin["skip"] = True
+    elif component in ['dup', 'high', 'low', 'n', 'x2', 'x3', 'x4']:
+      family_name += '_' + component
+    elif component in ['lane', 'laneq']:
+      family_name += '_lane'
+    elif component in ['rot90', 'rot180', 'rot270']:
+      family_name += '_rot'
+    else:
+      assert False
+
+  if intrin["name"] in family_overrides:
+
+    family_name = family_overrides[intrin["name"]]
+
+  elif not force:
+
+    # Ends with q, but not qq
+    if base_name[-1] == 'q':
+      if base_name[-2] == 'q':
+        family_name = family_name[:-1]
+      else:
+        return False
+    
+    if base_name[-1] == 'b' and name_components[-1] in ["s8", "u8"]:
+      return False
+    elif base_name[-1] == 'w' and name_components[-1] in ["s16", "u16", "f16", "bf16"]:
+      return False
+    elif base_name[-1] == 's' and name_components[-1] in ["s32", "u32", "f32"]:
+      return False
+    elif base_name[-1] == 'd' and name_components[-1] in ["s64", "u64", "f64"]:
+      return False
+
+  else:
+
+    if family_name not in families:
+      m = patterns["family_shortener"].match(family_name)
+      shorter = m.group(1)
+      if m.group(3) != None:
+        shorter += m.group(3)
+      if shorter in families:
+        family_name = shorter
+      else:
+        assert False
+
+  for header in files.keys():
+    if files[header].find("simde_" + intrin["name"]) >= 0:
+      intrin["implemented"] = True
+      break
+
+  if family_name not in families:
+    families[family_name] = {
+      "unsupported": 0,
+      "implemented": 0,
+      "functions": []
+    }
+
+  for arch in intrin["Architectures"]:
+    if arch not in architectures:
+      architectures[arch] = {
+        "total": 0,
+        "implemented": 0,
+        "unsupported": 0
+      }
+    
+    architectures[arch]["total"] = architectures[arch]["total"] + 1
+    if intrin["skip"]:
+      architectures[arch]["unsupported"] = architectures[arch]["unsupported"] + 1
+    if intrin["implemented"]:
+      architectures[arch]["implemented"] = architectures[arch]["implemented"] + 1
+
+  families[family_name]["functions"].append(intrin)
+  if intrin["skip"]:
+    families[family_name]["unsupported"] = families[family_name]["unsupported"] + 1
+  elif intrin["implemented"]:
+    families[family_name]["implemented"] = families[family_name]["implemented"] + 1
+
+  return True
 
 with open(sys.argv[2]) as fp:
-    regex = re.compile("^v((([a-z0-9]+[^q])|ceq)q?)(_rot(90|180|270))?(_dup)?((_lane)q?)?(_low)?(_high)?(_n)?((_lane)q?)?(_((s|u|p|f|bf)(8|16|32|64|128)))?_((s|u|p|f|bf)(8|16|32|64|128))")
-    regex_single = re.compile("^(.+)(b|h|s|d)$")
+  for intrin in json.load(fp):
+    if intrin["SIMD_ISA"] != "neon":
+      continue
 
-    possible_singles = []
+    intrin["implemented"] = False
+    intrin["skip"] = False
 
-    func = ''
-    while True:
-        func = fp.readline().strip()
-        if func == '':
-            break
+    data.append(intrin)
 
-        m = regex.match(func)
-        if m is None:
-            print('No match for ' + func)
-            break
+  skipped = []
+  for intrin in data:
+    # if len(skipped) > 10:
+    #   break
+    if not group_intrin(intrin, False):
+      skipped.append(intrin)
 
-        groups = m.groups()
+  for intrin in data:
+    group_intrin(intrin, True)
 
-        if groups[18] == 'p' or groups[17] == 'bf16' or groups[17] == 'f16':
-            skipped_functions += 1
-            continue
+# Okay, now everything should be where we want it.
 
-        sm = regex_single.match(groups[0])
-        if sm is not None:
-            possible_singles.append(func)
-            continue
+print("SIMDe does not currently support 16-bit floating point types or polynomial types, so they are excluded from this list (though separate totals are also provided to be transparent about what was skipped.  We do plan to support these types in the future.\n")
 
-        family = groups[1]
+print("# Functions by Architecture\n")
 
-        for idx in [7, 9, 10]:
-            if groups[idx] is not None:
-                family += groups[idx]
+print('| Architecture | Functions | Functions with supported types | Implemented by SIMDe | Percent implemented |')
+print('| --: | --: | --: | --: |')
+for arch in architectures.keys():
+  print('| ', end='')
+  if arch == "v7":
+    print('%12s' % "ARMv7", end=' |')
+  elif arch == "A32":
+    print('%12s' % "ARMv8", end=' |')
+  elif arch == "A64":
+    print('%12s' % "AArch64", end=' |')
+  else:
+    print('%12s' % arch, end=' |')
 
-        if family not in families:
-            families[family] = []
+  print('%10d' % (architectures[arch]["total"]), end=' |')
+  print('%31d' % (architectures[arch]["total"] - architectures[arch]["unsupported"]), end=' |')
+  print('%21d' % (architectures[arch]["implemented"]), end=' |')
+  print('%19.2f%%' % ((float(architectures[arch]["implemented"]) / float(architectures[arch]["total"] - architectures[arch]["unsupported"])) * 100.0), end=' |')
 
-        families[family].append(func)
+  print('')
+print('')
 
-        # print(func + ' -> ' + family)
+completeFamilies = []
+incompleteFamilies = []
+unimplementedFamilies = []
 
-        if func == "vabal_high_u8x":
-            print([family, groups])
+for family_name in sorted(families):
+  family = families[family_name]
 
-            for i in range(len(groups)):
-                print("\t" + str(i) + ": " + str(groups[i]))
+  if (len(family["functions"]) - family["unsupported"]) == family["implemented"]:
+    completeFamilies.append(family_name)
+  elif family["implemented"] > 0:
+    incompleteFamilies.append(family_name)
+  else:
+    unimplementedFamilies.append(family_name)
 
-            break
+print("# Families\n")
 
-    for func in possible_singles:
-       m = regex.match(func)
-       groups = m.groups()
+print("There are %d function families in NEON (based on how we define families).  Discounting functions which use unsupported types, SIMDe has completely implemented %d (%.2f%%) and partially implemented another %d (%.2f%%)\n" % (
+  len(families),
+  len(completeFamilies),
+  (float(len(completeFamilies)) / float(len(families))) * 100.0,
+  len(incompleteFamilies),
+  (float(len(incompleteFamilies)) / float(len(families))) * 100.0
+))
 
-       sm = regex_single.match(groups[0])
-       if sm.group(1) in families:
-           families[sm.group(1)].append(func)
-       elif sm.group(0) in families:
-           families[sm.group(0)].append(func)
+print("## Inomplete Families\n")
 
-complete_families = 0
-partial_families = 0
-complete_functions = 0
-total_functions = 0
+print("There are currently %d incomplete families.\n" % len(incompleteFamilies))
 
-for family in families:
-    funcs_found = []
-    funcs_missing = []
+for family_name in incompleteFamilies:
+  print('### ' + family_name + "\n")
 
-    for func in families[family]:
-        r = os.system('grep -PRq simde_' + func + ' ' + sys.argv[1] + '/simde/arm/neon')
-        total_functions += 1
-        if r == 0:
-            funcs_found.append(func)
-        else:
-            funcs_missing.append(func)
+  family = families[family_name]
+  implementable = (len(family["functions"]) - family["unsupported"])
 
-    family_link = '[' + family + '](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=v' + family + ')'
-
-    if len(funcs_missing) == 0:
-        print(' - [x] ' + family_link)
-        complete_families += 1
-        complete_functions += len(families[family])
+  if implementable == 0:
+    print("Family only contains functions which require unsupported types.\n")
+  else:
+    print('SIMDe currently implements %d of %d (%.2f%%) functions' % (family["implemented"], implementable, (float(family["implemented"]) / implementable) * 100.0), end="")
+    if family["unsupported"] > 0:
+      print(", not counting %d which require currently unsupported types.\n" % family["unsupported"])
     else:
-        print(' - [ ] ' + family_link)
-        if len(funcs_found) != 0:
-            partial_families += 1
-            for func in families[family]:
-                if func in funcs_found:
-                    print('   - [x] ' + func)
-                    complete_functions += 1
-                else:
-                    print('   - [ ] ' + func)
+      print(".\n")
 
-print("\n{0}/{1} ({2}%) of function families are fully implemented. Another {3} ({4}%) are partially implemented.\n".format(complete_families, len(families), int((complete_families / len(families)) * 100.0), partial_families, int((partial_families / len(families)) * 100.0)))
-print("Overall, {0}/{1} ({2}%) of functions are implemented.\n".format(complete_functions, total_functions, int((complete_functions / total_functions) * 100.0)))
-print("Note: this list does not include {0} functions for poly types or 16-bit floats; SIMDe doesn't support those yet.".format(skipped_functions))
+  for func in family["functions"]:
+    if not func["skip"]:
+      if func["implemented"]:
+        print(' * [x] ', end='')
+      else:
+        print(' * [ ] ', end='')
+      print(func["name"])
+
+  print('')
+
+print("## Unimplemented Families\n")
+
+print("There are currently %d unimplemented families.\n" % len(incompleteFamilies))
+
+for family_name in unimplementedFamilies:
+  family = families[family_name]
+
+  desc = []
+  if len(family["functions"]) > family["unsupported"]:
+    desc.append("%d functions" % (len(family["functions"]) - family["unsupported"]))
+  if family["unsupported"] > 0:
+    desc.append("%d functions with unsupported types" % family["unsupported"])
+
+  print(' * %s' % family_name, end='')
+  print(" (" + (", plus ".join(desc)) + ")")
+print('')
+
+print("## Complete Families\n")
+
+print("SIMDe contains complete implementations of %d functions families.\n" % len(completeFamilies))
+
+for family_name in completeFamilies:
+  family = families[family_name]
+
+  print(" * " + family_name, end='')
+
+  if family["unsupported"] > 0:
+    print(' (%d functions with unsupported types)' % family["unsupported"])
+  else:
+    print('')
+
