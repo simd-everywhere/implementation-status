@@ -1,1429 +1,1453 @@
- - [ ] [abal_high](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vabal_high)
- - [ ] [abal](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vabal)
- - [x] [aba](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vaba)
- - [ ] [abdl_high](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vabdl_high)
- - [x] [abdl](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vabdl)
- - [x] [abd](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vabd)
- - [x] [abs](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vabs)
- - [ ] [addhn_high](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vaddhn_high)
- - [x] [addhn](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vaddhn)
- - [x] [addl_high](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vaddl_high)
- - [x] [addl](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vaddl)
- - [x] [addlv](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vaddlv)
- - [x] [add](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vadd)
- - [x] [addv](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vaddv)
- - [x] [addw_high](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vaddw_high)
- - [x] [addw](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vaddw)
- - [ ] [aesd](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vaesd)
- - [ ] [aese](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vaese)
- - [ ] [aesimc](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vaesimc)
- - [ ] [aesmc](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vaesmc)
- - [x] [and](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vand)
- - [x] [bcax](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vbcax)
- - [ ] [bfdot](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vbfdot)
- - [ ] [bfdot_lane](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vbfdot_lane)
- - [ ] [bfmlalb](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vbfmlalb)
- - [ ] [bfmlalb_lane](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vbfmlalb_lane)
- - [ ] [bfmlalt](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vbfmlalt)
- - [ ] [bfmlalt_lane](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vbfmlalt_lane)
- - [ ] [bfmmla](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vbfmmla)
- - [x] [bic](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vbic)
- - [x] [bsl](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vbsl)
- - [ ] [cadd](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vcadd)
- - [x] [cage](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vcage)
- - [x] [cagt](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vcagt)
- - [ ] [cale](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vcale)
- - [ ] [calt](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vcalt)
- - [x] [ce](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vce)
- - [x] [ceq](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vceq)
- - [x] [ceqz](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vceqz)
- - [x] [cge](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vcge)
- - [x] [cgez](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vcgez)
- - [x] [cgt](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vcgt)
- - [x] [cgtz](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vcgtz)
- - [x] [cle](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vcle)
- - [x] [clez](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vclez)
- - [x] [cls](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vcls)
- - [x] [clt](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vclt)
- - [x] [cltz](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vcltz)
- - [x] [clz](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vclz)
- - [x] [cmla](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vcmla)
- - [ ] [cmla_lane](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vcmla_lane)
- - [x] [cnt](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vcnt)
- - [x] [combine](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vcombine)
- - [ ] [copy_lane](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vcopy_lane)
- - [x] [create](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vcreate)
- - [ ] [cvta](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vcvta)
- - [ ] [cvt](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vcvt)
-   - [ ] vcvt_bf16_f32
-   - [ ] vcvt_f16_f32
-   - [ ] vcvt_f16_s16
-   - [ ] vcvt_f16_u16
-   - [ ] vcvt_f32_f64
-   - [x] vcvt_f32_s32
-   - [x] vcvt_f32_u32
-   - [ ] vcvt_f64_f32
-   - [x] vcvt_f64_s64
-   - [x] vcvt_f64_u64
-   - [ ] vcvtq_f16_s16
-   - [ ] vcvtq_f16_u16
-   - [x] vcvtq_f32_s32
-   - [x] vcvtq_f32_u32
-   - [x] vcvtq_f64_s64
-   - [x] vcvtq_f64_u64
-   - [ ] vcvtq_low_bf16_f32
-   - [x] vcvtq_s32_f32
-   - [x] vcvtq_s64_f64
-   - [x] vcvtq_u32_f32
-   - [x] vcvtq_u64_f64
-   - [x] vcvt_s32_f32
-   - [x] vcvt_s64_f64
-   - [x] vcvt_u32_f32
-   - [x] vcvt_u64_f64
-   - [x] vcvtd_f64_s64
-   - [x] vcvtd_f64_u64
-   - [ ] vcvtd_n_f64_s64
-   - [ ] vcvtd_n_f64_u64
-   - [ ] vcvtd_n_s64_f64
-   - [ ] vcvtd_n_u64_f64
-   - [x] vcvtd_s64_f64
-   - [x] vcvtd_u64_f64
-   - [ ] vcvth_bf16_f32
-   - [ ] vcvth_f16_s16
-   - [ ] vcvth_f16_s32
-   - [ ] vcvth_f16_s64
-   - [ ] vcvth_f16_u16
-   - [ ] vcvth_f16_u32
-   - [ ] vcvth_f16_u64
-   - [ ] vcvth_n_f16_s16
-   - [ ] vcvth_n_f16_s32
-   - [ ] vcvth_n_f16_s64
-   - [ ] vcvth_n_f16_u16
-   - [ ] vcvth_n_f16_u32
-   - [ ] vcvth_n_f16_u64
-   - [x] vcvts_f32_s32
-   - [x] vcvts_f32_u32
-   - [ ] vcvts_n_f32_s32
-   - [ ] vcvts_n_f32_u32
-   - [ ] vcvts_n_s32_f32
-   - [ ] vcvts_n_u32_f32
-   - [x] vcvts_s32_f32
-   - [x] vcvts_u32_f32
- - [ ] [cvt_high](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vcvt_high)
- - [ ] [cvtm](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vcvtm)
- - [ ] [cvt_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vcvt_n)
- - [ ] [cvtn](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vcvtn)
- - [ ] [cvtp](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vcvtp)
- - [ ] [cvtx](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vcvtx)
- - [ ] [cvtx_high](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vcvtx_high)
- - [ ] [div](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vdiv)
- - [x] [dot_lane](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vdot_lane)
- - [x] [dot](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vdot)
- - [x] [dup_lane](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vdup_lane)
- - [x] [dup_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vdup_n)
- - [ ] [eor3](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=veor3)
- - [x] [eor](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=veor)
- - [x] [ext](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vext)
- - [ ] [fma](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vfma)
-   - [x] vfma_f32
-   - [x] vfma_f64
-   - [x] vfmaq_f32
-   - [x] vfmaq_f64
-   - [ ] vfmad_lane_f64
-   - [ ] vfmad_laneq_f64
-   - [ ] vfmas_lane_f32
-   - [ ] vfmas_laneq_f32
- - [ ] [fma_lane](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vfma_lane)
- - [x] [fma_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vfma_n)
- - [ ] [fms](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vfms)
- - [ ] [fms_lane](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vfms_lane)
- - [ ] [fms_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vfms_n)
- - [x] [get_high](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vget_high)
- - [x] [get_lane](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vget_lane)
- - [x] [get](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vget)
- - [x] [hadd](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vhadd)
- - [x] [hsub](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vhsub)
- - [ ] [ld1](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vld1)
-   - [x] vld1_dup_f32
-   - [ ] vld1_dup_f64
-   - [x] vld1_dup_s16
-   - [x] vld1_dup_s32
-   - [x] vld1_dup_s64
-   - [x] vld1_dup_s8
-   - [x] vld1_dup_u16
-   - [x] vld1_dup_u32
-   - [x] vld1_dup_u64
-   - [x] vld1_dup_u8
-   - [x] vld1_f32
-   - [ ] vld1_f32_x2
-   - [ ] vld1_f32_x3
-   - [ ] vld1_f32_x4
-   - [x] vld1_f64
-   - [ ] vld1_f64_x2
-   - [ ] vld1_f64_x3
-   - [ ] vld1_f64_x4
-   - [x] vld1q_dup_f32
-   - [ ] vld1q_dup_f64
-   - [x] vld1q_dup_s16
-   - [x] vld1q_dup_s32
-   - [x] vld1q_dup_s64
-   - [x] vld1q_dup_s8
-   - [x] vld1q_dup_u16
-   - [x] vld1q_dup_u32
-   - [x] vld1q_dup_u64
-   - [x] vld1q_dup_u8
-   - [x] vld1q_f32
-   - [ ] vld1q_f32_x2
-   - [ ] vld1q_f32_x3
-   - [ ] vld1q_f32_x4
-   - [x] vld1q_f64
-   - [ ] vld1q_f64_x2
-   - [ ] vld1q_f64_x3
-   - [ ] vld1q_f64_x4
-   - [x] vld1q_s16
-   - [ ] vld1q_s16_x2
-   - [ ] vld1q_s16_x3
-   - [ ] vld1q_s16_x4
-   - [x] vld1q_s32
-   - [ ] vld1q_s32_x2
-   - [ ] vld1q_s32_x3
-   - [ ] vld1q_s32_x4
-   - [x] vld1q_s64
-   - [ ] vld1q_s64_x2
-   - [ ] vld1q_s64_x3
-   - [ ] vld1q_s64_x4
-   - [x] vld1q_s8
-   - [ ] vld1q_s8_x2
-   - [ ] vld1q_s8_x3
-   - [ ] vld1q_s8_x4
-   - [x] vld1q_u16
-   - [ ] vld1q_u16_x2
-   - [ ] vld1q_u16_x3
-   - [ ] vld1q_u16_x4
-   - [x] vld1q_u32
-   - [ ] vld1q_u32_x2
-   - [ ] vld1q_u32_x3
-   - [ ] vld1q_u32_x4
-   - [x] vld1q_u64
-   - [ ] vld1q_u64_x2
-   - [ ] vld1q_u64_x3
-   - [ ] vld1q_u64_x4
-   - [x] vld1q_u8
-   - [ ] vld1q_u8_x2
-   - [ ] vld1q_u8_x3
-   - [ ] vld1q_u8_x4
-   - [x] vld1_s16
-   - [ ] vld1_s16_x2
-   - [ ] vld1_s16_x3
-   - [ ] vld1_s16_x4
-   - [x] vld1_s32
-   - [ ] vld1_s32_x2
-   - [ ] vld1_s32_x3
-   - [ ] vld1_s32_x4
-   - [x] vld1_s64
-   - [ ] vld1_s64_x2
-   - [ ] vld1_s64_x3
-   - [ ] vld1_s64_x4
-   - [x] vld1_s8
-   - [ ] vld1_s8_x2
-   - [ ] vld1_s8_x3
-   - [ ] vld1_s8_x4
-   - [x] vld1_u16
-   - [ ] vld1_u16_x2
-   - [ ] vld1_u16_x3
-   - [ ] vld1_u16_x4
-   - [x] vld1_u32
-   - [ ] vld1_u32_x2
-   - [ ] vld1_u32_x3
-   - [ ] vld1_u32_x4
-   - [x] vld1_u64
-   - [ ] vld1_u64_x2
-   - [ ] vld1_u64_x3
-   - [ ] vld1_u64_x4
-   - [x] vld1_u8
-   - [ ] vld1_u8_x2
-   - [ ] vld1_u8_x3
-   - [ ] vld1_u8_x4
- - [ ] [ld1_lane](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vld1_lane)
-   - [ ] vld1_lane_f32
-   - [ ] vld1_lane_f64
-   - [x] vld1_lane_s16
-   - [x] vld1_lane_s32
-   - [ ] vld1_lane_s64
-   - [x] vld1_lane_s8
-   - [x] vld1_lane_u16
-   - [x] vld1_lane_u32
-   - [ ] vld1_lane_u64
-   - [x] vld1_lane_u8
-   - [ ] vld1q_lane_f32
-   - [ ] vld1q_lane_f64
-   - [x] vld1q_lane_s16
-   - [x] vld1q_lane_s32
-   - [ ] vld1q_lane_s64
-   - [x] vld1q_lane_s8
-   - [x] vld1q_lane_u16
-   - [x] vld1q_lane_u32
-   - [ ] vld1q_lane_u64
-   - [x] vld1q_lane_u8
- - [ ] [ld2](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vld2)
-   - [ ] vld2_dup_f32
-   - [ ] vld2_dup_f64
-   - [ ] vld2_dup_s16
-   - [ ] vld2_dup_s32
-   - [ ] vld2_dup_s64
-   - [ ] vld2_dup_s8
-   - [ ] vld2_dup_u16
-   - [ ] vld2_dup_u32
-   - [ ] vld2_dup_u64
-   - [ ] vld2_dup_u8
-   - [ ] vld2_f32
-   - [ ] vld2_f64
-   - [ ] vld2q_dup_f32
-   - [ ] vld2q_dup_f64
-   - [ ] vld2q_dup_s16
-   - [ ] vld2q_dup_s32
-   - [ ] vld2q_dup_s64
-   - [ ] vld2q_dup_s8
-   - [ ] vld2q_dup_u16
-   - [ ] vld2q_dup_u32
-   - [ ] vld2q_dup_u64
-   - [ ] vld2q_dup_u8
-   - [x] vld2q_f32
-   - [ ] vld2q_f64
-   - [ ] vld2q_s16
-   - [ ] vld2q_s32
-   - [ ] vld2q_s64
-   - [ ] vld2q_s8
-   - [x] vld2q_u16
-   - [x] vld2q_u32
-   - [ ] vld2q_u64
-   - [x] vld2q_u8
-   - [ ] vld2_s16
-   - [ ] vld2_s32
-   - [ ] vld2_s64
-   - [ ] vld2_s8
-   - [x] vld2_u16
-   - [x] vld2_u32
-   - [ ] vld2_u64
-   - [x] vld2_u8
- - [ ] [ld2_lane](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vld2_lane)
- - [ ] [ld3](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vld3)
-   - [ ] vld3_dup_f32
-   - [ ] vld3_dup_f64
-   - [ ] vld3_dup_s16
-   - [ ] vld3_dup_s32
-   - [ ] vld3_dup_s64
-   - [ ] vld3_dup_s8
-   - [ ] vld3_dup_u16
-   - [ ] vld3_dup_u32
-   - [ ] vld3_dup_u64
-   - [ ] vld3_dup_u8
-   - [x] vld3_f32
-   - [x] vld3_f64
-   - [ ] vld3q_dup_f32
-   - [ ] vld3q_dup_f64
-   - [ ] vld3q_dup_s16
-   - [ ] vld3q_dup_s32
-   - [ ] vld3q_dup_s64
-   - [ ] vld3q_dup_s8
-   - [ ] vld3q_dup_u16
-   - [ ] vld3q_dup_u32
-   - [ ] vld3q_dup_u64
-   - [ ] vld3q_dup_u8
-   - [x] vld3q_f32
-   - [x] vld3q_f64
-   - [x] vld3q_s16
-   - [x] vld3q_s32
-   - [x] vld3q_s64
-   - [x] vld3q_s8
-   - [x] vld3q_u16
-   - [x] vld3q_u32
-   - [x] vld3q_u64
-   - [x] vld3q_u8
-   - [x] vld3_s16
-   - [x] vld3_s32
-   - [x] vld3_s64
-   - [x] vld3_s8
-   - [x] vld3_u16
-   - [x] vld3_u32
-   - [x] vld3_u64
-   - [x] vld3_u8
- - [ ] [ld3_lane](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vld3_lane)
- - [ ] [ld4](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vld4)
-   - [ ] vld4_dup_f32
-   - [ ] vld4_dup_f64
-   - [ ] vld4_dup_s16
-   - [ ] vld4_dup_s32
-   - [ ] vld4_dup_s64
-   - [ ] vld4_dup_s8
-   - [ ] vld4_dup_u16
-   - [ ] vld4_dup_u32
-   - [ ] vld4_dup_u64
-   - [ ] vld4_dup_u8
-   - [x] vld4_f32
-   - [x] vld4_f64
-   - [ ] vld4q_dup_f32
-   - [ ] vld4q_dup_f64
-   - [ ] vld4q_dup_s16
-   - [ ] vld4q_dup_s32
-   - [ ] vld4q_dup_s64
-   - [ ] vld4q_dup_s8
-   - [ ] vld4q_dup_u16
-   - [ ] vld4q_dup_u32
-   - [ ] vld4q_dup_u64
-   - [ ] vld4q_dup_u8
-   - [x] vld4q_f32
-   - [x] vld4q_f64
-   - [x] vld4q_s16
-   - [x] vld4q_s32
-   - [x] vld4q_s64
-   - [x] vld4q_s8
-   - [x] vld4q_u16
-   - [x] vld4q_u32
-   - [x] vld4q_u64
-   - [x] vld4q_u8
-   - [x] vld4_s16
-   - [x] vld4_s32
-   - [x] vld4_s64
-   - [x] vld4_s8
-   - [x] vld4_u16
-   - [x] vld4_u32
-   - [x] vld4_u64
-   - [x] vld4_u8
- - [ ] [ld4_lane](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vld4_lane)
-   - [ ] vld4_lane_f32
-   - [ ] vld4_lane_f64
-   - [x] vld4_lane_s16
-   - [x] vld4_lane_s32
-   - [ ] vld4_lane_s64
-   - [x] vld4_lane_s8
-   - [x] vld4_lane_u16
-   - [x] vld4_lane_u32
-   - [ ] vld4_lane_u64
-   - [x] vld4_lane_u8
-   - [ ] vld4q_lane_f32
-   - [ ] vld4q_lane_f64
-   - [ ] vld4q_lane_s16
-   - [ ] vld4q_lane_s32
-   - [ ] vld4q_lane_s64
-   - [ ] vld4q_lane_s8
-   - [ ] vld4q_lane_u16
-   - [ ] vld4q_lane_u32
-   - [ ] vld4q_lane_u64
-   - [ ] vld4q_lane_u8
- - [x] [max](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vmax)
- - [x] [maxnm](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vmaxnm)
- - [ ] [maxnmv](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vmaxnmv)
- - [x] [maxv](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vmaxv)
- - [x] [min](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vmin)
- - [x] [minnm](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vminnm)
- - [ ] [minnmv](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vminnmv)
- - [x] [minv](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vminv)
- - [x] [mla](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vmla)
- - [ ] [mla_lane](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vmla_lane)
- - [ ] [mlal_high](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vmlal_high)
-   - [ ] vmlal_high_laneq_s16
-   - [ ] vmlal_high_laneq_s32
-   - [ ] vmlal_high_laneq_u16
-   - [ ] vmlal_high_laneq_u32
-   - [ ] vmlal_high_lane_s16
-   - [ ] vmlal_high_lane_s32
-   - [ ] vmlal_high_lane_u16
-   - [ ] vmlal_high_lane_u32
-   - [x] vmlal_high_s16
-   - [x] vmlal_high_s32
-   - [x] vmlal_high_s8
-   - [x] vmlal_high_u16
-   - [x] vmlal_high_u32
-   - [x] vmlal_high_u8
- - [ ] [mlal_high_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vmlal_high_n)
- - [x] [mlal_lane](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vmlal_lane)
- - [x] [mlal_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vmlal_n)
- - [x] [mlal](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vmlal)
- - [x] [mla_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vmla_n)
- - [ ] [mlsl_high](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vmlsl_high)
-   - [ ] vmlsl_high_laneq_s16
-   - [ ] vmlsl_high_laneq_s32
-   - [ ] vmlsl_high_laneq_u16
-   - [ ] vmlsl_high_laneq_u32
-   - [ ] vmlsl_high_lane_s16
-   - [ ] vmlsl_high_lane_s32
-   - [ ] vmlsl_high_lane_u16
-   - [ ] vmlsl_high_lane_u32
-   - [x] vmlsl_high_s16
-   - [x] vmlsl_high_s32
-   - [x] vmlsl_high_s8
-   - [x] vmlsl_high_u16
-   - [x] vmlsl_high_u32
-   - [x] vmlsl_high_u8
- - [ ] [mlsl_high_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vmlsl_high_n)
- - [x] [mlsl_lane](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vmlsl_lane)
- - [x] [mlsl_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vmlsl_n)
- - [x] [mlsl](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vmlsl)
- - [ ] [mls](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vmls)
-   - [x] vmlsq_f32
-   - [x] vmlsq_f64
-   - [x] vmlsq_s16
-   - [x] vmlsq_s32
-   - [x] vmlsq_s8
-   - [x] vmlsq_u16
-   - [x] vmlsq_u32
-   - [x] vmlsq_u8
-   - [x] vmls_f32
-   - [x] vmls_f64
-   - [ ] vmls_lane_f32
-   - [ ] vmls_laneq_f32
-   - [ ] vmls_laneq_s16
-   - [ ] vmls_laneq_s32
-   - [ ] vmls_laneq_u16
-   - [ ] vmls_laneq_u32
-   - [ ] vmls_lane_s16
-   - [ ] vmls_lane_s32
-   - [ ] vmls_lane_u16
-   - [ ] vmls_lane_u32
-   - [x] vmls_n_f32
-   - [x] vmls_n_s16
-   - [x] vmls_n_s32
-   - [x] vmls_n_u16
-   - [x] vmls_n_u32
-   - [x] vmls_s16
-   - [x] vmls_s32
-   - [x] vmls_s8
-   - [x] vmls_u16
-   - [x] vmls_u32
-   - [x] vmls_u8
- - [ ] [mls_lane](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vmls_lane)
- - [x] [mls_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vmls_n)
- - [ ] [mmla](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vmmla)
- - [x] [movl_high](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vmovl_high)
- - [x] [movl](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vmovl)
- - [x] [mov_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vmov_n)
- - [x] [movn_high](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vmovn_high)
- - [x] [movn](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vmovn)
- - [ ] [mul](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vmul)
-   - [x] vmul_f32
-   - [x] vmul_f64
-   - [x] vmulq_f32
-   - [x] vmulq_f64
-   - [x] vmulq_s16
-   - [x] vmulq_s32
-   - [x] vmulq_s8
-   - [x] vmulq_u16
-   - [x] vmulq_u32
-   - [x] vmulq_u8
-   - [x] vmul_s16
-   - [x] vmul_s32
-   - [x] vmul_s8
-   - [x] vmul_u16
-   - [x] vmul_u32
-   - [x] vmul_u8
-   - [ ] vmuld_lane_f64
-   - [ ] vmuld_laneq_f64
-   - [ ] vmuls_lane_f32
-   - [ ] vmuls_laneq_f32
- - [ ] [mul_lane](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vmul_lane)
-   - [x] vmul_lane_f32
-   - [x] vmul_lane_f64
-   - [ ] vmul_laneq_f32
-   - [ ] vmul_laneq_f64
-   - [ ] vmul_laneq_s16
-   - [ ] vmul_laneq_s32
-   - [ ] vmul_laneq_u16
-   - [ ] vmul_laneq_u32
-   - [x] vmul_lane_s16
-   - [x] vmul_lane_s32
-   - [x] vmul_lane_u16
-   - [x] vmul_lane_u32
-   - [x] vmulq_lane_f32
-   - [x] vmulq_lane_f64
-   - [x] vmulq_laneq_f32
-   - [x] vmulq_laneq_f64
-   - [x] vmulq_laneq_s16
-   - [x] vmulq_laneq_s32
-   - [x] vmulq_laneq_u16
-   - [x] vmulq_laneq_u32
-   - [x] vmulq_lane_s16
-   - [x] vmulq_lane_s32
-   - [x] vmulq_lane_u16
-   - [x] vmulq_lane_u32
- - [ ] [mull_high](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vmull_high)
-   - [ ] vmull_high_laneq_s16
-   - [ ] vmull_high_laneq_s32
-   - [ ] vmull_high_laneq_u16
-   - [ ] vmull_high_laneq_u32
-   - [ ] vmull_high_lane_s16
-   - [ ] vmull_high_lane_s32
-   - [ ] vmull_high_lane_u16
-   - [ ] vmull_high_lane_u32
-   - [x] vmull_high_s16
-   - [x] vmull_high_s32
-   - [x] vmull_high_s8
-   - [x] vmull_high_u16
-   - [x] vmull_high_u32
-   - [x] vmull_high_u8
- - [ ] [mull_high_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vmull_high_n)
- - [x] [mull_lane](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vmull_lane)
- - [x] [mull_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vmull_n)
- - [x] [mull](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vmull)
- - [x] [mul_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vmul_n)
- - [ ] [mulx](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vmulx)
- - [ ] [mulx_lane](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vmulx_lane)
- - [x] [mvn](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vmvn)
- - [ ] [neg](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vneg)
-   - [x] vneg_f32
-   - [x] vneg_f64
-   - [x] vnegq_f32
-   - [x] vnegq_f64
-   - [x] vnegq_s16
-   - [x] vnegq_s32
-   - [x] vnegq_s64
-   - [x] vnegq_s8
-   - [x] vneg_s16
-   - [x] vneg_s32
-   - [x] vneg_s64
-   - [x] vneg_s8
-   - [ ] vnegd_s64
- - [x] [orn](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vorn)
- - [x] [orr](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vorr)
- - [x] [padal](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vpadal)
- - [x] [paddl](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vpaddl)
- - [ ] [padd](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vpadd)
-   - [x] vpaddq_f32
-   - [x] vpaddq_f64
-   - [x] vpaddq_s16
-   - [x] vpaddq_s32
-   - [x] vpaddq_s64
-   - [x] vpaddq_s8
-   - [x] vpaddq_u16
-   - [x] vpaddq_u32
-   - [x] vpaddq_u64
-   - [x] vpaddq_u8
-   - [ ] vpaddd_f64
-   - [ ] vpaddd_s64
-   - [ ] vpaddd_u64
-   - [x] vpadd_f32
-   - [x] vpadd_s16
-   - [x] vpadd_s32
-   - [x] vpadd_s8
-   - [ ] vpadds_f32
-   - [x] vpadd_u16
-   - [x] vpadd_u32
-   - [x] vpadd_u8
- - [ ] [pmax](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vpmax)
-   - [x] vpmax_f32
-   - [x] vpmaxq_f32
-   - [x] vpmaxq_f64
-   - [x] vpmaxq_s16
-   - [x] vpmaxq_s32
-   - [x] vpmaxq_s8
-   - [x] vpmaxq_u16
-   - [x] vpmaxq_u32
-   - [x] vpmaxq_u8
-   - [x] vpmax_s16
-   - [x] vpmax_s32
-   - [x] vpmax_s8
-   - [x] vpmax_u16
-   - [x] vpmax_u32
-   - [x] vpmax_u8
-   - [ ] vpmaxs_f32
- - [ ] [pmaxnm](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vpmaxnm)
- - [ ] [pmin](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vpmin)
-   - [x] vpmin_f32
-   - [x] vpminq_f32
-   - [x] vpminq_f64
-   - [x] vpminq_s16
-   - [x] vpminq_s32
-   - [x] vpminq_s8
-   - [x] vpminq_u16
-   - [x] vpminq_u32
-   - [x] vpminq_u8
-   - [x] vpmin_s16
-   - [x] vpmin_s32
-   - [x] vpmin_s8
-   - [x] vpmin_u16
-   - [x] vpmin_u32
-   - [x] vpmin_u8
-   - [ ] vpmins_f32
- - [ ] [pminnm](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vpminnm)
- - [x] [qabs](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqabs)
- - [x] [qadd](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqadd)
- - [ ] [qdmlal_high](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqdmlal_high)
- - [ ] [qdmlal_high_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqdmlal_high_n)
- - [ ] [qdmlal_lane](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqdmlal_lane)
- - [ ] [qdmlal_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqdmlal_n)
- - [ ] [qdmlal](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqdmlal)
- - [ ] [qdmlsl_high](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqdmlsl_high)
- - [ ] [qdmlsl_high_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqdmlsl_high_n)
- - [ ] [qdmlsl_lane](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqdmlsl_lane)
- - [ ] [qdmlsl_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqdmlsl_n)
- - [ ] [qdmlsl](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqdmlsl)
- - [ ] [qdmulh_lane](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqdmulh_lane)
-   - [ ] vqdmulhq_laneq_s16
-   - [ ] vqdmulhq_laneq_s32
-   - [x] vqdmulhq_lane_s16
-   - [x] vqdmulhq_lane_s32
- - [x] [qdmulh_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqdmulh_n)
- - [ ] [qdmulh](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqdmulh)
-   - [x] vqdmulhq_s16
-   - [x] vqdmulhq_s32
-   - [ ] vqdmulhh_laneq_s16
-   - [ ] vqdmulhh_lane_s16
-   - [ ] vqdmulhh_s16
-   - [ ] vqdmulh_laneq_s16
-   - [ ] vqdmulh_laneq_s32
-   - [x] vqdmulh_lane_s16
-   - [x] vqdmulh_lane_s32
-   - [x] vqdmulh_n_s16
-   - [x] vqdmulh_n_s32
-   - [x] vqdmulh_s16
-   - [x] vqdmulh_s32
-   - [ ] vqdmulhs_laneq_s32
-   - [ ] vqdmulhs_lane_s32
-   - [ ] vqdmulhs_s32
- - [ ] [qdmull_high](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqdmull_high)
- - [ ] [qdmull_high_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqdmull_high_n)
- - [ ] [qdmull_lane](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqdmull_lane)
- - [ ] [qdmull_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqdmull_n)
- - [ ] [qdmull](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqdmull)
-   - [x] vqdmull_s16
-   - [x] vqdmull_s32
-   - [ ] vqdmullh_laneq_s16
-   - [ ] vqdmullh_lane_s16
-   - [x] vqdmullh_s16
-   - [ ] vqdmulls_laneq_s32
-   - [ ] vqdmulls_lane_s32
-   - [x] vqdmulls_s32
- - [x] [qmovn_high](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqmovn_high)
- - [x] [qmovn](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqmovn)
- - [ ] [qmovun_high](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqmovun_high)
- - [x] [qmovun](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqmovun)
- - [x] [qneg](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqneg)
- - [ ] [qrdmlah_lane](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqrdmlah_lane)
- - [ ] [qrdmlah](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqrdmlah)
- - [ ] [qrdmlsh_lane](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqrdmlsh_lane)
- - [ ] [qrdmlsh](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqrdmlsh)
- - [x] [qrdmulh_lane](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqrdmulh_lane)
- - [x] [qrdmulh_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqrdmulh_n)
- - [ ] [qrdmulh](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqrdmulh)
-   - [x] vqrdmulhq_s16
-   - [x] vqrdmulhq_s32
-   - [ ] vqrdmulhh_laneq_s16
-   - [ ] vqrdmulhh_lane_s16
-   - [x] vqrdmulhh_s16
-   - [x] vqrdmulh_laneq_s16
-   - [x] vqrdmulh_laneq_s32
-   - [x] vqrdmulh_lane_s16
-   - [x] vqrdmulh_lane_s32
-   - [x] vqrdmulh_n_s16
-   - [x] vqrdmulh_n_s32
-   - [x] vqrdmulh_s16
-   - [x] vqrdmulh_s32
-   - [ ] vqrdmulhs_laneq_s32
-   - [ ] vqrdmulhs_lane_s32
-   - [x] vqrdmulhs_s32
- - [ ] [qrshl](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqrshl)
- - [ ] [qrshrn_high_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqrshrn_high_n)
- - [x] [qrshrn_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqrshrn_n)
- - [ ] [qrshrun_high_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqrshrun_high_n)
- - [x] [qrshrun_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqrshrun_n)
- - [ ] [qshl_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqshl_n)
- - [ ] [qshl](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqshl)
-   - [x] vqshlq_s16
-   - [x] vqshlq_s32
-   - [x] vqshlq_s64
-   - [x] vqshlq_s8
-   - [x] vqshlq_u16
-   - [x] vqshlq_u32
-   - [x] vqshlq_u64
-   - [x] vqshlq_u8
-   - [x] vqshl_s16
-   - [x] vqshl_s32
-   - [x] vqshl_s64
-   - [x] vqshl_s8
-   - [x] vqshl_u16
-   - [x] vqshl_u32
-   - [x] vqshl_u64
-   - [x] vqshl_u8
-   - [ ] vqshlb_n_s8
-   - [ ] vqshlb_n_u8
-   - [x] vqshlb_s8
-   - [x] vqshlb_u8
-   - [ ] vqshld_n_s64
-   - [ ] vqshld_n_u64
-   - [x] vqshld_s64
-   - [x] vqshld_u64
-   - [ ] vqshlh_n_s16
-   - [ ] vqshlh_n_u16
-   - [x] vqshlh_s16
-   - [x] vqshlh_u16
-   - [ ] vqshls_n_s32
-   - [ ] vqshls_n_u32
-   - [x] vqshls_s32
-   - [x] vqshls_u32
- - [x] [qshlu_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqshlu_n)
- - [ ] [qshrn_high_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqshrn_high_n)
- - [x] [qshrn_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqshrn_n)
- - [ ] [qshrun_high_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqshrun_high_n)
- - [x] [qshrun_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqshrun_n)
- - [x] [qsub](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqsub)
- - [x] [qtbl1](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqtbl1)
- - [x] [qtbl2](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqtbl2)
- - [x] [qtbl3](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqtbl3)
- - [x] [qtbl4](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqtbl4)
- - [x] [qtbx1](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqtbx1)
- - [x] [qtbx2](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqtbx2)
- - [x] [qtbx3](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqtbx3)
- - [x] [qtbx4](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vqtbx4)
- - [ ] [raddhn_high](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vraddhn_high)
- - [ ] [raddhn](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vraddhn)
- - [ ] [rax1](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vrax1)
- - [x] [rbit](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vrbit)
- - [ ] [recpe](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vrecpe)
-   - [x] vrecpe_f32
-   - [ ] vrecpe_f64
-   - [x] vrecpeq_f32
-   - [ ] vrecpeq_f64
-   - [ ] vrecpeq_u32
-   - [ ] vrecpe_u32
-   - [ ] vrecped_f64
-   - [ ] vrecpes_f32
- - [ ] [recps](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vrecps)
-   - [x] vrecpsq_f32
-   - [ ] vrecpsq_f64
-   - [ ] vrecpsd_f64
-   - [x] vrecps_f32
-   - [ ] vrecps_f64
-   - [ ] vrecpss_f32
- - [ ] [reinterpret](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vreinterpret)
-   - [ ] vreinterpret_bf16_f32
-   - [ ] vreinterpret_bf16_f64
-   - [ ] vreinterpret_bf16_s16
-   - [ ] vreinterpret_bf16_s32
-   - [ ] vreinterpret_bf16_s64
-   - [ ] vreinterpret_bf16_s8
-   - [ ] vreinterpret_bf16_u16
-   - [ ] vreinterpret_bf16_u32
-   - [ ] vreinterpret_bf16_u64
-   - [ ] vreinterpret_bf16_u8
-   - [ ] vreinterpret_f16_f32
-   - [ ] vreinterpret_f16_f64
-   - [ ] vreinterpret_f16_s16
-   - [ ] vreinterpret_f16_s32
-   - [ ] vreinterpret_f16_s64
-   - [ ] vreinterpret_f16_s8
-   - [ ] vreinterpret_f16_u16
-   - [ ] vreinterpret_f16_u32
-   - [ ] vreinterpret_f16_u64
-   - [ ] vreinterpret_f16_u8
-   - [x] vreinterpret_f32_f64
-   - [x] vreinterpret_f32_s16
-   - [x] vreinterpret_f32_s32
-   - [x] vreinterpret_f32_s64
-   - [x] vreinterpret_f32_s8
-   - [x] vreinterpret_f32_u16
-   - [x] vreinterpret_f32_u32
-   - [x] vreinterpret_f32_u64
-   - [x] vreinterpret_f32_u8
-   - [x] vreinterpret_f64_f32
-   - [x] vreinterpret_f64_s16
-   - [x] vreinterpret_f64_s32
-   - [x] vreinterpret_f64_s64
-   - [x] vreinterpret_f64_s8
-   - [x] vreinterpret_f64_u16
-   - [x] vreinterpret_f64_u32
-   - [x] vreinterpret_f64_u64
-   - [x] vreinterpret_f64_u8
-   - [ ] vreinterpret_p16_f32
-   - [ ] vreinterpret_p16_f64
-   - [ ] vreinterpret_p16_s16
-   - [ ] vreinterpret_p16_s32
-   - [ ] vreinterpret_p16_s64
-   - [ ] vreinterpret_p16_s8
-   - [ ] vreinterpret_p16_u16
-   - [ ] vreinterpret_p16_u32
-   - [ ] vreinterpret_p16_u64
-   - [ ] vreinterpret_p16_u8
-   - [ ] vreinterpret_p64_f32
-   - [ ] vreinterpret_p64_f64
-   - [ ] vreinterpret_p64_s16
-   - [ ] vreinterpret_p64_s32
-   - [ ] vreinterpret_p64_s8
-   - [ ] vreinterpret_p64_u16
-   - [ ] vreinterpret_p64_u32
-   - [ ] vreinterpret_p64_u64
-   - [ ] vreinterpret_p64_u8
-   - [ ] vreinterpret_p8_f32
-   - [ ] vreinterpret_p8_f64
-   - [ ] vreinterpret_p8_s16
-   - [ ] vreinterpret_p8_s32
-   - [ ] vreinterpret_p8_s64
-   - [ ] vreinterpret_p8_s8
-   - [ ] vreinterpret_p8_u16
-   - [ ] vreinterpret_p8_u32
-   - [ ] vreinterpret_p8_u64
-   - [ ] vreinterpret_p8_u8
-   - [ ] vreinterpretq_bf16_f32
-   - [ ] vreinterpretq_bf16_f64
-   - [ ] vreinterpretq_bf16_s16
-   - [ ] vreinterpretq_bf16_s32
-   - [ ] vreinterpretq_bf16_s64
-   - [ ] vreinterpretq_bf16_s8
-   - [ ] vreinterpretq_bf16_u16
-   - [ ] vreinterpretq_bf16_u32
-   - [ ] vreinterpretq_bf16_u64
-   - [ ] vreinterpretq_bf16_u8
-   - [ ] vreinterpretq_f16_f32
-   - [ ] vreinterpretq_f16_f64
-   - [ ] vreinterpretq_f16_s16
-   - [ ] vreinterpretq_f16_s32
-   - [ ] vreinterpretq_f16_s64
-   - [ ] vreinterpretq_f16_s8
-   - [ ] vreinterpretq_f16_u16
-   - [ ] vreinterpretq_f16_u32
-   - [ ] vreinterpretq_f16_u64
-   - [ ] vreinterpretq_f16_u8
-   - [x] vreinterpretq_f32_f64
-   - [x] vreinterpretq_f32_s16
-   - [x] vreinterpretq_f32_s32
-   - [x] vreinterpretq_f32_s64
-   - [x] vreinterpretq_f32_s8
-   - [x] vreinterpretq_f32_u16
-   - [x] vreinterpretq_f32_u32
-   - [x] vreinterpretq_f32_u64
-   - [x] vreinterpretq_f32_u8
-   - [x] vreinterpretq_f64_f32
-   - [x] vreinterpretq_f64_s16
-   - [x] vreinterpretq_f64_s32
-   - [x] vreinterpretq_f64_s64
-   - [x] vreinterpretq_f64_s8
-   - [x] vreinterpretq_f64_u16
-   - [x] vreinterpretq_f64_u32
-   - [x] vreinterpretq_f64_u64
-   - [x] vreinterpretq_f64_u8
-   - [ ] vreinterpretq_p128_f32
-   - [ ] vreinterpretq_p128_f64
-   - [ ] vreinterpretq_p128_s16
-   - [ ] vreinterpretq_p128_s32
-   - [ ] vreinterpretq_p128_s64
-   - [ ] vreinterpretq_p128_s8
-   - [ ] vreinterpretq_p128_u16
-   - [ ] vreinterpretq_p128_u32
-   - [ ] vreinterpretq_p128_u64
-   - [ ] vreinterpretq_p128_u8
-   - [ ] vreinterpretq_p16_f32
-   - [ ] vreinterpretq_p16_f64
-   - [ ] vreinterpretq_p16_s16
-   - [ ] vreinterpretq_p16_s32
-   - [ ] vreinterpretq_p16_s64
-   - [ ] vreinterpretq_p16_s8
-   - [ ] vreinterpretq_p16_u16
-   - [ ] vreinterpretq_p16_u32
-   - [ ] vreinterpretq_p16_u64
-   - [ ] vreinterpretq_p16_u8
-   - [ ] vreinterpretq_p64_f32
-   - [ ] vreinterpretq_p64_f64
-   - [ ] vreinterpretq_p64_s16
-   - [ ] vreinterpretq_p64_s32
-   - [ ] vreinterpretq_p64_s64
-   - [ ] vreinterpretq_p64_s8
-   - [ ] vreinterpretq_p64_u16
-   - [ ] vreinterpretq_p64_u32
-   - [ ] vreinterpretq_p64_u64
-   - [ ] vreinterpretq_p64_u8
-   - [ ] vreinterpretq_p8_f32
-   - [ ] vreinterpretq_p8_f64
-   - [ ] vreinterpretq_p8_s16
-   - [ ] vreinterpretq_p8_s32
-   - [ ] vreinterpretq_p8_s64
-   - [ ] vreinterpretq_p8_s8
-   - [ ] vreinterpretq_p8_u16
-   - [ ] vreinterpretq_p8_u32
-   - [ ] vreinterpretq_p8_u64
-   - [ ] vreinterpretq_p8_u8
-   - [x] vreinterpretq_s16_f32
-   - [x] vreinterpretq_s16_f64
-   - [x] vreinterpretq_s16_s32
-   - [x] vreinterpretq_s16_s64
-   - [x] vreinterpretq_s16_s8
-   - [x] vreinterpretq_s16_u16
-   - [x] vreinterpretq_s16_u32
-   - [x] vreinterpretq_s16_u64
-   - [x] vreinterpretq_s16_u8
-   - [x] vreinterpretq_s32_f32
-   - [x] vreinterpretq_s32_f64
-   - [x] vreinterpretq_s32_s16
-   - [x] vreinterpretq_s32_s64
-   - [x] vreinterpretq_s32_s8
-   - [x] vreinterpretq_s32_u16
-   - [x] vreinterpretq_s32_u32
-   - [x] vreinterpretq_s32_u64
-   - [x] vreinterpretq_s32_u8
-   - [x] vreinterpretq_s64_f32
-   - [x] vreinterpretq_s64_f64
-   - [x] vreinterpretq_s64_s16
-   - [x] vreinterpretq_s64_s32
-   - [x] vreinterpretq_s64_s8
-   - [x] vreinterpretq_s64_u16
-   - [x] vreinterpretq_s64_u32
-   - [x] vreinterpretq_s64_u64
-   - [x] vreinterpretq_s64_u8
-   - [x] vreinterpretq_s8_f32
-   - [x] vreinterpretq_s8_f64
-   - [x] vreinterpretq_s8_s16
-   - [x] vreinterpretq_s8_s32
-   - [x] vreinterpretq_s8_s64
-   - [x] vreinterpretq_s8_u16
-   - [x] vreinterpretq_s8_u32
-   - [x] vreinterpretq_s8_u64
-   - [x] vreinterpretq_s8_u8
-   - [x] vreinterpretq_u16_f32
-   - [x] vreinterpretq_u16_f64
-   - [x] vreinterpretq_u16_s16
-   - [x] vreinterpretq_u16_s32
-   - [x] vreinterpretq_u16_s64
-   - [x] vreinterpretq_u16_s8
-   - [x] vreinterpretq_u16_u32
-   - [x] vreinterpretq_u16_u64
-   - [x] vreinterpretq_u16_u8
-   - [x] vreinterpretq_u32_f32
-   - [x] vreinterpretq_u32_f64
-   - [x] vreinterpretq_u32_s16
-   - [x] vreinterpretq_u32_s32
-   - [x] vreinterpretq_u32_s64
-   - [x] vreinterpretq_u32_s8
-   - [x] vreinterpretq_u32_u16
-   - [x] vreinterpretq_u32_u64
-   - [x] vreinterpretq_u32_u8
-   - [x] vreinterpretq_u64_f32
-   - [x] vreinterpretq_u64_f64
-   - [x] vreinterpretq_u64_s16
-   - [x] vreinterpretq_u64_s32
-   - [x] vreinterpretq_u64_s64
-   - [x] vreinterpretq_u64_s8
-   - [x] vreinterpretq_u64_u16
-   - [x] vreinterpretq_u64_u32
-   - [x] vreinterpretq_u64_u8
-   - [x] vreinterpretq_u8_f32
-   - [x] vreinterpretq_u8_f64
-   - [x] vreinterpretq_u8_s16
-   - [x] vreinterpretq_u8_s32
-   - [x] vreinterpretq_u8_s64
-   - [x] vreinterpretq_u8_s8
-   - [x] vreinterpretq_u8_u16
-   - [x] vreinterpretq_u8_u32
-   - [x] vreinterpretq_u8_u64
-   - [x] vreinterpret_s16_f32
-   - [x] vreinterpret_s16_f64
-   - [x] vreinterpret_s16_s32
-   - [x] vreinterpret_s16_s64
-   - [x] vreinterpret_s16_s8
-   - [x] vreinterpret_s16_u16
-   - [x] vreinterpret_s16_u32
-   - [x] vreinterpret_s16_u64
-   - [x] vreinterpret_s16_u8
-   - [x] vreinterpret_s32_f32
-   - [x] vreinterpret_s32_f64
-   - [x] vreinterpret_s32_s16
-   - [x] vreinterpret_s32_s64
-   - [x] vreinterpret_s32_s8
-   - [x] vreinterpret_s32_u16
-   - [x] vreinterpret_s32_u32
-   - [x] vreinterpret_s32_u64
-   - [x] vreinterpret_s32_u8
-   - [x] vreinterpret_s64_f32
-   - [x] vreinterpret_s64_f64
-   - [x] vreinterpret_s64_s16
-   - [x] vreinterpret_s64_s32
-   - [x] vreinterpret_s64_s8
-   - [x] vreinterpret_s64_u16
-   - [x] vreinterpret_s64_u32
-   - [x] vreinterpret_s64_u64
-   - [x] vreinterpret_s64_u8
-   - [x] vreinterpret_s8_f32
-   - [x] vreinterpret_s8_f64
-   - [x] vreinterpret_s8_s16
-   - [x] vreinterpret_s8_s32
-   - [x] vreinterpret_s8_s64
-   - [x] vreinterpret_s8_u16
-   - [x] vreinterpret_s8_u32
-   - [x] vreinterpret_s8_u64
-   - [x] vreinterpret_s8_u8
-   - [x] vreinterpret_u16_f32
-   - [x] vreinterpret_u16_f64
-   - [x] vreinterpret_u16_s16
-   - [x] vreinterpret_u16_s32
-   - [x] vreinterpret_u16_s64
-   - [x] vreinterpret_u16_s8
-   - [x] vreinterpret_u16_u32
-   - [x] vreinterpret_u16_u64
-   - [x] vreinterpret_u16_u8
-   - [x] vreinterpret_u32_f32
-   - [x] vreinterpret_u32_f64
-   - [x] vreinterpret_u32_s16
-   - [x] vreinterpret_u32_s32
-   - [x] vreinterpret_u32_s64
-   - [x] vreinterpret_u32_s8
-   - [x] vreinterpret_u32_u16
-   - [x] vreinterpret_u32_u64
-   - [x] vreinterpret_u32_u8
-   - [x] vreinterpret_u64_f32
-   - [x] vreinterpret_u64_f64
-   - [x] vreinterpret_u64_s16
-   - [x] vreinterpret_u64_s32
-   - [x] vreinterpret_u64_s64
-   - [x] vreinterpret_u64_s8
-   - [x] vreinterpret_u64_u16
-   - [x] vreinterpret_u64_u32
-   - [x] vreinterpret_u64_u8
-   - [x] vreinterpret_u8_f32
-   - [x] vreinterpret_u8_f64
-   - [x] vreinterpret_u8_s16
-   - [x] vreinterpret_u8_s32
-   - [x] vreinterpret_u8_s64
-   - [x] vreinterpret_u8_s8
-   - [x] vreinterpret_u8_u16
-   - [x] vreinterpret_u8_u32
-   - [x] vreinterpret_u8_u64
- - [x] [rev16](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vrev16)
- - [x] [rev32](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vrev32)
- - [x] [rev64](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vrev64)
- - [x] [rhadd](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vrhadd)
- - [ ] [rnd32x](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vrnd32x)
- - [ ] [rnd32z](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vrnd32z)
- - [ ] [rnd64x](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vrnd64x)
- - [ ] [rnd64z](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vrnd64z)
- - [ ] [rnda](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vrnda)
- - [x] [rndi](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vrndi)
- - [x] [rndm](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vrndm)
- - [ ] [rndn](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vrndn)
-   - [x] vrndn_f32
-   - [x] vrndn_f64
-   - [x] vrndnq_f32
-   - [x] vrndnq_f64
-   - [ ] vrndns_f32
- - [x] [rndp](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vrndp)
- - [x] [rnd](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vrnd)
- - [ ] [rndx](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vrndx)
- - [ ] [rshl](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vrshl)
-   - [x] vrshlq_s16
-   - [x] vrshlq_s32
-   - [x] vrshlq_s64
-   - [x] vrshlq_s8
-   - [x] vrshlq_u16
-   - [x] vrshlq_u32
-   - [x] vrshlq_u64
-   - [x] vrshlq_u8
-   - [x] vrshl_s16
-   - [x] vrshl_s32
-   - [x] vrshl_s64
-   - [x] vrshl_s8
-   - [x] vrshl_u16
-   - [x] vrshl_u32
-   - [x] vrshl_u64
-   - [x] vrshl_u8
-   - [ ] vrshld_s64
-   - [ ] vrshld_u64
- - [ ] [rshrn_high_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vrshrn_high_n)
- - [x] [rshrn_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vrshrn_n)
- - [x] [rshr_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vrshr_n)
- - [ ] [rsqrte](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vrsqrte)
-   - [x] vrsqrte_f32
-   - [ ] vrsqrte_f64
-   - [x] vrsqrteq_f32
-   - [ ] vrsqrteq_f64
-   - [ ] vrsqrteq_u32
-   - [ ] vrsqrte_u32
-   - [ ] vrsqrted_f64
-   - [ ] vrsqrtes_f32
- - [ ] [rsqrts](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vrsqrts)
-   - [x] vrsqrtsq_f32
-   - [ ] vrsqrtsq_f64
-   - [ ] vrsqrtsd_f64
-   - [x] vrsqrts_f32
-   - [ ] vrsqrts_f64
-   - [ ] vrsqrtss_f32
- - [x] [rsra_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vrsra_n)
- - [ ] [rsubhn_high](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vrsubhn_high)
- - [ ] [rsubhn](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vrsubhn)
- - [x] [set_lane](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vset_lane)
- - [ ] [sha1c](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vsha1c)
- - [ ] [sha1m](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vsha1m)
- - [ ] [sha1p](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vsha1p)
- - [ ] [sha1su0](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vsha1su0)
- - [ ] [sha1su1](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vsha1su1)
- - [ ] [sha256h2](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vsha256h2)
- - [ ] [sha256h](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vsha256h)
- - [ ] [sha256su0](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vsha256su0)
- - [ ] [sha256su1](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vsha256su1)
- - [ ] [sha512h2](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vsha512h2)
- - [ ] [sha512h](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vsha512h)
- - [ ] [sha512su0](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vsha512su0)
- - [ ] [sha512su1](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vsha512su1)
- - [ ] [shll_high_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vshll_high_n)
- - [x] [shll_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vshll_n)
- - [x] [shl_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vshl_n)
- - [ ] [shl](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vshl)
-   - [x] vshlq_s16
-   - [x] vshlq_s32
-   - [x] vshlq_s64
-   - [x] vshlq_s8
-   - [x] vshlq_u16
-   - [x] vshlq_u32
-   - [x] vshlq_u64
-   - [x] vshlq_u8
-   - [x] vshl_s16
-   - [x] vshl_s32
-   - [x] vshl_s64
-   - [x] vshl_s8
-   - [x] vshl_u16
-   - [x] vshl_u32
-   - [x] vshl_u64
-   - [x] vshl_u8
-   - [ ] vshld_n_s64
-   - [ ] vshld_n_u64
-   - [ ] vshld_s64
-   - [ ] vshld_u64
- - [ ] [shrn_high_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vshrn_high_n)
- - [x] [shrn_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vshrn_n)
- - [x] [shr_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vshr_n)
- - [ ] [sli_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vsli_n)
- - [ ] [sm3partw1](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vsm3partw1)
- - [ ] [sm3partw2](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vsm3partw2)
- - [ ] [sm3ss1](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vsm3ss1)
- - [ ] [sm3tt1a](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vsm3tt1a)
- - [ ] [sm3tt1b](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vsm3tt1b)
- - [ ] [sm3tt2a](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vsm3tt2a)
- - [ ] [sm3tt2b](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vsm3tt2b)
- - [ ] [sm4ekey](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vsm4ekey)
- - [ ] [sm4e](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vsm4e)
- - [x] [sqadd](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vsqadd)
- - [ ] [sqrt](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vsqrt)
- - [x] [sra_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vsra_n)
- - [x] [sri_n](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vsri_n)
- - [ ] [st1](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vst1)
-   - [x] vst1_f32
-   - [ ] vst1_f32_x2
-   - [ ] vst1_f32_x3
-   - [ ] vst1_f32_x4
-   - [x] vst1_f64
-   - [ ] vst1_f64_x2
-   - [ ] vst1_f64_x3
-   - [ ] vst1_f64_x4
-   - [x] vst1q_f32
-   - [ ] vst1q_f32_x2
-   - [ ] vst1q_f32_x3
-   - [ ] vst1q_f32_x4
-   - [x] vst1q_f64
-   - [ ] vst1q_f64_x2
-   - [ ] vst1q_f64_x3
-   - [ ] vst1q_f64_x4
-   - [x] vst1q_s16
-   - [ ] vst1q_s16_x2
-   - [ ] vst1q_s16_x3
-   - [ ] vst1q_s16_x4
-   - [x] vst1q_s32
-   - [ ] vst1q_s32_x2
-   - [ ] vst1q_s32_x3
-   - [ ] vst1q_s32_x4
-   - [x] vst1q_s64
-   - [ ] vst1q_s64_x2
-   - [ ] vst1q_s64_x3
-   - [ ] vst1q_s64_x4
-   - [x] vst1q_s8
-   - [ ] vst1q_s8_x2
-   - [ ] vst1q_s8_x3
-   - [ ] vst1q_s8_x4
-   - [x] vst1q_u16
-   - [ ] vst1q_u16_x2
-   - [ ] vst1q_u16_x3
-   - [ ] vst1q_u16_x4
-   - [x] vst1q_u32
-   - [ ] vst1q_u32_x2
-   - [ ] vst1q_u32_x3
-   - [ ] vst1q_u32_x4
-   - [x] vst1q_u64
-   - [ ] vst1q_u64_x2
-   - [ ] vst1q_u64_x3
-   - [ ] vst1q_u64_x4
-   - [x] vst1q_u8
-   - [ ] vst1q_u8_x2
-   - [ ] vst1q_u8_x3
-   - [ ] vst1q_u8_x4
-   - [x] vst1_s16
-   - [ ] vst1_s16_x2
-   - [ ] vst1_s16_x3
-   - [ ] vst1_s16_x4
-   - [x] vst1_s32
-   - [ ] vst1_s32_x2
-   - [ ] vst1_s32_x3
-   - [ ] vst1_s32_x4
-   - [x] vst1_s64
-   - [ ] vst1_s64_x2
-   - [ ] vst1_s64_x3
-   - [ ] vst1_s64_x4
-   - [x] vst1_s8
-   - [ ] vst1_s8_x2
-   - [ ] vst1_s8_x3
-   - [ ] vst1_s8_x4
-   - [x] vst1_u16
-   - [ ] vst1_u16_x2
-   - [ ] vst1_u16_x3
-   - [ ] vst1_u16_x4
-   - [x] vst1_u32
-   - [ ] vst1_u32_x2
-   - [ ] vst1_u32_x3
-   - [ ] vst1_u32_x4
-   - [x] vst1_u64
-   - [ ] vst1_u64_x2
-   - [ ] vst1_u64_x3
-   - [ ] vst1_u64_x4
-   - [x] vst1_u8
-   - [ ] vst1_u8_x2
-   - [ ] vst1_u8_x3
-   - [ ] vst1_u8_x4
- - [x] [st1_lane](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vst1_lane)
- - [ ] [st2](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vst2)
-   - [x] vst2_f32
-   - [ ] vst2_f64
-   - [x] vst2q_f32
-   - [ ] vst2q_f64
-   - [x] vst2q_s16
-   - [x] vst2q_s32
-   - [ ] vst2q_s64
-   - [x] vst2q_s8
-   - [x] vst2q_u16
-   - [x] vst2q_u32
-   - [ ] vst2q_u64
-   - [x] vst2q_u8
-   - [x] vst2_s16
-   - [x] vst2_s32
-   - [ ] vst2_s64
-   - [x] vst2_s8
-   - [x] vst2_u16
-   - [x] vst2_u32
-   - [ ] vst2_u64
-   - [x] vst2_u8
- - [ ] [st2_lane](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vst2_lane)
-   - [ ] vst2_lane_f32
-   - [ ] vst2_lane_f64
-   - [x] vst2_lane_s16
-   - [x] vst2_lane_s32
-   - [ ] vst2_lane_s64
-   - [x] vst2_lane_s8
-   - [x] vst2_lane_u16
-   - [x] vst2_lane_u32
-   - [ ] vst2_lane_u64
-   - [x] vst2_lane_u8
-   - [ ] vst2q_lane_f32
-   - [ ] vst2q_lane_f64
-   - [ ] vst2q_lane_s16
-   - [ ] vst2q_lane_s32
-   - [ ] vst2q_lane_s64
-   - [ ] vst2q_lane_s8
-   - [ ] vst2q_lane_u16
-   - [ ] vst2q_lane_u32
-   - [ ] vst2q_lane_u64
-   - [ ] vst2q_lane_u8
- - [x] [st3](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vst3)
- - [ ] [st3_lane](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vst3_lane)
-   - [ ] vst3_lane_f32
-   - [ ] vst3_lane_f64
-   - [x] vst3_lane_s16
-   - [x] vst3_lane_s32
-   - [ ] vst3_lane_s64
-   - [x] vst3_lane_s8
-   - [x] vst3_lane_u16
-   - [x] vst3_lane_u32
-   - [ ] vst3_lane_u64
-   - [x] vst3_lane_u8
-   - [ ] vst3q_lane_f32
-   - [ ] vst3q_lane_f64
-   - [ ] vst3q_lane_s16
-   - [ ] vst3q_lane_s32
-   - [ ] vst3q_lane_s64
-   - [ ] vst3q_lane_s8
-   - [ ] vst3q_lane_u16
-   - [ ] vst3q_lane_u32
-   - [ ] vst3q_lane_u64
-   - [ ] vst3q_lane_u8
- - [x] [st4](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vst4)
- - [ ] [st4_lane](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vst4_lane)
-   - [ ] vst4_lane_f32
-   - [ ] vst4_lane_f64
-   - [x] vst4_lane_s16
-   - [x] vst4_lane_s32
-   - [ ] vst4_lane_s64
-   - [x] vst4_lane_s8
-   - [x] vst4_lane_u16
-   - [x] vst4_lane_u32
-   - [ ] vst4_lane_u64
-   - [x] vst4_lane_u8
-   - [ ] vst4q_lane_f32
-   - [ ] vst4q_lane_f64
-   - [ ] vst4q_lane_s16
-   - [ ] vst4q_lane_s32
-   - [ ] vst4q_lane_s64
-   - [ ] vst4q_lane_s8
-   - [ ] vst4q_lane_u16
-   - [ ] vst4q_lane_u32
-   - [ ] vst4q_lane_u64
-   - [ ] vst4q_lane_u8
- - [ ] [subhn_high](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vsubhn_high)
- - [x] [subhn](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vsubhn)
- - [ ] [subl_high](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vsubl_high)
- - [x] [subl](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vsubl)
- - [ ] [sub](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vsub)
-   - [x] vsubq_f32
-   - [x] vsubq_f64
-   - [x] vsubq_s16
-   - [x] vsubq_s32
-   - [x] vsubq_s64
-   - [x] vsubq_s8
-   - [x] vsubq_u16
-   - [x] vsubq_u32
-   - [x] vsubq_u64
-   - [x] vsubq_u8
-   - [ ] vsubd_s64
-   - [ ] vsubd_u64
-   - [x] vsub_f32
-   - [x] vsub_f64
-   - [x] vsub_s16
-   - [x] vsub_s32
-   - [x] vsub_s64
-   - [x] vsub_s8
-   - [x] vsub_u16
-   - [x] vsub_u32
-   - [x] vsub_u64
-   - [x] vsub_u8
- - [x] [subw_high](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vsubw_high)
- - [x] [subw](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vsubw)
- - [ ] [sudot_lane](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vsudot_lane)
- - [x] [tbl1](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vtbl1)
- - [x] [tbl2](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vtbl2)
- - [x] [tbl3](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vtbl3)
- - [x] [tbl4](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vtbl4)
- - [x] [tbx1](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vtbx1)
- - [x] [tbx2](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vtbx2)
- - [x] [tbx3](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vtbx3)
- - [x] [tbx4](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vtbx4)
- - [x] [trn1](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vtrn1)
- - [x] [trn2](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vtrn2)
- - [x] [trn](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vtrn)
- - [x] [tst](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vtst)
- - [x] [uqadd](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vuqadd)
- - [ ] [usdot_lane](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vusdot_lane)
- - [ ] [usdot](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vusdot)
- - [ ] [usmmla](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vusmmla)
- - [x] [uzp1](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vuzp1)
- - [x] [uzp2](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vuzp2)
- - [x] [uzp](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vuzp)
- - [x] [xar](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vxar)
- - [x] [zip1](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vzip1)
- - [x] [zip2](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vzip2)
- - [x] [zip](https://developer.arm.com/architectures/instruction-sets/simd-isas/neon/intrinsics?search=vzip)
+# Summary
 
-146/300 (48%) of function families are fully implemented. Another 37 (12%) are partially implemented.
+TL;DR: SIMDe currently implements 3336 out of 6670 (50.01%) NEON functions.  If you don't count 16-bit floats and poly types, it's 3336 / 4969 (67.14%).
 
-Overall, 2177/3330 (65%) of functions are implemented.
+SIMDe does not currently support 16-bit floating point types or polynomial types, so they are excluded from this list (though separate totals are often provided to be transparent about what was skipped.  We do plan to support these types in the future.
 
-Note: this list does not include 961 functions for poly types or 16-bit floats; SIMDe doesn't support those yet.
+# Functions by Architecture
+
+| Architecture | Functions | Functions with supported types | Implemented by SIMDe | Percent implemented |
+| --: | --: | --: | --: |
+|        ARMv7 |      3411 |                           2807 |                 2281 |              81.26% |
+|        ARMv8 |      4290 |                           2980 |                 2329 |              78.15% |
+|      AArch64 |      6670 |                           4969 |                 3336 |              67.14% |
+
+# Families
+
+There are 390 function families in NEON (based on how we define families).  Discounting functions which use unsupported types, SIMDe has completely implemented 221 (56.67%) and partially implemented another 38 (9.74%).
+
+## Inomplete Families
+
+There are currently 38 incomplete families.
+
+### cvt
+
+SIMDe currently implements 32 of 36 (88.89%) functions, not counting 20 which require currently unsupported types.
+
+ * [x] vcvt_s32_f32
+ * [x] vcvt_u32_f32
+ * [x] vcvt_s64_f64
+ * [x] vcvt_u64_f64
+ * [x] vcvt_f32_s32
+ * [x] vcvt_f32_u32
+ * [x] vcvt_f64_s64
+ * [x] vcvt_f64_u64
+ * [ ] vcvt_f32_f64
+ * [ ] vcvt_f64_f32
+ * [x] vcvt_s32_f32
+ * [x] vcvtq_s32_f32
+ * [x] vcvt_u32_f32
+ * [x] vcvtq_u32_f32
+ * [x] vcvts_s32_f32
+ * [x] vcvts_u32_f32
+ * [x] vcvt_s64_f64
+ * [x] vcvtq_s64_f64
+ * [x] vcvt_u64_f64
+ * [x] vcvtq_u64_f64
+ * [x] vcvtd_s64_f64
+ * [x] vcvtd_u64_f64
+ * [x] vcvt_f32_s32
+ * [x] vcvtq_f32_s32
+ * [x] vcvt_f32_u32
+ * [x] vcvtq_f32_u32
+ * [x] vcvts_f32_s32
+ * [x] vcvts_f32_u32
+ * [x] vcvt_f64_s64
+ * [x] vcvtq_f64_s64
+ * [x] vcvt_f64_u64
+ * [x] vcvtq_f64_u64
+ * [x] vcvtd_f64_s64
+ * [x] vcvtd_f64_u64
+ * [ ] vcvt_f32_f64
+ * [ ] vcvt_f64_f32
+
+### dup_lane
+
+SIMDe currently implements 60 of 72 (83.33%) functions, not counting 30 which require currently unsupported types.
+
+ * [x] vdup_lane_s8
+ * [x] vdup_lane_s16
+ * [x] vdup_lane_s32
+ * [x] vdup_lane_s64
+ * [x] vdup_lane_u8
+ * [x] vdup_lane_u16
+ * [x] vdup_lane_u32
+ * [x] vdup_lane_u64
+ * [x] vdup_lane_f32
+ * [x] vdup_lane_f64
+ * [x] vdup_laneq_s8
+ * [x] vdup_laneq_s16
+ * [x] vdup_laneq_s32
+ * [x] vdup_laneq_s64
+ * [x] vdup_laneq_u8
+ * [x] vdup_laneq_u16
+ * [x] vdup_laneq_u32
+ * [x] vdup_laneq_u64
+ * [x] vdup_laneq_f32
+ * [x] vdup_laneq_f64
+ * [x] vdup_lane_s8
+ * [x] vdupq_lane_s8
+ * [x] vdup_lane_s16
+ * [x] vdupq_lane_s16
+ * [x] vdup_lane_s32
+ * [x] vdupq_lane_s32
+ * [x] vdup_lane_s64
+ * [x] vdupq_lane_s64
+ * [x] vdup_lane_u8
+ * [x] vdupq_lane_u8
+ * [x] vdup_lane_u16
+ * [x] vdupq_lane_u16
+ * [x] vdup_lane_u32
+ * [x] vdupq_lane_u32
+ * [x] vdup_lane_u64
+ * [x] vdupq_lane_u64
+ * [x] vdup_lane_f32
+ * [x] vdupq_lane_f32
+ * [x] vdup_lane_f64
+ * [x] vdupq_lane_f64
+ * [x] vdup_laneq_s8
+ * [x] vdupq_laneq_s8
+ * [x] vdup_laneq_s16
+ * [x] vdupq_laneq_s16
+ * [x] vdup_laneq_s32
+ * [x] vdupq_laneq_s32
+ * [x] vdup_laneq_s64
+ * [x] vdupq_laneq_s64
+ * [x] vdup_laneq_u8
+ * [x] vdupq_laneq_u8
+ * [x] vdup_laneq_u16
+ * [x] vdupq_laneq_u16
+ * [x] vdup_laneq_u32
+ * [x] vdupq_laneq_u32
+ * [x] vdup_laneq_u64
+ * [x] vdupq_laneq_u64
+ * [x] vdup_laneq_f32
+ * [x] vdupq_laneq_f32
+ * [x] vdup_laneq_f64
+ * [x] vdupq_laneq_f64
+ * [ ] vdups_lane_s32
+ * [ ] vdupd_lane_s64
+ * [ ] vdups_lane_u32
+ * [ ] vdupd_lane_u64
+ * [ ] vdups_lane_f32
+ * [ ] vdupd_lane_f64
+ * [ ] vdups_laneq_s32
+ * [ ] vdupd_laneq_s64
+ * [ ] vdups_laneq_u32
+ * [ ] vdupd_laneq_u64
+ * [ ] vdups_laneq_f32
+ * [ ] vdupd_laneq_f64
+
+### fma_lane
+
+SIMDe currently implements 14 of 16 (87.50%) functions, not counting 6 which require currently unsupported types.
+
+ * [x] vfma_lane_f32
+ * [x] vfma_lane_f64
+ * [x] vfma_laneq_f32
+ * [x] vfma_laneq_f64
+ * [x] vfma_lane_f32
+ * [ ] vfmaq_lane_f32
+ * [x] vfma_lane_f64
+ * [ ] vfmaq_lane_f64
+ * [x] vfmas_lane_f32
+ * [x] vfmad_lane_f64
+ * [x] vfma_laneq_f32
+ * [x] vfmaq_laneq_f32
+ * [x] vfma_laneq_f64
+ * [x] vfmaq_laneq_f64
+ * [x] vfmas_laneq_f32
+ * [x] vfmad_laneq_f64
+
+### ld1_dup
+
+SIMDe currently implements 27 of 30 (90.00%) functions, not counting 15 which require currently unsupported types.
+
+ * [x] vld1_dup_s8
+ * [x] vld1_dup_s16
+ * [x] vld1_dup_s32
+ * [x] vld1_dup_s64
+ * [x] vld1_dup_u8
+ * [x] vld1_dup_u16
+ * [x] vld1_dup_u32
+ * [x] vld1_dup_u64
+ * [x] vld1_dup_f32
+ * [ ] vld1_dup_f64
+ * [x] vld1_dup_s8
+ * [x] vld1q_dup_s8
+ * [x] vld1_dup_s16
+ * [x] vld1q_dup_s16
+ * [x] vld1_dup_s32
+ * [x] vld1q_dup_s32
+ * [x] vld1_dup_s64
+ * [x] vld1q_dup_s64
+ * [x] vld1_dup_u8
+ * [x] vld1q_dup_u8
+ * [x] vld1_dup_u16
+ * [x] vld1q_dup_u16
+ * [x] vld1_dup_u32
+ * [x] vld1q_dup_u32
+ * [x] vld1_dup_u64
+ * [x] vld1q_dup_u64
+ * [x] vld1_dup_f32
+ * [x] vld1q_dup_f32
+ * [ ] vld1_dup_f64
+ * [ ] vld1q_dup_f64
+
+### ld1_lane
+
+SIMDe currently implements 18 of 30 (60.00%) functions, not counting 15 which require currently unsupported types.
+
+ * [x] vld1_lane_s8
+ * [x] vld1_lane_s16
+ * [x] vld1_lane_s32
+ * [ ] vld1_lane_s64
+ * [x] vld1_lane_u8
+ * [x] vld1_lane_u16
+ * [x] vld1_lane_u32
+ * [ ] vld1_lane_u64
+ * [ ] vld1_lane_f32
+ * [ ] vld1_lane_f64
+ * [x] vld1_lane_s8
+ * [x] vld1q_lane_s8
+ * [x] vld1_lane_s16
+ * [x] vld1q_lane_s16
+ * [x] vld1_lane_s32
+ * [x] vld1q_lane_s32
+ * [ ] vld1_lane_s64
+ * [ ] vld1q_lane_s64
+ * [x] vld1_lane_u8
+ * [x] vld1q_lane_u8
+ * [x] vld1_lane_u16
+ * [x] vld1q_lane_u16
+ * [x] vld1_lane_u32
+ * [x] vld1q_lane_u32
+ * [ ] vld1_lane_u64
+ * [ ] vld1q_lane_u64
+ * [ ] vld1_lane_f32
+ * [ ] vld1q_lane_f32
+ * [ ] vld1_lane_f64
+ * [ ] vld1q_lane_f64
+
+### ld2
+
+SIMDe currently implements 10 of 30 (33.33%) functions, not counting 15 which require currently unsupported types.
+
+ * [ ] vld2_s8
+ * [ ] vld2_s16
+ * [ ] vld2_s32
+ * [x] vld2_u8
+ * [x] vld2_u16
+ * [x] vld2_u32
+ * [ ] vld2_f32
+ * [ ] vld2_s64
+ * [ ] vld2_u64
+ * [ ] vld2_f64
+ * [ ] vld2_s8
+ * [ ] vld2q_s8
+ * [ ] vld2_s16
+ * [ ] vld2q_s16
+ * [ ] vld2_s32
+ * [ ] vld2q_s32
+ * [x] vld2_u8
+ * [x] vld2q_u8
+ * [x] vld2_u16
+ * [x] vld2q_u16
+ * [x] vld2_u32
+ * [x] vld2q_u32
+ * [ ] vld2_f32
+ * [x] vld2q_f32
+ * [ ] vld2_s64
+ * [ ] vld2_u64
+ * [ ] vld2q_s64
+ * [ ] vld2q_u64
+ * [ ] vld2_f64
+ * [ ] vld2q_f64
+
+### ld4_lane
+
+SIMDe currently implements 12 of 30 (40.00%) functions, not counting 15 which require currently unsupported types.
+
+ * [x] vld4_lane_s16
+ * [x] vld4_lane_s32
+ * [x] vld4_lane_u16
+ * [x] vld4_lane_u32
+ * [ ] vld4_lane_f32
+ * [x] vld4_lane_s8
+ * [x] vld4_lane_u8
+ * [ ] vld4_lane_s64
+ * [ ] vld4_lane_u64
+ * [ ] vld4_lane_f64
+ * [x] vld4_lane_s16
+ * [ ] vld4q_lane_s16
+ * [x] vld4_lane_s32
+ * [ ] vld4q_lane_s32
+ * [x] vld4_lane_u16
+ * [ ] vld4q_lane_u16
+ * [x] vld4_lane_u32
+ * [ ] vld4q_lane_u32
+ * [ ] vld4_lane_f32
+ * [ ] vld4q_lane_f32
+ * [x] vld4_lane_s8
+ * [x] vld4_lane_u8
+ * [ ] vld4q_lane_s8
+ * [ ] vld4q_lane_u8
+ * [ ] vld4_lane_s64
+ * [ ] vld4q_lane_s64
+ * [ ] vld4_lane_u64
+ * [ ] vld4q_lane_u64
+ * [ ] vld4_lane_f64
+ * [ ] vld4q_lane_f64
+
+### mul_lane
+
+SIMDe currently implements 32 of 40 (80.00%) functions, not counting 6 which require currently unsupported types.
+
+ * [x] vmul_lane_s16
+ * [x] vmul_lane_s32
+ * [x] vmul_lane_u16
+ * [x] vmul_lane_u32
+ * [x] vmul_lane_f32
+ * [x] vmul_lane_f64
+ * [ ] vmul_laneq_s16
+ * [ ] vmul_laneq_s32
+ * [ ] vmul_laneq_u16
+ * [ ] vmul_laneq_u32
+ * [x] vmul_laneq_f32
+ * [x] vmul_laneq_f64
+ * [x] vmul_lane_s16
+ * [x] vmulq_lane_s16
+ * [x] vmul_lane_s32
+ * [x] vmulq_lane_s32
+ * [x] vmul_lane_u16
+ * [x] vmulq_lane_u16
+ * [x] vmul_lane_u32
+ * [x] vmulq_lane_u32
+ * [x] vmul_lane_f32
+ * [x] vmulq_lane_f32
+ * [x] vmul_lane_f64
+ * [x] vmulq_lane_f64
+ * [x] vmuls_lane_f32
+ * [x] vmuld_lane_f64
+ * [ ] vmul_laneq_s16
+ * [x] vmulq_laneq_s16
+ * [ ] vmul_laneq_s32
+ * [x] vmulq_laneq_s32
+ * [ ] vmul_laneq_u16
+ * [x] vmulq_laneq_u16
+ * [ ] vmul_laneq_u32
+ * [x] vmulq_laneq_u32
+ * [x] vmul_laneq_f32
+ * [x] vmulq_laneq_f32
+ * [x] vmul_laneq_f64
+ * [x] vmulq_laneq_f64
+ * [x] vmuls_laneq_f32
+ * [x] vmuld_laneq_f64
+
+### neg
+
+SIMDe currently implements 18 of 19 (94.74%) functions, not counting 3 which require currently unsupported types.
+
+ * [x] vneg_s8
+ * [x] vneg_s16
+ * [x] vneg_s32
+ * [x] vneg_f32
+ * [x] vneg_s64
+ * [x] vneg_f64
+ * [x] vneg_s8
+ * [x] vnegq_s8
+ * [x] vneg_s16
+ * [x] vnegq_s16
+ * [x] vneg_s32
+ * [x] vnegq_s32
+ * [x] vneg_f32
+ * [x] vnegq_f32
+ * [x] vneg_s64
+ * [ ] vnegd_s64
+ * [x] vnegq_s64
+ * [x] vneg_f64
+ * [x] vnegq_f64
+
+### padd
+
+SIMDe currently implements 24 of 28 (85.71%) functions, not counting 3 which require currently unsupported types.
+
+ * [x] vpadd_s8
+ * [x] vpadd_s16
+ * [x] vpadd_s32
+ * [x] vpadd_u8
+ * [x] vpadd_u16
+ * [x] vpadd_u32
+ * [x] vpadd_f32
+ * [x] vpadd_s8
+ * [x] vpadd_s16
+ * [x] vpadd_s32
+ * [x] vpadd_u8
+ * [x] vpadd_u16
+ * [x] vpadd_u32
+ * [x] vpadd_f32
+ * [x] vpaddq_s8
+ * [x] vpaddq_s16
+ * [x] vpaddq_s32
+ * [x] vpaddq_s64
+ * [x] vpaddq_u8
+ * [x] vpaddq_u16
+ * [x] vpaddq_u32
+ * [x] vpaddq_u64
+ * [x] vpaddq_f32
+ * [x] vpaddq_f64
+ * [ ] vpaddd_s64
+ * [ ] vpaddd_u64
+ * [ ] vpadds_f32
+ * [ ] vpaddd_f64
+
+### pmax
+
+SIMDe currently implements 22 of 25 (88.00%) functions, not counting 3 which require currently unsupported types.
+
+ * [x] vpmax_s8
+ * [x] vpmax_s16
+ * [x] vpmax_s32
+ * [x] vpmax_u8
+ * [x] vpmax_u16
+ * [x] vpmax_u32
+ * [x] vpmax_f32
+ * [ ] vpmaxqd_f64
+ * [x] vpmax_s8
+ * [x] vpmax_s16
+ * [x] vpmax_s32
+ * [x] vpmax_u8
+ * [x] vpmax_u16
+ * [x] vpmax_u32
+ * [x] vpmax_f32
+ * [x] vpmaxq_s8
+ * [x] vpmaxq_s16
+ * [x] vpmaxq_s32
+ * [x] vpmaxq_u8
+ * [x] vpmaxq_u16
+ * [x] vpmaxq_u32
+ * [x] vpmaxq_f32
+ * [x] vpmaxq_f64
+ * [ ] vpmaxs_f32
+ * [ ] vpmaxqd_f64
+
+### pmin
+
+SIMDe currently implements 22 of 25 (88.00%) functions, not counting 3 which require currently unsupported types.
+
+ * [x] vpmin_s8
+ * [x] vpmin_s16
+ * [x] vpmin_s32
+ * [x] vpmin_u8
+ * [x] vpmin_u16
+ * [x] vpmin_u32
+ * [x] vpmin_f32
+ * [ ] vpminqd_f64
+ * [x] vpmin_s8
+ * [x] vpmin_s16
+ * [x] vpmin_s32
+ * [x] vpmin_u8
+ * [x] vpmin_u16
+ * [x] vpmin_u32
+ * [x] vpmin_f32
+ * [x] vpminq_s8
+ * [x] vpminq_s16
+ * [x] vpminq_s32
+ * [x] vpminq_u8
+ * [x] vpminq_u16
+ * [x] vpminq_u32
+ * [x] vpminq_f32
+ * [x] vpminq_f64
+ * [ ] vpmins_f32
+ * [ ] vpminqd_f64
+
+### qdmulh
+
+SIMDe currently implements 6 of 7 (85.71%) functions.
+
+ * [x] vqdmulh_s16
+ * [x] vqdmulh_s32
+ * [x] vqdmulh_s16
+ * [x] vqdmulhq_s16
+ * [x] vqdmulh_s32
+ * [x] vqdmulhq_s32
+ * [ ] vqdmulhs_s32
+
+### qdmulh_lane
+
+SIMDe currently implements 6 of 14 (42.86%) functions.
+
+ * [x] vqdmulh_lane_s16
+ * [x] vqdmulh_lane_s32
+ * [ ] vqdmulh_laneq_s16
+ * [ ] vqdmulh_laneq_s32
+ * [x] vqdmulh_lane_s16
+ * [x] vqdmulhq_lane_s16
+ * [x] vqdmulh_lane_s32
+ * [x] vqdmulhq_lane_s32
+ * [ ] vqdmulhs_lane_s32
+ * [ ] vqdmulh_laneq_s16
+ * [ ] vqdmulhq_laneq_s16
+ * [ ] vqdmulh_laneq_s32
+ * [ ] vqdmulhq_laneq_s32
+ * [ ] vqdmulhs_laneq_s32
+
+### qrdmulh_lane
+
+SIMDe currently implements 12 of 14 (85.71%) functions.
+
+ * [x] vqrdmulh_lane_s16
+ * [x] vqrdmulh_lane_s32
+ * [x] vqrdmulh_laneq_s16
+ * [x] vqrdmulh_laneq_s32
+ * [x] vqrdmulh_lane_s16
+ * [x] vqrdmulhq_lane_s16
+ * [x] vqrdmulh_lane_s32
+ * [x] vqrdmulhq_lane_s32
+ * [ ] vqrdmulhs_lane_s32
+ * [x] vqrdmulh_laneq_s16
+ * [x] vqrdmulhq_laneq_s16
+ * [x] vqrdmulh_laneq_s32
+ * [x] vqrdmulhq_laneq_s32
+ * [ ] vqrdmulhs_laneq_s32
+
+### qrshrn_n
+
+SIMDe currently implements 12 of 16 (75.00%) functions.
+
+ * [x] vqrshrn_n_s16
+ * [x] vqrshrn_n_s32
+ * [x] vqrshrn_n_s64
+ * [x] vqrshrn_n_u16
+ * [x] vqrshrn_n_u32
+ * [x] vqrshrn_n_u64
+ * [x] vqrshrn_n_s16
+ * [x] vqrshrn_n_s32
+ * [x] vqrshrn_n_s64
+ * [x] vqrshrn_n_u16
+ * [x] vqrshrn_n_u32
+ * [x] vqrshrn_n_u64
+ * [ ] vqrshrns_n_s32
+ * [ ] vqrshrnd_n_s64
+ * [ ] vqrshrns_n_u32
+ * [ ] vqrshrnd_n_u64
+
+### qrshrun_n
+
+SIMDe currently implements 6 of 8 (75.00%) functions.
+
+ * [x] vqrshrun_n_s16
+ * [x] vqrshrun_n_s32
+ * [x] vqrshrun_n_s64
+ * [x] vqrshrun_n_s16
+ * [x] vqrshrun_n_s32
+ * [x] vqrshrun_n_s64
+ * [ ] vqrshruns_n_s32
+ * [ ] vqrshrund_n_s64
+
+### qshlu_n
+
+SIMDe currently implements 12 of 15 (80.00%) functions.
+
+ * [x] vqshlu_n_s8
+ * [x] vqshlu_n_s16
+ * [x] vqshlu_n_s32
+ * [x] vqshlu_n_s64
+ * [x] vqshlu_n_s8
+ * [x] vqshluq_n_s8
+ * [x] vqshlu_n_s16
+ * [x] vqshluq_n_s16
+ * [x] vqshlu_n_s32
+ * [x] vqshluq_n_s32
+ * [x] vqshlu_n_s64
+ * [x] vqshluq_n_s64
+ * [ ] vqshlub_n_s8
+ * [ ] vqshlus_n_s32
+ * [ ] vqshlud_n_s64
+
+### qshrn_n
+
+SIMDe currently implements 12 of 16 (75.00%) functions.
+
+ * [x] vqshrn_n_s16
+ * [x] vqshrn_n_s32
+ * [x] vqshrn_n_s64
+ * [x] vqshrn_n_u16
+ * [x] vqshrn_n_u32
+ * [x] vqshrn_n_u64
+ * [x] vqshrn_n_s16
+ * [x] vqshrn_n_s32
+ * [x] vqshrn_n_s64
+ * [x] vqshrn_n_u16
+ * [x] vqshrn_n_u32
+ * [x] vqshrn_n_u64
+ * [ ] vqshrns_n_s32
+ * [ ] vqshrnd_n_s64
+ * [ ] vqshrns_n_u32
+ * [ ] vqshrnd_n_u64
+
+### qshrun_n
+
+SIMDe currently implements 6 of 8 (75.00%) functions.
+
+ * [x] vqshrun_n_s16
+ * [x] vqshrun_n_s32
+ * [x] vqshrun_n_s64
+ * [x] vqshrun_n_s16
+ * [x] vqshrun_n_s32
+ * [x] vqshrun_n_s64
+ * [ ] vqshruns_n_s32
+ * [ ] vqshrund_n_s64
+
+### recpe
+
+SIMDe currently implements 3 of 11 (27.27%) functions, not counting 3 which require currently unsupported types.
+
+ * [ ] vrecpe_u32
+ * [x] vrecpe_f32
+ * [ ] vrecpe_f64
+ * [ ] vrecpe_u32
+ * [ ] vrecpeq_u32
+ * [x] vrecpe_f32
+ * [x] vrecpeq_f32
+ * [ ] vrecpe_f64
+ * [ ] vrecpeq_f64
+ * [ ] vrecpes_f32
+ * [ ] vrecped_f64
+
+### recps
+
+SIMDe currently implements 2 of 7 (28.57%) functions, not counting 3 which require currently unsupported types.
+
+ * [ ] vrecps_f64
+ * [x] vrecps_f32
+ * [x] vrecpsq_f32
+ * [ ] vrecps_f64
+ * [ ] vrecpsq_f64
+ * [ ] vrecpss_f32
+ * [ ] vrecpsd_f64
+
+### rndn
+
+SIMDe currently implements 6 of 7 (85.71%) functions, not counting 3 which require currently unsupported types.
+
+ * [x] vrndn_f32
+ * [x] vrndn_f64
+ * [x] vrndn_f32
+ * [x] vrndnq_f32
+ * [x] vrndn_f64
+ * [x] vrndnq_f64
+ * [ ] vrndns_f32
+
+### rshl
+
+SIMDe currently implements 24 of 26 (92.31%) functions.
+
+ * [x] vrshl_s8
+ * [x] vrshl_s16
+ * [x] vrshl_s32
+ * [x] vrshl_s64
+ * [x] vrshl_u8
+ * [x] vrshl_u16
+ * [x] vrshl_u32
+ * [x] vrshl_u64
+ * [x] vrshl_s8
+ * [x] vrshlq_s8
+ * [x] vrshl_s16
+ * [x] vrshlq_s16
+ * [x] vrshl_s32
+ * [x] vrshlq_s32
+ * [x] vrshl_s64
+ * [x] vrshlq_s64
+ * [x] vrshl_u8
+ * [x] vrshlq_u8
+ * [x] vrshl_u16
+ * [x] vrshlq_u16
+ * [x] vrshl_u32
+ * [x] vrshlq_u32
+ * [x] vrshl_u64
+ * [x] vrshlq_u64
+ * [ ] vrshld_s64
+ * [ ] vrshld_u64
+
+### rshr_n
+
+SIMDe currently implements 24 of 26 (92.31%) functions.
+
+ * [x] vrshr_n_s8
+ * [x] vrshr_n_s16
+ * [x] vrshr_n_s32
+ * [x] vrshr_n_s64
+ * [x] vrshr_n_u8
+ * [x] vrshr_n_u16
+ * [x] vrshr_n_u32
+ * [x] vrshr_n_u64
+ * [x] vrshr_n_s8
+ * [x] vrshrq_n_s8
+ * [x] vrshr_n_s16
+ * [x] vrshrq_n_s16
+ * [x] vrshr_n_s32
+ * [x] vrshrq_n_s32
+ * [x] vrshr_n_s64
+ * [x] vrshrq_n_s64
+ * [x] vrshr_n_u8
+ * [x] vrshrq_n_u8
+ * [x] vrshr_n_u16
+ * [x] vrshrq_n_u16
+ * [x] vrshr_n_u32
+ * [x] vrshrq_n_u32
+ * [x] vrshr_n_u64
+ * [x] vrshrq_n_u64
+ * [ ] vrshrd_n_s64
+ * [ ] vrshrd_n_u64
+
+### rsqrte
+
+SIMDe currently implements 3 of 11 (27.27%) functions, not counting 3 which require currently unsupported types.
+
+ * [ ] vrsqrte_u32
+ * [x] vrsqrte_f32
+ * [ ] vrsqrte_f64
+ * [ ] vrsqrte_u32
+ * [ ] vrsqrteq_u32
+ * [x] vrsqrte_f32
+ * [x] vrsqrteq_f32
+ * [ ] vrsqrte_f64
+ * [ ] vrsqrteq_f64
+ * [ ] vrsqrtes_f32
+ * [ ] vrsqrted_f64
+
+### rsqrts
+
+SIMDe currently implements 2 of 7 (28.57%) functions, not counting 3 which require currently unsupported types.
+
+ * [ ] vrsqrts_f64
+ * [x] vrsqrts_f32
+ * [x] vrsqrtsq_f32
+ * [ ] vrsqrts_f64
+ * [ ] vrsqrtsq_f64
+ * [ ] vrsqrtss_f32
+ * [ ] vrsqrtsd_f64
+
+### rsra_n
+
+SIMDe currently implements 24 of 26 (92.31%) functions.
+
+ * [x] vrsra_n_s8
+ * [x] vrsra_n_s16
+ * [x] vrsra_n_s32
+ * [x] vrsra_n_s64
+ * [x] vrsra_n_u8
+ * [x] vrsra_n_u16
+ * [x] vrsra_n_u32
+ * [x] vrsra_n_u64
+ * [x] vrsra_n_s8
+ * [x] vrsraq_n_s8
+ * [x] vrsra_n_s16
+ * [x] vrsraq_n_s16
+ * [x] vrsra_n_s32
+ * [x] vrsraq_n_s32
+ * [x] vrsra_n_s64
+ * [x] vrsraq_n_s64
+ * [x] vrsra_n_u8
+ * [x] vrsraq_n_u8
+ * [x] vrsra_n_u16
+ * [x] vrsraq_n_u16
+ * [x] vrsra_n_u32
+ * [x] vrsraq_n_u32
+ * [x] vrsra_n_u64
+ * [x] vrsraq_n_u64
+ * [ ] vrsrad_n_s64
+ * [ ] vrsrad_n_u64
+
+### shl
+
+SIMDe currently implements 24 of 26 (92.31%) functions.
+
+ * [x] vshl_s8
+ * [x] vshl_s16
+ * [x] vshl_s32
+ * [x] vshl_s64
+ * [x] vshl_u8
+ * [x] vshl_u16
+ * [x] vshl_u32
+ * [x] vshl_u64
+ * [x] vshl_s8
+ * [x] vshlq_s8
+ * [x] vshl_s16
+ * [x] vshlq_s16
+ * [x] vshl_s32
+ * [x] vshlq_s32
+ * [x] vshl_s64
+ * [x] vshlq_s64
+ * [x] vshl_u8
+ * [x] vshlq_u8
+ * [x] vshl_u16
+ * [x] vshlq_u16
+ * [x] vshl_u32
+ * [x] vshlq_u32
+ * [x] vshl_u64
+ * [x] vshlq_u64
+ * [ ] vshld_s64
+ * [ ] vshld_u64
+
+### shl_n
+
+SIMDe currently implements 24 of 26 (92.31%) functions.
+
+ * [x] vshl_n_s8
+ * [x] vshl_n_s16
+ * [x] vshl_n_s32
+ * [x] vshl_n_s64
+ * [x] vshl_n_u8
+ * [x] vshl_n_u16
+ * [x] vshl_n_u32
+ * [x] vshl_n_u64
+ * [x] vshl_n_s8
+ * [x] vshlq_n_s8
+ * [x] vshl_n_s16
+ * [x] vshlq_n_s16
+ * [x] vshl_n_s32
+ * [x] vshlq_n_s32
+ * [x] vshl_n_s64
+ * [x] vshlq_n_s64
+ * [x] vshl_n_u8
+ * [x] vshlq_n_u8
+ * [x] vshl_n_u16
+ * [x] vshlq_n_u16
+ * [x] vshl_n_u32
+ * [x] vshlq_n_u32
+ * [x] vshl_n_u64
+ * [x] vshlq_n_u64
+ * [ ] vshld_n_s64
+ * [ ] vshld_n_u64
+
+### shr_n
+
+SIMDe currently implements 24 of 26 (92.31%) functions.
+
+ * [x] vshr_n_s8
+ * [x] vshr_n_s16
+ * [x] vshr_n_s32
+ * [x] vshr_n_s64
+ * [x] vshr_n_u8
+ * [x] vshr_n_u16
+ * [x] vshr_n_u32
+ * [x] vshr_n_u64
+ * [x] vshr_n_s8
+ * [x] vshrq_n_s8
+ * [x] vshr_n_s16
+ * [x] vshrq_n_s16
+ * [x] vshr_n_s32
+ * [x] vshrq_n_s32
+ * [x] vshr_n_s64
+ * [x] vshrq_n_s64
+ * [x] vshr_n_u8
+ * [x] vshrq_n_u8
+ * [x] vshr_n_u16
+ * [x] vshrq_n_u16
+ * [x] vshr_n_u32
+ * [x] vshrq_n_u32
+ * [x] vshr_n_u64
+ * [x] vshrq_n_u64
+ * [ ] vshrd_n_s64
+ * [ ] vshrd_n_u64
+
+### sra_n
+
+SIMDe currently implements 24 of 26 (92.31%) functions.
+
+ * [x] vsra_n_s8
+ * [x] vsra_n_s16
+ * [x] vsra_n_s32
+ * [x] vsra_n_s64
+ * [x] vsra_n_u8
+ * [x] vsra_n_u16
+ * [x] vsra_n_u32
+ * [x] vsra_n_u64
+ * [x] vsra_n_s8
+ * [x] vsraq_n_s8
+ * [x] vsra_n_s16
+ * [x] vsraq_n_s16
+ * [x] vsra_n_s32
+ * [x] vsraq_n_s32
+ * [x] vsra_n_s64
+ * [x] vsraq_n_s64
+ * [x] vsra_n_u8
+ * [x] vsraq_n_u8
+ * [x] vsra_n_u16
+ * [x] vsraq_n_u16
+ * [x] vsra_n_u32
+ * [x] vsraq_n_u32
+ * [x] vsra_n_u64
+ * [x] vsraq_n_u64
+ * [ ] vsrad_n_s64
+ * [ ] vsrad_n_u64
+
+### sri_n
+
+SIMDe currently implements 24 of 26 (92.31%) functions, not counting 9 which require currently unsupported types.
+
+ * [x] vsri_n_s8
+ * [x] vsri_n_s16
+ * [x] vsri_n_s32
+ * [x] vsri_n_s64
+ * [x] vsri_n_u8
+ * [x] vsri_n_u16
+ * [x] vsri_n_u32
+ * [x] vsri_n_u64
+ * [x] vsri_n_s8
+ * [x] vsriq_n_s8
+ * [x] vsri_n_s16
+ * [x] vsriq_n_s16
+ * [x] vsri_n_s32
+ * [x] vsriq_n_s32
+ * [x] vsri_n_s64
+ * [x] vsriq_n_s64
+ * [x] vsri_n_u8
+ * [x] vsriq_n_u8
+ * [x] vsri_n_u16
+ * [x] vsriq_n_u16
+ * [x] vsri_n_u32
+ * [x] vsriq_n_u32
+ * [x] vsri_n_u64
+ * [x] vsriq_n_u64
+ * [ ] vsrid_n_s64
+ * [ ] vsrid_n_u64
+
+### st2
+
+SIMDe currently implements 21 of 30 (70.00%) functions, not counting 15 which require currently unsupported types.
+
+ * [x] vst2_s8
+ * [x] vst2_s16
+ * [x] vst2_s32
+ * [x] vst2_u8
+ * [x] vst2_u16
+ * [x] vst2_u32
+ * [x] vst2_f32
+ * [ ] vst2_s64
+ * [ ] vst2_u64
+ * [ ] vst2_f64
+ * [x] vst2_s8
+ * [x] vst2q_s8
+ * [x] vst2_s16
+ * [x] vst2q_s16
+ * [x] vst2_s32
+ * [x] vst2q_s32
+ * [x] vst2_u8
+ * [x] vst2q_u8
+ * [x] vst2_u16
+ * [x] vst2q_u16
+ * [x] vst2_u32
+ * [x] vst2q_u32
+ * [x] vst2_f32
+ * [x] vst2q_f32
+ * [ ] vst2_s64
+ * [ ] vst2_u64
+ * [ ] vst2q_s64
+ * [ ] vst2q_u64
+ * [ ] vst2_f64
+ * [ ] vst2q_f64
+
+### st2_lane
+
+SIMDe currently implements 12 of 30 (40.00%) functions, not counting 15 which require currently unsupported types.
+
+ * [x] vst2_lane_s8
+ * [x] vst2_lane_u8
+ * [x] vst2_lane_s16
+ * [x] vst2_lane_s32
+ * [x] vst2_lane_u16
+ * [x] vst2_lane_u32
+ * [ ] vst2_lane_f32
+ * [ ] vst2_lane_s64
+ * [ ] vst2_lane_u64
+ * [ ] vst2_lane_f64
+ * [x] vst2_lane_s8
+ * [x] vst2_lane_u8
+ * [x] vst2_lane_s16
+ * [ ] vst2q_lane_s16
+ * [x] vst2_lane_s32
+ * [ ] vst2q_lane_s32
+ * [x] vst2_lane_u16
+ * [ ] vst2q_lane_u16
+ * [x] vst2_lane_u32
+ * [ ] vst2q_lane_u32
+ * [ ] vst2_lane_f32
+ * [ ] vst2q_lane_f32
+ * [ ] vst2q_lane_s8
+ * [ ] vst2q_lane_u8
+ * [ ] vst2_lane_s64
+ * [ ] vst2q_lane_s64
+ * [ ] vst2_lane_u64
+ * [ ] vst2q_lane_u64
+ * [ ] vst2_lane_f64
+ * [ ] vst2q_lane_f64
+
+### st3_lane
+
+SIMDe currently implements 12 of 30 (40.00%) functions, not counting 15 which require currently unsupported types.
+
+ * [x] vst3_lane_s8
+ * [x] vst3_lane_u8
+ * [x] vst3_lane_s16
+ * [x] vst3_lane_s32
+ * [x] vst3_lane_u16
+ * [x] vst3_lane_u32
+ * [ ] vst3_lane_f32
+ * [ ] vst3_lane_s64
+ * [ ] vst3_lane_u64
+ * [ ] vst3_lane_f64
+ * [x] vst3_lane_s8
+ * [x] vst3_lane_u8
+ * [x] vst3_lane_s16
+ * [ ] vst3q_lane_s16
+ * [x] vst3_lane_s32
+ * [ ] vst3q_lane_s32
+ * [x] vst3_lane_u16
+ * [ ] vst3q_lane_u16
+ * [x] vst3_lane_u32
+ * [ ] vst3q_lane_u32
+ * [ ] vst3_lane_f32
+ * [ ] vst3q_lane_f32
+ * [ ] vst3q_lane_s8
+ * [ ] vst3q_lane_u8
+ * [ ] vst3_lane_s64
+ * [ ] vst3q_lane_s64
+ * [ ] vst3_lane_u64
+ * [ ] vst3q_lane_u64
+ * [ ] vst3_lane_f64
+ * [ ] vst3q_lane_f64
+
+### st4_lane
+
+SIMDe currently implements 12 of 30 (40.00%) functions, not counting 15 which require currently unsupported types.
+
+ * [x] vst4_lane_s8
+ * [x] vst4_lane_u8
+ * [x] vst4_lane_s16
+ * [x] vst4_lane_s32
+ * [x] vst4_lane_u16
+ * [x] vst4_lane_u32
+ * [ ] vst4_lane_f32
+ * [ ] vst4_lane_s64
+ * [ ] vst4_lane_u64
+ * [ ] vst4_lane_f64
+ * [x] vst4_lane_s8
+ * [x] vst4_lane_u8
+ * [x] vst4_lane_s16
+ * [ ] vst4q_lane_s16
+ * [x] vst4_lane_s32
+ * [ ] vst4q_lane_s32
+ * [x] vst4_lane_u16
+ * [ ] vst4q_lane_u16
+ * [x] vst4_lane_u32
+ * [ ] vst4q_lane_u32
+ * [ ] vst4_lane_f32
+ * [ ] vst4q_lane_f32
+ * [ ] vst4q_lane_s8
+ * [ ] vst4q_lane_u8
+ * [ ] vst4_lane_s64
+ * [ ] vst4q_lane_s64
+ * [ ] vst4_lane_u64
+ * [ ] vst4q_lane_u64
+ * [ ] vst4_lane_f64
+ * [ ] vst4q_lane_f64
+
+### sub
+
+SIMDe currently implements 28 of 30 (93.33%) functions, not counting 3 which require currently unsupported types.
+
+ * [x] vsub_s16
+ * [x] vsub_s32
+ * [x] vsub_s64
+ * [x] vsub_u16
+ * [x] vsub_u32
+ * [x] vsub_u64
+ * [x] vsub_f32
+ * [x] vsub_f64
+ * [x] vsub_s8
+ * [x] vsubq_s8
+ * [x] vsub_s16
+ * [x] vsubq_s16
+ * [x] vsub_s32
+ * [x] vsubq_s32
+ * [x] vsub_s64
+ * [x] vsubq_s64
+ * [x] vsub_u8
+ * [x] vsubq_u8
+ * [x] vsub_u16
+ * [x] vsubq_u16
+ * [x] vsub_u32
+ * [x] vsubq_u32
+ * [x] vsub_u64
+ * [x] vsubq_u64
+ * [x] vsub_f32
+ * [x] vsubq_f32
+ * [x] vsub_f64
+ * [x] vsubq_f64
+ * [ ] vsubd_s64
+ * [ ] vsubd_u64
+
+## Unimplemented Families
+
+There are currently 38 unimplemented families.
+
+ * abal (12 functions)
+ * abal_high (12 functions)
+ * abdl_high (12 functions)
+ * addhn_high (12 functions)
+ * aes (8 functions)
+ * bfdot (3 functions)
+ * bfdot_lane (6 functions)
+ * cadd_rot (8 functions, plus 6 functions with unsupported types)
+ * cale (8 functions, plus 3 functions with unsupported types)
+ * calt (8 functions, plus 3 functions with unsupported types)
+ * cmla_lane (6 functions, plus 8 functions with unsupported types)
+ * cmla_rot_lane (18 functions, plus 24 functions with unsupported types)
+ * copy_lane (60 functions, plus 24 functions with unsupported types)
+ * cvt_high (4 functions, plus 6 functions with unsupported types)
+ * cvt_n (32 functions, plus 12 functions with unsupported types)
+ * cvta (16 functions, plus 6 functions with unsupported types)
+ * cvtm (16 functions, plus 6 functions with unsupported types)
+ * cvtn (16 functions, plus 6 functions with unsupported types)
+ * cvtp (16 functions, plus 6 functions with unsupported types)
+ * cvtx (3 functions)
+ * cvtx_high (2 functions)
+ * div (6 functions, plus 3 functions with unsupported types)
+ * dupb_lane (4 functions, plus 4 functions with unsupported types)
+ * duph_lane (8 functions, plus 12 functions with unsupported types)
+ * eor3 (9 functions)
+ * fmlal (4 functions)
+ * fmlal_lane (8 functions)
+ * fms (5 functions, plus 3 functions with unsupported types)
+ * fms_lane (14 functions, plus 6 functions with unsupported types)
+ * fms_n (5 functions, plus 3 functions with unsupported types)
+ * ld1_x2 (30 functions, plus 15 functions with unsupported types)
+ * ld1_x3 (30 functions, plus 15 functions with unsupported types)
+ * ld1_x4 (30 functions, plus 15 functions with unsupported types)
+ * ld2_dup (30 functions, plus 15 functions with unsupported types)
+ * ld2_lane (30 functions, plus 15 functions with unsupported types)
+ * ld3_dup (30 functions, plus 15 functions with unsupported types)
+ * ld3_lane (30 functions, plus 15 functions with unsupported types)
+ * ld4_dup (30 functions, plus 15 functions with unsupported types)
+ * maxnmv (4 functions, plus 3 functions with unsupported types)
+ * minnmv (4 functions, plus 3 functions with unsupported types)
+ * mla_lane (30 functions)
+ * mlal_high_lane (16 functions)
+ * mlal_high_n (8 functions)
+ * mls_lane (24 functions)
+ * mlsl_high_lane (16 functions)
+ * mlsl_high_n (8 functions)
+ * mmla (7 functions)
+ * mull_high_lane (16 functions)
+ * mull_high_n (8 functions)
+ * mulx (8 functions, plus 3 functions with unsupported types)
+ * mulx_lane (16 functions, plus 6 functions with unsupported types)
+ * pmaxnm (7 functions, plus 3 functions with unsupported types)
+ * pminnm (7 functions, plus 3 functions with unsupported types)
+ * qdmlal (5 functions)
+ * qdmlal_high (4 functions)
+ * qdmlal_high_lane (8 functions)
+ * qdmlal_high_n (4 functions)
+ * qdmlal_lane (10 functions)
+ * qdmlal_n (4 functions)
+ * qdmlalh (2 functions)
+ * qdmlalh_lane (4 functions)
+ * qdmlsl (5 functions)
+ * qdmlsl_high (4 functions)
+ * qdmlsl_high_lane (8 functions)
+ * qdmlsl_high_n (4 functions)
+ * qdmlsl_lane (10 functions)
+ * qdmlsl_n (4 functions)
+ * qdmlslh (2 functions)
+ * qdmlslh_lane (4 functions)
+ * qdmulhh (2 functions)
+ * qdmulhh_lane (4 functions)
+ * qdmull_high (4 functions)
+ * qdmull_high_lane (8 functions)
+ * qdmull_high_n (4 functions)
+ * qdmull_lane (10 functions)
+ * qdmull_n (4 functions)
+ * qdmullh_lane (4 functions)
+ * qmovun_high (6 functions)
+ * qrdmlah (7 functions)
+ * qrdmlah_lane (14 functions)
+ * qrdmlahh (2 functions)
+ * qrdmlahh_lane (4 functions)
+ * qrdmlsh (7 functions)
+ * qrdmlsh_lane (14 functions)
+ * qrdmlshh (2 functions)
+ * qrdmlshh_lane (4 functions)
+ * qrdmulhh_lane (4 functions)
+ * qrshl (30 functions)
+ * qrshlh (4 functions)
+ * qrshrn_high_n (12 functions)
+ * qrshrnh_n (4 functions)
+ * qrshrun_high_n (6 functions)
+ * qrshrunh_n (2 functions)
+ * qshl_n (30 functions)
+ * qshlh_n (4 functions)
+ * qshluh_n (2 functions)
+ * qshrn_high_n (12 functions)
+ * qshrnh_n (4 functions)
+ * qshrun_high_n (6 functions)
+ * qshrunh_n (2 functions)
+ * raddhn (12 functions)
+ * raddhn_high (12 functions)
+ * rax (2 functions)
+ * recp (4 functions)
+ * rnd32x (6 functions)
+ * rnd32z (6 functions)
+ * rnd64x (6 functions)
+ * rnd64z (6 functions)
+ * rnda (6 functions, plus 3 functions with unsupported types)
+ * rndx (6 functions, plus 3 functions with unsupported types)
+ * rshrn_high_n (12 functions)
+ * rsubhn (12 functions)
+ * rsubhn_high (12 functions)
+ * sha1 (10 functions)
+ * sha1h (2 functions)
+ * sha256 (8 functions)
+ * sha512 (8 functions)
+ * shll_high_n (24 functions)
+ * shrn_high_n (12 functions)
+ * sli_n (26 functions, plus 9 functions with unsupported types)
+ * sm3 (14 functions)
+ * sm4 (4 functions)
+ * sqrt (6 functions, plus 3 functions with unsupported types)
+ * st1_x2 (30 functions, plus 15 functions with unsupported types)
+ * st1_x3 (30 functions, plus 15 functions with unsupported types)
+ * st1_x4 (30 functions, plus 15 functions with unsupported types)
+ * subhn_high (12 functions)
+ * subl_high (12 functions)
+ * sudot_lane (6 functions)
+ * usdot (3 functions)
+ * usdot_lane (6 functions)
+
+## Complete Families
+
+SIMDe contains complete implementations of 221 functions families.
+
+ * aba
+ * abd (3 functions with unsupported types)
+ * abdh (2 functions with unsupported types)
+ * abdl
+ * abs (3 functions with unsupported types)
+ * absh (2 functions with unsupported types)
+ * add (13 functions with unsupported types)
+ * addh (2 functions with unsupported types)
+ * addhn
+ * addl
+ * addl_high
+ * addlv
+ * addv
+ * addw
+ * addw_high
+ * and
+ * bcax
+ * bic
+ * bsl (12 functions with unsupported types)
+ * cage (3 functions with unsupported types)
+ * cageh (2 functions with unsupported types)
+ * cagt (3 functions with unsupported types)
+ * cagth (2 functions with unsupported types)
+ * caleh (2 functions with unsupported types)
+ * calth (2 functions with unsupported types)
+ * ceq (9 functions with unsupported types)
+ * ceqh (2 functions with unsupported types)
+ * ceqz (9 functions with unsupported types)
+ * ceqzh (2 functions with unsupported types)
+ * cge (3 functions with unsupported types)
+ * cgeh (2 functions with unsupported types)
+ * cgez (3 functions with unsupported types)
+ * cgezh (2 functions with unsupported types)
+ * cgt (3 functions with unsupported types)
+ * cgth (2 functions with unsupported types)
+ * cgtz (3 functions with unsupported types)
+ * cgtzh (2 functions with unsupported types)
+ * cle (3 functions with unsupported types)
+ * cleh (2 functions with unsupported types)
+ * clez (3 functions with unsupported types)
+ * clezh (2 functions with unsupported types)
+ * cls
+ * clt (3 functions with unsupported types)
+ * clth (2 functions with unsupported types)
+ * cltz (3 functions with unsupported types)
+ * cltzh (2 functions with unsupported types)
+ * clz
+ * cmla (3 functions with unsupported types)
+ * cmla_rot (9 functions with unsupported types)
+ * cnt (3 functions with unsupported types)
+ * combine (10 functions with unsupported types)
+ * create (10 functions with unsupported types)
+ * cvt_low (3 functions with unsupported types)
+ * cvtah (14 functions with unsupported types)
+ * cvth (26 functions with unsupported types)
+ * cvth_n (24 functions with unsupported types)
+ * cvtmh (12 functions with unsupported types)
+ * cvtnh (12 functions with unsupported types)
+ * cvtph (12 functions with unsupported types)
+ * divh (2 functions with unsupported types)
+ * dot
+ * dot_lane
+ * dup_n (15 functions with unsupported types)
+ * eor
+ * ext (12 functions with unsupported types)
+ * fma (3 functions with unsupported types)
+ * fma_n (3 functions with unsupported types)
+ * fmah (2 functions with unsupported types)
+ * fmah_lane (4 functions with unsupported types)
+ * fmlal_high (3 functions with unsupported types)
+ * fmlal_lane_high (6 functions with unsupported types)
+ * fmlal_lane_low (6 functions with unsupported types)
+ * fmlal_low (3 functions with unsupported types)
+ * fmlsl_high (3 functions with unsupported types)
+ * fmlsl_lane_high (6 functions with unsupported types)
+ * fmlsl_lane_low (6 functions with unsupported types)
+ * fmlsl_low (3 functions with unsupported types)
+ * fmsh (2 functions with unsupported types)
+ * fmsh_lane (4 functions with unsupported types)
+ * get_high (10 functions with unsupported types)
+ * get_lane (15 functions with unsupported types)
+ * get_low (10 functions with unsupported types)
+ * hadd
+ * hsub
+ * ld1 (15 functions with unsupported types)
+ * ld3 (15 functions with unsupported types)
+ * ld4 (15 functions with unsupported types)
+ * ldr (2 functions with unsupported types)
+ * max (3 functions with unsupported types)
+ * maxh (2 functions with unsupported types)
+ * maxnm (3 functions with unsupported types)
+ * maxnmh (2 functions with unsupported types)
+ * maxv (3 functions with unsupported types)
+ * min (3 functions with unsupported types)
+ * minh (2 functions with unsupported types)
+ * minnm (3 functions with unsupported types)
+ * minnmh (2 functions with unsupported types)
+ * minv (3 functions with unsupported types)
+ * mla
+ * mla_n
+ * mlal
+ * mlal_high
+ * mlal_lane
+ * mlal_n
+ * mls
+ * mls_n
+ * mlsl
+ * mlsl_high
+ * mlsl_lane
+ * mlsl_n
+ * mov_n (9 functions with unsupported types)
+ * movl
+ * movl_high
+ * movn
+ * movn_high
+ * mul (6 functions with unsupported types)
+ * mul_n (3 functions with unsupported types)
+ * mulh (2 functions with unsupported types)
+ * mulh_lane (4 functions with unsupported types)
+ * mull (4 functions with unsupported types)
+ * mull_high (4 functions with unsupported types)
+ * mull_lane
+ * mull_n
+ * mulx_n (3 functions with unsupported types)
+ * mulxh (2 functions with unsupported types)
+ * mulxh_lane (4 functions with unsupported types)
+ * mvn (3 functions with unsupported types)
+ * negh (2 functions with unsupported types)
+ * orn
+ * orr
+ * padal
+ * paddl
+ * qabs
+ * qabsh
+ * qadd
+ * qaddh
+ * qdmulh_n
+ * qdmull
+ * qdmullh
+ * qmovn
+ * qmovn_high
+ * qmovnh
+ * qmovun
+ * qmovunh
+ * qneg
+ * qnegh
+ * qrdmulh
+ * qrdmulh_n
+ * qrdmulhh
+ * qshl
+ * qshlh
+ * qsub
+ * qsubh
+ * qtbl1 (3 functions with unsupported types)
+ * qtbl2 (3 functions with unsupported types)
+ * qtbl3 (3 functions with unsupported types)
+ * qtbl4 (3 functions with unsupported types)
+ * qtbx1 (3 functions with unsupported types)
+ * qtbx2 (3 functions with unsupported types)
+ * qtbx3 (3 functions with unsupported types)
+ * qtbx4 (3 functions with unsupported types)
+ * rbit (3 functions with unsupported types)
+ * recpeh (2 functions with unsupported types)
+ * recpsh (2 functions with unsupported types)
+ * recpxh (2 functions with unsupported types)
+ * reinterpret (376 functions with unsupported types)
+ * rev16 (3 functions with unsupported types)
+ * rev32 (6 functions with unsupported types)
+ * rev64 (9 functions with unsupported types)
+ * rhadd
+ * rnd (3 functions with unsupported types)
+ * rndah (2 functions with unsupported types)
+ * rndh (2 functions with unsupported types)
+ * rndi (3 functions with unsupported types)
+ * rndih (2 functions with unsupported types)
+ * rndm (3 functions with unsupported types)
+ * rndmh (2 functions with unsupported types)
+ * rndnh (2 functions with unsupported types)
+ * rndp (3 functions with unsupported types)
+ * rndph (2 functions with unsupported types)
+ * rndxh (2 functions with unsupported types)
+ * rshrn_n
+ * rsqrteh (2 functions with unsupported types)
+ * rsqrtsh (2 functions with unsupported types)
+ * set_lane (15 functions with unsupported types)
+ * shll_n
+ * shrn_n
+ * sqadd
+ * sqaddh
+ * sqrth (2 functions with unsupported types)
+ * st1 (15 functions with unsupported types)
+ * st1_lane (15 functions with unsupported types)
+ * st3 (15 functions with unsupported types)
+ * st4 (15 functions with unsupported types)
+ * str (2 functions with unsupported types)
+ * subh (2 functions with unsupported types)
+ * subhn
+ * subl
+ * subw
+ * subw_high
+ * tbl1 (2 functions with unsupported types)
+ * tbl2 (2 functions with unsupported types)
+ * tbl3 (2 functions with unsupported types)
+ * tbl4 (2 functions with unsupported types)
+ * tbx1 (2 functions with unsupported types)
+ * tbx2 (2 functions with unsupported types)
+ * tbx3 (2 functions with unsupported types)
+ * tbx4 (2 functions with unsupported types)
+ * trn (9 functions with unsupported types)
+ * trn1 (10 functions with unsupported types)
+ * trn2 (10 functions with unsupported types)
+ * tst (6 functions with unsupported types)
+ * uqadd
+ * uqaddh
+ * uzp (9 functions with unsupported types)
+ * uzp1 (10 functions with unsupported types)
+ * uzp2 (10 functions with unsupported types)
+ * xar
+ * zip (9 functions with unsupported types)
+ * zip1 (10 functions with unsupported types)
+ * zip2 (10 functions with unsupported types)
