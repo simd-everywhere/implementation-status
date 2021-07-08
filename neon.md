@@ -1,6 +1,6 @@
 # Summary
 
-TL;DR: SIMDe currently implements 3377 out of 6670 (50.63%) NEON functions.  If you don't count 16-bit floats and poly types, it's 3377 / 4969 (67.96%).
+TL;DR: SIMDe currently implements 3469 out of 6670 (52.01%) NEON functions.  If you don't count 16-bit floats and poly types, it's 3469 / 4969 (69.81%).
 
 SIMDe does not currently support 16-bit floating point types or polynomial types, so they are excluded from this list (though separate totals are often provided to be transparent about what was skipped.  We do plan to support these types in the future.
 
@@ -8,17 +8,17 @@ SIMDe does not currently support 16-bit floating point types or polynomial types
 
 | Architecture | Functions | Functions with supported types | Implemented by SIMDe | Percent implemented |
 |--------------|----------:|-------------------------------:|---------------------:|--------------------:|
-|        ARMv7 |      3411 |                           2807 |                 2281 |              81.26% |
-|        ARMv8 |      4290 |                           2980 |                 2330 |              78.19% |
-|      AArch64 |      6670 |                           4969 |                 3377 |              67.96% |
+|        ARMv7 |      3411 |                           2807 |                 2311 |              82.33% |
+|        ARMv8 |      4290 |                           2980 |                 2360 |              79.19% |
+|      AArch64 |      6670 |                           4969 |                 3469 |              69.81% |
 
 # Families
 
-There are 390 function families in NEON (based on how we define families).  Discounting functions which use unsupported types, SIMDe has completely implemented 236 (60.51%) and partially implemented another 23 (5.90%).
+There are 390 function families in NEON (based on how we define families).  Discounting functions which use unsupported types, SIMDe has completely implemented 251 (64.36%) and partially implemented another 8 (2.05%).
 
 ## Incomplete Families
 
-There are currently 23 incomplete families.
+There are currently 8 incomplete families.
 
 ### cvt
 
@@ -96,76 +96,6 @@ SIMDe currently implements 27 of 30 (90.00%) functions, not counting 15 which re
  * [ ] vld1_dup_f64
  * [ ] vld1q_dup_f64
 
-### ld1_lane
-
-SIMDe currently implements 18 of 30 (60.00%) functions, not counting 15 which require currently unsupported types.
-
- * [x] vld1_lane_s8
- * [x] vld1_lane_s16
- * [x] vld1_lane_s32
- * [ ] vld1_lane_s64
- * [x] vld1_lane_u8
- * [x] vld1_lane_u16
- * [x] vld1_lane_u32
- * [ ] vld1_lane_u64
- * [ ] vld1_lane_f32
- * [ ] vld1_lane_f64
- * [x] vld1_lane_s8
- * [x] vld1q_lane_s8
- * [x] vld1_lane_s16
- * [x] vld1q_lane_s16
- * [x] vld1_lane_s32
- * [x] vld1q_lane_s32
- * [ ] vld1_lane_s64
- * [ ] vld1q_lane_s64
- * [x] vld1_lane_u8
- * [x] vld1q_lane_u8
- * [x] vld1_lane_u16
- * [x] vld1q_lane_u16
- * [x] vld1_lane_u32
- * [x] vld1q_lane_u32
- * [ ] vld1_lane_u64
- * [ ] vld1q_lane_u64
- * [ ] vld1_lane_f32
- * [ ] vld1q_lane_f32
- * [ ] vld1_lane_f64
- * [ ] vld1q_lane_f64
-
-### ld2
-
-SIMDe currently implements 10 of 30 (33.33%) functions, not counting 15 which require currently unsupported types.
-
- * [ ] vld2_s8
- * [ ] vld2_s16
- * [ ] vld2_s32
- * [x] vld2_u8
- * [x] vld2_u16
- * [x] vld2_u32
- * [ ] vld2_f32
- * [ ] vld2_s64
- * [ ] vld2_u64
- * [ ] vld2_f64
- * [ ] vld2_s8
- * [ ] vld2q_s8
- * [ ] vld2_s16
- * [ ] vld2q_s16
- * [ ] vld2_s32
- * [ ] vld2q_s32
- * [x] vld2_u8
- * [x] vld2q_u8
- * [x] vld2_u16
- * [x] vld2q_u16
- * [x] vld2_u32
- * [x] vld2q_u32
- * [ ] vld2_f32
- * [x] vld2q_f32
- * [ ] vld2_s64
- * [ ] vld2_u64
- * [ ] vld2q_s64
- * [ ] vld2q_u64
- * [ ] vld2_f64
- * [ ] vld2q_f64
-
 ### ld4_lane
 
 SIMDe currently implements 12 of 30 (40.00%) functions, not counting 15 which require currently unsupported types.
@@ -201,110 +131,6 @@ SIMDe currently implements 12 of 30 (40.00%) functions, not counting 15 which re
  * [ ] vld4_lane_f64
  * [ ] vld4q_lane_f64
 
-### mul_lane
-
-SIMDe currently implements 32 of 40 (80.00%) functions, not counting 6 which require currently unsupported types.
-
- * [x] vmul_lane_s16
- * [x] vmul_lane_s32
- * [x] vmul_lane_u16
- * [x] vmul_lane_u32
- * [x] vmul_lane_f32
- * [x] vmul_lane_f64
- * [ ] vmul_laneq_s16
- * [ ] vmul_laneq_s32
- * [ ] vmul_laneq_u16
- * [ ] vmul_laneq_u32
- * [x] vmul_laneq_f32
- * [x] vmul_laneq_f64
- * [x] vmul_lane_s16
- * [x] vmulq_lane_s16
- * [x] vmul_lane_s32
- * [x] vmulq_lane_s32
- * [x] vmul_lane_u16
- * [x] vmulq_lane_u16
- * [x] vmul_lane_u32
- * [x] vmulq_lane_u32
- * [x] vmul_lane_f32
- * [x] vmulq_lane_f32
- * [x] vmul_lane_f64
- * [x] vmulq_lane_f64
- * [x] vmuls_lane_f32
- * [x] vmuld_lane_f64
- * [ ] vmul_laneq_s16
- * [x] vmulq_laneq_s16
- * [ ] vmul_laneq_s32
- * [x] vmulq_laneq_s32
- * [ ] vmul_laneq_u16
- * [x] vmulq_laneq_u16
- * [ ] vmul_laneq_u32
- * [x] vmulq_laneq_u32
- * [x] vmul_laneq_f32
- * [x] vmulq_laneq_f32
- * [x] vmul_laneq_f64
- * [x] vmulq_laneq_f64
- * [x] vmuls_laneq_f32
- * [x] vmuld_laneq_f64
-
-### qdmulh_lane
-
-SIMDe currently implements 6 of 14 (42.86%) functions.
-
- * [x] vqdmulh_lane_s16
- * [x] vqdmulh_lane_s32
- * [ ] vqdmulh_laneq_s16
- * [ ] vqdmulh_laneq_s32
- * [x] vqdmulh_lane_s16
- * [x] vqdmulhq_lane_s16
- * [x] vqdmulh_lane_s32
- * [x] vqdmulhq_lane_s32
- * [ ] vqdmulhs_lane_s32
- * [ ] vqdmulh_laneq_s16
- * [ ] vqdmulhq_laneq_s16
- * [ ] vqdmulh_laneq_s32
- * [ ] vqdmulhq_laneq_s32
- * [ ] vqdmulhs_laneq_s32
-
-### qrdmulh_lane
-
-SIMDe currently implements 12 of 14 (85.71%) functions.
-
- * [x] vqrdmulh_lane_s16
- * [x] vqrdmulh_lane_s32
- * [x] vqrdmulh_laneq_s16
- * [x] vqrdmulh_laneq_s32
- * [x] vqrdmulh_lane_s16
- * [x] vqrdmulhq_lane_s16
- * [x] vqrdmulh_lane_s32
- * [x] vqrdmulhq_lane_s32
- * [ ] vqrdmulhs_lane_s32
- * [x] vqrdmulh_laneq_s16
- * [x] vqrdmulhq_laneq_s16
- * [x] vqrdmulh_laneq_s32
- * [x] vqrdmulhq_laneq_s32
- * [ ] vqrdmulhs_laneq_s32
-
-### qrshrn_n
-
-SIMDe currently implements 12 of 16 (75.00%) functions.
-
- * [x] vqrshrn_n_s16
- * [x] vqrshrn_n_s32
- * [x] vqrshrn_n_s64
- * [x] vqrshrn_n_u16
- * [x] vqrshrn_n_u32
- * [x] vqrshrn_n_u64
- * [x] vqrshrn_n_s16
- * [x] vqrshrn_n_s32
- * [x] vqrshrn_n_s64
- * [x] vqrshrn_n_u16
- * [x] vqrshrn_n_u32
- * [x] vqrshrn_n_u64
- * [ ] vqrshrns_n_s32
- * [ ] vqrshrnd_n_s64
- * [ ] vqrshrns_n_u32
- * [ ] vqrshrnd_n_u64
-
 ### qshlu_n
 
 SIMDe currently implements 12 of 15 (80.00%) functions.
@@ -324,207 +150,6 @@ SIMDe currently implements 12 of 15 (80.00%) functions.
  * [ ] vqshlub_n_s8
  * [ ] vqshlus_n_s32
  * [ ] vqshlud_n_s64
-
-### qshrn_n
-
-SIMDe currently implements 12 of 16 (75.00%) functions.
-
- * [x] vqshrn_n_s16
- * [x] vqshrn_n_s32
- * [x] vqshrn_n_s64
- * [x] vqshrn_n_u16
- * [x] vqshrn_n_u32
- * [x] vqshrn_n_u64
- * [x] vqshrn_n_s16
- * [x] vqshrn_n_s32
- * [x] vqshrn_n_s64
- * [x] vqshrn_n_u16
- * [x] vqshrn_n_u32
- * [x] vqshrn_n_u64
- * [ ] vqshrns_n_s32
- * [ ] vqshrnd_n_s64
- * [ ] vqshrns_n_u32
- * [ ] vqshrnd_n_u64
-
-### recpe
-
-SIMDe currently implements 3 of 11 (27.27%) functions, not counting 3 which require currently unsupported types.
-
- * [ ] vrecpe_u32
- * [x] vrecpe_f32
- * [ ] vrecpe_f64
- * [ ] vrecpe_u32
- * [ ] vrecpeq_u32
- * [x] vrecpe_f32
- * [x] vrecpeq_f32
- * [ ] vrecpe_f64
- * [ ] vrecpeq_f64
- * [ ] vrecpes_f32
- * [ ] vrecped_f64
-
-### recps
-
-SIMDe currently implements 2 of 7 (28.57%) functions, not counting 3 which require currently unsupported types.
-
- * [ ] vrecps_f64
- * [x] vrecps_f32
- * [x] vrecpsq_f32
- * [ ] vrecps_f64
- * [ ] vrecpsq_f64
- * [ ] vrecpss_f32
- * [ ] vrecpsd_f64
-
-### rsqrte
-
-SIMDe currently implements 3 of 11 (27.27%) functions, not counting 3 which require currently unsupported types.
-
- * [ ] vrsqrte_u32
- * [x] vrsqrte_f32
- * [ ] vrsqrte_f64
- * [ ] vrsqrte_u32
- * [ ] vrsqrteq_u32
- * [x] vrsqrte_f32
- * [x] vrsqrteq_f32
- * [ ] vrsqrte_f64
- * [ ] vrsqrteq_f64
- * [ ] vrsqrtes_f32
- * [ ] vrsqrted_f64
-
-### rsqrts
-
-SIMDe currently implements 2 of 7 (28.57%) functions, not counting 3 which require currently unsupported types.
-
- * [ ] vrsqrts_f64
- * [x] vrsqrts_f32
- * [x] vrsqrtsq_f32
- * [ ] vrsqrts_f64
- * [ ] vrsqrtsq_f64
- * [ ] vrsqrtss_f32
- * [ ] vrsqrtsd_f64
-
-### rsra_n
-
-SIMDe currently implements 24 of 26 (92.31%) functions.
-
- * [x] vrsra_n_s8
- * [x] vrsra_n_s16
- * [x] vrsra_n_s32
- * [x] vrsra_n_s64
- * [x] vrsra_n_u8
- * [x] vrsra_n_u16
- * [x] vrsra_n_u32
- * [x] vrsra_n_u64
- * [x] vrsra_n_s8
- * [x] vrsraq_n_s8
- * [x] vrsra_n_s16
- * [x] vrsraq_n_s16
- * [x] vrsra_n_s32
- * [x] vrsraq_n_s32
- * [x] vrsra_n_s64
- * [x] vrsraq_n_s64
- * [x] vrsra_n_u8
- * [x] vrsraq_n_u8
- * [x] vrsra_n_u16
- * [x] vrsraq_n_u16
- * [x] vrsra_n_u32
- * [x] vrsraq_n_u32
- * [x] vrsra_n_u64
- * [x] vrsraq_n_u64
- * [ ] vrsrad_n_s64
- * [ ] vrsrad_n_u64
-
-### shl
-
-SIMDe currently implements 24 of 26 (92.31%) functions.
-
- * [x] vshl_s8
- * [x] vshl_s16
- * [x] vshl_s32
- * [x] vshl_s64
- * [x] vshl_u8
- * [x] vshl_u16
- * [x] vshl_u32
- * [x] vshl_u64
- * [x] vshl_s8
- * [x] vshlq_s8
- * [x] vshl_s16
- * [x] vshlq_s16
- * [x] vshl_s32
- * [x] vshlq_s32
- * [x] vshl_s64
- * [x] vshlq_s64
- * [x] vshl_u8
- * [x] vshlq_u8
- * [x] vshl_u16
- * [x] vshlq_u16
- * [x] vshl_u32
- * [x] vshlq_u32
- * [x] vshl_u64
- * [x] vshlq_u64
- * [ ] vshld_s64
- * [ ] vshld_u64
-
-### shl_n
-
-SIMDe currently implements 24 of 26 (92.31%) functions.
-
- * [x] vshl_n_s8
- * [x] vshl_n_s16
- * [x] vshl_n_s32
- * [x] vshl_n_s64
- * [x] vshl_n_u8
- * [x] vshl_n_u16
- * [x] vshl_n_u32
- * [x] vshl_n_u64
- * [x] vshl_n_s8
- * [x] vshlq_n_s8
- * [x] vshl_n_s16
- * [x] vshlq_n_s16
- * [x] vshl_n_s32
- * [x] vshlq_n_s32
- * [x] vshl_n_s64
- * [x] vshlq_n_s64
- * [x] vshl_n_u8
- * [x] vshlq_n_u8
- * [x] vshl_n_u16
- * [x] vshlq_n_u16
- * [x] vshl_n_u32
- * [x] vshlq_n_u32
- * [x] vshl_n_u64
- * [x] vshlq_n_u64
- * [ ] vshld_n_s64
- * [ ] vshld_n_u64
-
-### sri_n
-
-SIMDe currently implements 24 of 26 (92.31%) functions, not counting 9 which require currently unsupported types.
-
- * [x] vsri_n_s8
- * [x] vsri_n_s16
- * [x] vsri_n_s32
- * [x] vsri_n_s64
- * [x] vsri_n_u8
- * [x] vsri_n_u16
- * [x] vsri_n_u32
- * [x] vsri_n_u64
- * [x] vsri_n_s8
- * [x] vsriq_n_s8
- * [x] vsri_n_s16
- * [x] vsriq_n_s16
- * [x] vsri_n_s32
- * [x] vsriq_n_s32
- * [x] vsri_n_s64
- * [x] vsriq_n_s64
- * [x] vsri_n_u8
- * [x] vsriq_n_u8
- * [x] vsri_n_u16
- * [x] vsriq_n_u16
- * [x] vsri_n_u32
- * [x] vsriq_n_u32
- * [x] vsri_n_u64
- * [x] vsriq_n_u64
- * [ ] vsrid_n_s64
- * [ ] vsrid_n_u64
 
 ### st2
 
@@ -668,7 +293,7 @@ SIMDe currently implements 12 of 30 (40.00%) functions, not counting 15 which re
 
 ## Unimplemented Families
 
-There are currently 23 unimplemented families.
+There are currently 8 unimplemented families.
 
  * abal (12 functions)
  * abal_high (12 functions)
@@ -804,7 +429,7 @@ There are currently 23 unimplemented families.
 
 ## Complete Families
 
-SIMDe contains complete implementations of 236 functions families.
+SIMDe contains complete implementations of 251 functions families.
 
  * aba
  * abd (3 functions with unsupported types)
@@ -893,6 +518,8 @@ SIMDe contains complete implementations of 236 functions families.
  * hadd
  * hsub
  * ld1 (15 functions with unsupported types)
+ * ld1_lane (15 functions with unsupported types)
+ * ld2 (15 functions with unsupported types)
  * ld3 (15 functions with unsupported types)
  * ld4 (15 functions with unsupported types)
  * ldr (2 functions with unsupported types)
@@ -924,6 +551,7 @@ SIMDe contains complete implementations of 236 functions families.
  * movn
  * movn_high
  * mul (6 functions with unsupported types)
+ * mul_lane (6 functions with unsupported types)
  * mul_n (3 functions with unsupported types)
  * mulh (2 functions with unsupported types)
  * mulh_lane (4 functions with unsupported types)
@@ -949,6 +577,7 @@ SIMDe contains complete implementations of 236 functions families.
  * qadd
  * qaddh
  * qdmulh
+ * qdmulh_lane
  * qdmulh_n
  * qdmull
  * qdmullh
@@ -960,11 +589,14 @@ SIMDe contains complete implementations of 236 functions families.
  * qneg
  * qnegh
  * qrdmulh
+ * qrdmulh_lane
  * qrdmulh_n
  * qrdmulhh
+ * qrshrn_n
  * qrshrun_n
  * qshl
  * qshlh
+ * qshrn_n
  * qshrun_n
  * qsub
  * qsubh
@@ -977,7 +609,9 @@ SIMDe contains complete implementations of 236 functions families.
  * qtbx3 (3 functions with unsupported types)
  * qtbx4 (3 functions with unsupported types)
  * rbit (3 functions with unsupported types)
+ * recpe (3 functions with unsupported types)
  * recpeh (2 functions with unsupported types)
+ * recps (3 functions with unsupported types)
  * recpsh (2 functions with unsupported types)
  * recpxh (2 functions with unsupported types)
  * reinterpret (376 functions with unsupported types)
@@ -1000,9 +634,14 @@ SIMDe contains complete implementations of 236 functions families.
  * rshl
  * rshr_n
  * rshrn_n
+ * rsqrte (3 functions with unsupported types)
  * rsqrteh (2 functions with unsupported types)
+ * rsqrts (3 functions with unsupported types)
  * rsqrtsh (2 functions with unsupported types)
+ * rsra_n
  * set_lane (15 functions with unsupported types)
+ * shl
+ * shl_n
  * shll_n
  * shr_n
  * shrn_n
@@ -1010,6 +649,7 @@ SIMDe contains complete implementations of 236 functions families.
  * sqaddh
  * sqrth (2 functions with unsupported types)
  * sra_n
+ * sri_n (9 functions with unsupported types)
  * st1 (15 functions with unsupported types)
  * st1_lane (15 functions with unsupported types)
  * st3 (15 functions with unsupported types)
