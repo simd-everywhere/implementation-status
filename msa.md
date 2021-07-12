@@ -1,6 +1,6 @@
 # MSA
 
-Overall, SIMDe implementents 12 of 533 (2.25%) functions from MSA.
+Overall, SIMDe implementents 16 of 533 (3.00%) functions from MSA.
 
 ## add_a
 
@@ -36,10 +36,10 @@ Overall, SIMDe implementents 12 of 533 (2.25%) functions from MSA.
 
 ## addvi
 
- * [ ] __msa_addvi_b
- * [ ] __msa_addvi_h
- * [ ] __msa_addvi_w
- * [ ] __msa_addvi_d
+ * [x] __msa_addvi_b
+ * [x] __msa_addvi_h
+ * [x] __msa_addvi_w
+ * [x] __msa_addvi_d
 
 ## and_v
 
