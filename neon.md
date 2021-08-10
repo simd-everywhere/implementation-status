@@ -1,6 +1,6 @@
 # Summary
 
-TL;DR: SIMDe currently implements 3560 out of 6670 (53.37%) NEON functions.  If you don't count 16-bit floats and poly types, it's 3560 / 4969 (71.64%).
+TL;DR: SIMDe currently implements 3563 out of 6670 (53.42%) NEON functions.  If you don't count 16-bit floats and poly types, it's 3563 / 4969 (71.70%).
 
 SIMDe does not currently support 16-bit floating point types or polynomial types, so they are excluded from this list (though separate totals are often provided to be transparent about what was skipped.  We do plan to support these types in the future.
 
@@ -8,21 +8,126 @@ SIMDe does not currently support 16-bit floating point types or polynomial types
 
 | Architecture | Functions | Functions with supported types | Implemented by SIMDe | Percent implemented |
 |--------------|----------:|-------------------------------:|---------------------:|--------------------:|
-|        ARMv7 |      3411 |                           2807 |                 2345 |              83.54% |
-|        ARMv8 |      4290 |                           2980 |                 2394 |              80.34% |
-|      AArch64 |      6670 |                           4969 |                 3560 |              71.64% |
+|        ARMv7 |      3411 |                           2807 |                 2348 |              83.65% |
+|        ARMv8 |      4290 |                           2980 |                 2397 |              80.44% |
+|      AArch64 |      6670 |                           4969 |                 3563 |              71.70% |
 
 # Families
 
-There are 390 function families in NEON (based on how we define families).  Discounting functions which use unsupported types, SIMDe has completely implemented 259 (66.41%) and partially implemented another 0 (0.00%).
+There are 390 function families in NEON (based on how we define families).  Discounting functions which use unsupported types, SIMDe has completely implemented 259 (66.41%) and partially implemented another 3 (0.77%).
 
 ## Incomplete Families
 
-There are currently 0 incomplete families.
+There are currently 3 incomplete families.
+
+### ld1_x2
+
+SIMDe currently implements 1 of 30 (3.33%) functions, not counting 15 which require currently unsupported types.
+
+ * [ ] vld1_s8_x2
+ * [ ] vld1_s16_x2
+ * [ ] vld1_s32_x2
+ * [ ] vld1_u8_x2
+ * [ ] vld1_u16_x2
+ * [ ] vld1_u32_x2
+ * [ ] vld1_f32_x2
+ * [ ] vld1_s64_x2
+ * [ ] vld1_u64_x2
+ * [ ] vld1_f64_x2
+ * [ ] vld1_s8_x2
+ * [ ] vld1q_s8_x2
+ * [ ] vld1_s16_x2
+ * [ ] vld1q_s16_x2
+ * [ ] vld1_s32_x2
+ * [ ] vld1q_s32_x2
+ * [ ] vld1_u8_x2
+ * [x] vld1q_u8_x2
+ * [ ] vld1_u16_x2
+ * [ ] vld1q_u16_x2
+ * [ ] vld1_u32_x2
+ * [ ] vld1q_u32_x2
+ * [ ] vld1_f32_x2
+ * [ ] vld1q_f32_x2
+ * [ ] vld1_s64_x2
+ * [ ] vld1_u64_x2
+ * [ ] vld1q_s64_x2
+ * [ ] vld1q_u64_x2
+ * [ ] vld1_f64_x2
+ * [ ] vld1q_f64_x2
+
+### ld1_x3
+
+SIMDe currently implements 1 of 30 (3.33%) functions, not counting 15 which require currently unsupported types.
+
+ * [ ] vld1_s8_x3
+ * [ ] vld1_s16_x3
+ * [ ] vld1_s32_x3
+ * [ ] vld1_u8_x3
+ * [ ] vld1_u16_x3
+ * [ ] vld1_u32_x3
+ * [ ] vld1_f32_x3
+ * [ ] vld1_s64_x3
+ * [ ] vld1_u64_x3
+ * [ ] vld1_f64_x3
+ * [ ] vld1_s8_x3
+ * [ ] vld1q_s8_x3
+ * [ ] vld1_s16_x3
+ * [ ] vld1q_s16_x3
+ * [ ] vld1_s32_x3
+ * [ ] vld1q_s32_x3
+ * [ ] vld1_u8_x3
+ * [x] vld1q_u8_x3
+ * [ ] vld1_u16_x3
+ * [ ] vld1q_u16_x3
+ * [ ] vld1_u32_x3
+ * [ ] vld1q_u32_x3
+ * [ ] vld1_f32_x3
+ * [ ] vld1q_f32_x3
+ * [ ] vld1_s64_x3
+ * [ ] vld1_u64_x3
+ * [ ] vld1q_s64_x3
+ * [ ] vld1q_u64_x3
+ * [ ] vld1_f64_x3
+ * [ ] vld1q_f64_x3
+
+### ld1_x4
+
+SIMDe currently implements 1 of 30 (3.33%) functions, not counting 15 which require currently unsupported types.
+
+ * [ ] vld1_s8_x4
+ * [ ] vld1_s16_x4
+ * [ ] vld1_s32_x4
+ * [ ] vld1_u8_x4
+ * [ ] vld1_u16_x4
+ * [ ] vld1_u32_x4
+ * [ ] vld1_f32_x4
+ * [ ] vld1_s64_x4
+ * [ ] vld1_u64_x4
+ * [ ] vld1_f64_x4
+ * [ ] vld1_s8_x4
+ * [ ] vld1q_s8_x4
+ * [ ] vld1_s16_x4
+ * [ ] vld1q_s16_x4
+ * [ ] vld1_s32_x4
+ * [ ] vld1q_s32_x4
+ * [ ] vld1_u8_x4
+ * [x] vld1q_u8_x4
+ * [ ] vld1_u16_x4
+ * [ ] vld1q_u16_x4
+ * [ ] vld1_u32_x4
+ * [ ] vld1q_u32_x4
+ * [ ] vld1_f32_x4
+ * [ ] vld1q_f32_x4
+ * [ ] vld1_s64_x4
+ * [ ] vld1_u64_x4
+ * [ ] vld1q_s64_x4
+ * [ ] vld1q_u64_x4
+ * [ ] vld1_f64_x4
+ * [ ] vld1q_f64_x4
 
 ## Unimplemented Families
 
-There are currently 0 unimplemented families.
+There are currently 3 unimplemented families.
 
  * abal (12 functions)
  * abal_high (12 functions)
@@ -54,9 +159,6 @@ There are currently 0 unimplemented families.
  * fms (5 functions, plus 3 functions with unsupported types)
  * fms_lane (14 functions, plus 6 functions with unsupported types)
  * fms_n (5 functions, plus 3 functions with unsupported types)
- * ld1_x2 (30 functions, plus 15 functions with unsupported types)
- * ld1_x3 (30 functions, plus 15 functions with unsupported types)
- * ld1_x4 (30 functions, plus 15 functions with unsupported types)
  * ld2_dup (30 functions, plus 15 functions with unsupported types)
  * ld2_lane (30 functions, plus 15 functions with unsupported types)
  * ld3_dup (30 functions, plus 15 functions with unsupported types)
