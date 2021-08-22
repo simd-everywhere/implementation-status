@@ -1,6 +1,6 @@
 # Summary
 
-TL;DR: SIMDe currently implements 3563 out of 6670 (53.42%) NEON functions.  If you don't count 16-bit floats and poly types, it's 3563 / 4969 (71.70%).
+TL;DR: SIMDe currently implements 3630 out of 6670 (54.42%) NEON functions.  If you don't count 16-bit floats and poly types, it's 3630 / 4969 (73.05%).
 
 SIMDe does not currently support 16-bit floating point types or polynomial types, so they are excluded from this list (though separate totals are often provided to be transparent about what was skipped.  We do plan to support these types in the future.
 
@@ -8,9 +8,9 @@ SIMDe does not currently support 16-bit floating point types or polynomial types
 
 | Architecture | Functions | Functions with supported types | Implemented by SIMDe | Percent implemented |
 |--------------|----------:|-------------------------------:|---------------------:|--------------------:|
-|        ARMv7 |      3411 |                           2807 |                 2348 |              83.65% |
-|        ARMv8 |      4290 |                           2980 |                 2397 |              80.44% |
-|      AArch64 |      6670 |                           4969 |                 3563 |              71.70% |
+|        ARMv7 |      3411 |                           2807 |                 2373 |              84.54% |
+|        ARMv8 |      4290 |                           2980 |                 2454 |              82.35% |
+|      AArch64 |      6670 |                           4969 |                 3630 |              73.05% |
 
 # Families
 
