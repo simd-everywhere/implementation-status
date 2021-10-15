@@ -9,8 +9,8 @@ fi
 
 # Download the IIG
 if [ ! -e "${SCRIPT_DIR}"/../data/iig.xml ]; then
-  IIG_VERSION="$(curl -s https://software.intel.com/sites/landingpage/IntrinsicsGuide/ | grep -Po '(?<=style.min.css\?)([0-9\.]+)')"
-  curl -s "https://software.intel.com/sites/landingpage/IntrinsicsGuide/files/data-${IIG_VERSION}.xml" > "${SCRIPT_DIR}"/../data/iig.xml;
+  IIG_VERSION="$(curl -s https://www.intel.com/content/www/us/en/docs/intrinsics-guide/index.html | grep -Po '(?<=style.min.css\?)([0-9\.\-]+)')"
+  curl -s "https://www.intel.com/content/dam/develop/public/us/en/include/intrinsics-guide/data-${IIG_VERSION}.xml" > "${SCRIPT_DIR}"/../data/iig.xml;
 fi
 
 # Download NEON intrinsics data
