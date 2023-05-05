@@ -1,6 +1,6 @@
 # Summary
 
-TL;DR: SIMDe currently implements 3745 out of 6670 (56.15%) NEON functions.  If you don't count 16-bit floats and poly types, it's 3745 / 4969 (75.37%).
+TL;DR: SIMDe currently implements 3760 out of 6670 (56.37%) NEON functions.  If you don't count 16-bit floats and poly types, it's 3760 / 4969 (75.67%).
 
 SIMDe does not currently support 16-bit floating point types or polynomial types, so they are excluded from this list (though separate totals are often provided to be transparent about what was skipped.  We do plan to support these types in the future.
 
@@ -8,21 +8,56 @@ SIMDe does not currently support 16-bit floating point types or polynomial types
 
 | Architecture | Functions | Functions with supported types | Implemented by SIMDe | Percent implemented |
 |--------------|----------:|-------------------------------:|---------------------:|--------------------:|
-|        ARMv7 |      3411 |                           2807 |                 2451 |              87.32% |
-|        ARMv8 |      4290 |                           2980 |                 2532 |              84.97% |
-|      AArch64 |      6670 |                           4969 |                 3745 |              75.37% |
+|        ARMv7 |      3411 |                           2807 |                 2466 |              87.85% |
+|        ARMv8 |      4290 |                           2980 |                 2547 |              85.47% |
+|      AArch64 |      6670 |                           4969 |                 3760 |              75.67% |
 
 # Families
 
-There are 390 function families in NEON (based on how we define families).  Discounting functions which use unsupported types, SIMDe has completely implemented 265 (67.95%) and partially implemented another 0 (0.00%).
+There are 390 function families in NEON (based on how we define families).  Discounting functions which use unsupported types, SIMDe has completely implemented 265 (67.95%) and partially implemented another 1 (0.26%).
 
 ## Incomplete Families
 
-There are currently 0 incomplete families.
+There are currently 1 incomplete families.
+
+### mla_lane
+
+SIMDe currently implements 15 of 30 (50.00%) functions.
+
+ * [x] vmla_lane_s16
+ * [x] vmla_lane_s32
+ * [x] vmla_lane_u16
+ * [x] vmla_lane_u32
+ * [x] vmla_lane_f32
+ * [ ] vmla_laneq_s16
+ * [ ] vmla_laneq_s32
+ * [ ] vmla_laneq_u16
+ * [ ] vmla_laneq_u32
+ * [ ] vmla_laneq_f32
+ * [x] vmla_lane_s16
+ * [x] vmlaq_lane_s16
+ * [x] vmla_lane_s32
+ * [x] vmlaq_lane_s32
+ * [x] vmla_lane_u16
+ * [x] vmlaq_lane_u16
+ * [x] vmla_lane_u32
+ * [x] vmlaq_lane_u32
+ * [x] vmla_lane_f32
+ * [x] vmlaq_lane_f32
+ * [ ] vmla_laneq_s16
+ * [ ] vmlaq_laneq_s16
+ * [ ] vmla_laneq_s32
+ * [ ] vmlaq_laneq_s32
+ * [ ] vmla_laneq_u16
+ * [ ] vmlaq_laneq_u16
+ * [ ] vmla_laneq_u32
+ * [ ] vmlaq_laneq_u32
+ * [ ] vmla_laneq_f32
+ * [ ] vmlaq_laneq_f32
 
 ## Unimplemented Families
 
-There are currently 0 unimplemented families.
+There are currently 1 unimplemented families.
 
  * abal (12 functions)
  * abal_high (12 functions)
@@ -61,7 +96,6 @@ There are currently 0 unimplemented families.
  * ld4_dup (30 functions, plus 15 functions with unsupported types)
  * maxnmv (4 functions, plus 3 functions with unsupported types)
  * minnmv (4 functions, plus 3 functions with unsupported types)
- * mla_lane (30 functions)
  * mlal_high_lane (16 functions)
  * mls_lane (24 functions)
  * mlsl_high_lane (16 functions)
