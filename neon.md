@@ -1,6 +1,6 @@
 # Summary
 
-TL;DR: SIMDe currently implements 3766 out of 6670 (56.46%) NEON functions.  If you don't count 16-bit floats and poly types, it's 3766 / 4969 (75.79%).
+TL;DR: SIMDe currently implements 3921 out of 6670 (58.79%) NEON functions.  If you don't count 16-bit floats and poly types, it's 3921 / 4969 (78.91%).
 
 SIMDe does not currently support 16-bit floating point types or polynomial types, so they are excluded from this list (though separate totals are often provided to be transparent about what was skipped.  We do plan to support these types in the future.
 
@@ -8,17 +8,38 @@ SIMDe does not currently support 16-bit floating point types or polynomial types
 
 | Architecture | Functions | Functions with supported types | Implemented by SIMDe | Percent implemented |
 |--------------|----------:|-------------------------------:|---------------------:|--------------------:|
-|        ARMv7 |      3411 |                           2807 |                 2466 |              87.85% |
-|        ARMv8 |      4290 |                           2980 |                 2549 |              85.54% |
-|      AArch64 |      6670 |                           4969 |                 3766 |              75.79% |
+|        ARMv7 |      3411 |                           2807 |                 2511 |              89.45% |
+|        ARMv8 |      4290 |                           2980 |                 2658 |              89.19% |
+|      AArch64 |      6670 |                           4969 |                 3921 |              78.91% |
 
 # Families
 
-There are 390 function families in NEON (based on how we define families).  Discounting functions which use unsupported types, SIMDe has completely implemented 265 (67.95%) and partially implemented another 2 (0.51%).
+There are 390 function families in NEON (based on how we define families).  Discounting functions which use unsupported types, SIMDe has completely implemented 268 (68.72%) and partially implemented another 4 (1.03%).
 
 ## Incomplete Families
 
-There are currently 2 incomplete families.
+There are currently 4 incomplete families.
+
+### cvta
+
+SIMDe currently implements 8 of 16 (50.00%) functions, not counting 6 which require currently unsupported types.
+
+ * [x] vcvta_s32_f32
+ * [x] vcvta_u32_f32
+ * [ ] vcvta_s64_f64
+ * [ ] vcvta_u64_f64
+ * [x] vcvta_s32_f32
+ * [x] vcvtaq_s32_f32
+ * [x] vcvta_u32_f32
+ * [x] vcvtaq_u32_f32
+ * [x] vcvtas_s32_f32
+ * [x] vcvtas_u32_f32
+ * [ ] vcvta_s64_f64
+ * [ ] vcvtaq_s64_f64
+ * [ ] vcvta_u64_f64
+ * [ ] vcvtaq_u64_f64
+ * [ ] vcvtad_s64_f64
+ * [ ] vcvtad_u64_f64
 
 ### cvtn
 
@@ -40,6 +61,17 @@ SIMDe currently implements 6 of 16 (37.50%) functions, not counting 6 which requ
  * [x] vcvtnq_u64_f64
  * [ ] vcvtnd_s64_f64
  * [x] vcvtnd_u64_f64
+
+### div
+
+SIMDe currently implements 3 of 6 (50.00%) functions, not counting 3 which require currently unsupported types.
+
+ * [x] vdiv_f32
+ * [ ] vdiv_f64
+ * [x] vdiv_f32
+ * [x] vdivq_f32
+ * [ ] vdiv_f64
+ * [ ] vdivq_f64
 
 ### mla_lane
 
@@ -78,7 +110,7 @@ SIMDe currently implements 15 of 30 (50.00%) functions.
 
 ## Unimplemented Families
 
-There are currently 2 unimplemented families.
+There are currently 4 unimplemented families.
 
  * abal (12 functions)
  * abal_high (12 functions)
@@ -95,12 +127,10 @@ There are currently 2 unimplemented families.
  * copy_lane (60 functions, plus 24 functions with unsupported types)
  * cvt_high (4 functions, plus 6 functions with unsupported types)
  * cvt_n (32 functions, plus 12 functions with unsupported types)
- * cvta (16 functions, plus 6 functions with unsupported types)
  * cvtm (16 functions, plus 6 functions with unsupported types)
  * cvtp (16 functions, plus 6 functions with unsupported types)
  * cvtx (3 functions)
  * cvtx_high (2 functions)
- * div (6 functions, plus 3 functions with unsupported types)
  * dupb_lane (4 functions, plus 4 functions with unsupported types)
  * duph_lane (8 functions, plus 12 functions with unsupported types)
  * eor3 (9 functions)
@@ -163,9 +193,7 @@ There are currently 2 unimplemented families.
  * qrshl (30 functions)
  * qrshlh (4 functions)
  * qrshrn_high_n (12 functions)
- * qrshrnh_n (4 functions)
  * qrshrun_high_n (6 functions)
- * qrshrunh_n (2 functions)
  * qshl_n (30 functions)
  * qshlh_n (4 functions)
  * qshluh_n (2 functions)
@@ -195,7 +223,6 @@ There are currently 2 unimplemented families.
  * sli_n (26 functions, plus 9 functions with unsupported types)
  * sm3 (14 functions)
  * sm4 (4 functions)
- * sqrt (6 functions, plus 3 functions with unsupported types)
  * st1_x2 (30 functions, plus 15 functions with unsupported types)
  * st1_x3 (30 functions, plus 15 functions with unsupported types)
  * st1_x4 (30 functions, plus 15 functions with unsupported types)
@@ -206,7 +233,7 @@ There are currently 2 unimplemented families.
 
 ## Complete Families
 
-SIMDe contains complete implementations of 265 functions families.
+SIMDe contains complete implementations of 268 functions families.
 
  * aba
  * abd (3 functions with unsupported types)
@@ -378,7 +405,9 @@ SIMDe contains complete implementations of 265 functions families.
  * qrdmulh_n
  * qrdmulhh
  * qrshrn_n
+ * qrshrnh_n
  * qrshrun_n
+ * qrshrunh_n
  * qshl
  * qshlh
  * qshlu_n
@@ -433,6 +462,7 @@ SIMDe contains complete implementations of 265 functions families.
  * shrn_n
  * sqadd
  * sqaddh
+ * sqrt (3 functions with unsupported types)
  * sqrth (2 functions with unsupported types)
  * sra_n
  * sri_n (9 functions with unsupported types)
