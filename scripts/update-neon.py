@@ -11,7 +11,6 @@ architectures = {}
 familyNames = {}
 unsupportedTypes = {
   "poly": [],
-  "f16": [],
   "bf16": []
 }
 
@@ -101,12 +100,12 @@ def group_intrin(intrin, force=False):
   for component in name_components[1:]:
     unsupportedType = False
 
-    if component in ['s8', 'u8', 's16', 'u16', 's32', 'u32', 's64', 'u64', 'f32', 'f64']:
+    if component in ['s8', 'u8', 's16', 'u16', 's32', 'u32', 's64', 'u64', 'f16', 'f32', 'f64']:
       pass
     elif component in ['p8', 'p16', 'p32', 'p64', 'p128']:
       unsupportedTypes["poly"].append(intrin)
       intrin["skip"] = True
-    elif component in ['f16', 'bf16']:
+    elif component in ['bf16']:
       unsupportedTypes[component].append(intrin)
       intrin["skip"] = True
     elif component in ['dup', 'high', 'low', 'n', 'x2', 'x3', 'x4']:
@@ -212,7 +211,7 @@ print("# Summary\n")
 
 
 
-print("TL;DR: SIMDe currently implements %d out of %d (%.2f%%) NEON functions.  If you don't count 16-bit floats and poly types, it's %d / %d (%.2f%%).\n" % (
+print("TL;DR: SIMDe currently implements %d out of %d (%.2f%%) NEON functions.  If you don't count poly types, it's %d / %d (%.2f%%).\n" % (
   architectures["A64"]["implemented"],
   architectures["A64"]["total"],
   ((float(architectures["A64"]["implemented"]) / float(architectures["A64"]["total"])) * 100.0),
@@ -221,7 +220,7 @@ print("TL;DR: SIMDe currently implements %d out of %d (%.2f%%) NEON functions.  
   ((float(architectures["A64"]["implemented"]) / (float(architectures["A64"]["total"] - architectures["A64"]["unsupported"]))) * 100.0),
 ))
 
-print("SIMDe does not currently support 16-bit floating point types or polynomial types, so they are excluded from this list (though separate totals are often provided to be transparent about what was skipped.  We do plan to support these types in the future.\n")
+print("SIMDe does not currently support polynomial types, so they are excluded from this list (though separate totals are often provided to be transparent about what was skipped.  We do plan to support these types in the future.\n")
 
 print("# Functions by Architecture\n")
 
