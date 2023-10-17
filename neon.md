@@ -1,6 +1,6 @@
 # Summary
 
-TL;DR: SIMDe currently implements 3921 out of 6670 (58.79%) NEON functions.  If you don't count poly types, it's 3921 / 5692 (68.89%).
+TL;DR: SIMDe currently implements 3991 out of 6670 (59.84%) NEON functions.  If you don't count poly types, it's 3991 / 5692 (70.12%).
 
 SIMDe does not currently support polynomial types, so they are excluded from this list (though separate totals are often provided to be transparent about what was skipped.  We do plan to support these types in the future.
 
@@ -9,12 +9,12 @@ SIMDe does not currently support polynomial types, so they are excluded from thi
 | Architecture | Functions | Functions with supported types | Implemented by SIMDe | Percent implemented |
 |--------------|----------:|-------------------------------:|---------------------:|--------------------:|
 |        ARMv7 |      3411 |                           2984 |                 2511 |              84.15% |
-|        ARMv8 |      4290 |                           3479 |                 2658 |              76.40% |
-|      AArch64 |      6670 |                           5692 |                 3921 |              68.89% |
+|        ARMv8 |      4290 |                           3479 |                 2726 |              78.36% |
+|      AArch64 |      6670 |                           5692 |                 3991 |              70.12% |
 
 # Families
 
-There are 390 function families in NEON (based on how we define families).  Discounting functions which use unsupported types, SIMDe has completely implemented 178 (45.64%) and partially implemented another 53 (13.59%).
+There are 390 function families in NEON (based on how we define families).  Discounting functions which use unsupported types, SIMDe has completely implemented 181 (46.41%) and partially implemented another 53 (13.59%).
 
 ## Incomplete Families
 
@@ -1981,7 +1981,6 @@ There are currently 53 unimplemented families.
  * aes (8 functions)
  * bfdot (3 functions)
  * bfdot_lane (6 functions)
- * cadd_rot (14 functions)
  * cale (11 functions)
  * caleh (2 functions)
  * calt (11 functions)
@@ -1990,8 +1989,6 @@ There are currently 53 unimplemented families.
  * cgtzh (2 functions)
  * cleh (2 functions)
  * cltzh (2 functions)
- * cmla_lane (14 functions)
- * cmla_rot_lane (42 functions)
  * copy_lane (60 functions, plus 24 functions with unsupported types)
  * cvt_high (8 functions, plus 2 functions with unsupported types)
  * cvt_n (44 functions)
@@ -2135,7 +2132,7 @@ There are currently 53 unimplemented families.
 
 ## Complete Families
 
-SIMDe contains complete implementations of 178 functions families.
+SIMDe contains complete implementations of 181 functions families.
 
  * aba
  * abdl
@@ -2154,6 +2151,7 @@ SIMDe contains complete implementations of 178 functions families.
  * bcax
  * bic
  * bsl (9 functions with unsupported types)
+ * cadd_rot
  * cage
  * cageh
  * cagt
@@ -2172,6 +2170,8 @@ SIMDe contains complete implementations of 178 functions families.
  * clt
  * clth
  * clz
+ * cmla_lane
+ * cmla_rot_lane
  * cnt (3 functions with unsupported types)
  * combine (8 functions with unsupported types)
  * cvt (4 functions with unsupported types)
