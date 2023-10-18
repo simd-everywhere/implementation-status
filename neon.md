@@ -1,6 +1,6 @@
 # Summary
 
-TL;DR: SIMDe currently implements 4574 out of 6670 (68.58%) NEON functions.  If you don't count poly types, it's 4574 / 5692 (80.36%).
+TL;DR: SIMDe currently implements 4664 out of 6670 (69.93%) NEON functions.  If you don't count poly types, it's 4664 / 5692 (81.94%).
 
 SIMDe does not currently support polynomial types, so they are excluded from this list (though separate totals are often provided to be transparent about what was skipped.  We do plan to support these types in the future.
 
@@ -8,17 +8,17 @@ SIMDe does not currently support polynomial types, so they are excluded from thi
 
 | Architecture | Functions | Functions with supported types | Implemented by SIMDe | Percent implemented |
 |--------------|----------:|-------------------------------:|---------------------:|--------------------:|
-|        ARMv7 |      3411 |                           2984 |                 2747 |              92.06% |
-|        ARMv8 |      4290 |                           3479 |                 3010 |              86.52% |
-|      AArch64 |      6670 |                           5692 |                 4574 |              80.36% |
+|        ARMv7 |      3411 |                           2984 |                 2828 |              94.77% |
+|        ARMv8 |      4290 |                           3479 |                 3091 |              88.85% |
+|      AArch64 |      6670 |                           5692 |                 4664 |              81.94% |
 
 # Families
 
-There are 390 function families in NEON (based on how we define families).  Discounting functions which use unsupported types, SIMDe has completely implemented 245 (62.82%) and partially implemented another 40 (10.26%).
+There are 390 function families in NEON (based on how we define families).  Discounting functions which use unsupported types, SIMDe has completely implemented 245 (62.82%) and partially implemented another 43 (11.03%).
 
 ## Incomplete Families
 
-There are currently 40 incomplete families.
+There are currently 43 incomplete families.
 
 ### abd
 
@@ -1162,6 +1162,120 @@ SIMDe currently implements 30 of 33 (90.91%) functions, not counting 12 which re
  * [x] vst1_lane_f64
  * [x] vst1q_lane_f64
 
+### st1_x2
+
+SIMDe currently implements 30 of 33 (90.91%) functions, not counting 12 which require currently unsupported types.
+
+ * [x] vst1_s8_x2
+ * [x] vst1_s16_x2
+ * [x] vst1_s32_x2
+ * [x] vst1_u8_x2
+ * [x] vst1_u16_x2
+ * [x] vst1_u32_x2
+ * [ ] vst1_f16_x2
+ * [x] vst1_f32_x2
+ * [x] vst1_s64_x2
+ * [x] vst1_u64_x2
+ * [x] vst1_f64_x2
+ * [x] vst1_s8_x2
+ * [x] vst1q_s8_x2
+ * [x] vst1_s16_x2
+ * [x] vst1q_s16_x2
+ * [x] vst1_s32_x2
+ * [x] vst1q_s32_x2
+ * [x] vst1_u8_x2
+ * [x] vst1q_u8_x2
+ * [x] vst1_u16_x2
+ * [x] vst1q_u16_x2
+ * [x] vst1_u32_x2
+ * [x] vst1q_u32_x2
+ * [ ] vst1_f16_x2
+ * [ ] vst1q_f16_x2
+ * [x] vst1_f32_x2
+ * [x] vst1q_f32_x2
+ * [x] vst1_s64_x2
+ * [x] vst1_u64_x2
+ * [x] vst1q_s64_x2
+ * [x] vst1q_u64_x2
+ * [x] vst1_f64_x2
+ * [x] vst1q_f64_x2
+
+### st1_x3
+
+SIMDe currently implements 30 of 33 (90.91%) functions, not counting 12 which require currently unsupported types.
+
+ * [x] vst1_s8_x3
+ * [x] vst1_s16_x3
+ * [x] vst1_s32_x3
+ * [x] vst1_u8_x3
+ * [x] vst1_u16_x3
+ * [x] vst1_u32_x3
+ * [ ] vst1_f16_x3
+ * [x] vst1_f32_x3
+ * [x] vst1_s64_x3
+ * [x] vst1_u64_x3
+ * [x] vst1_f64_x3
+ * [x] vst1_s8_x3
+ * [x] vst1q_s8_x3
+ * [x] vst1_s16_x3
+ * [x] vst1q_s16_x3
+ * [x] vst1_s32_x3
+ * [x] vst1q_s32_x3
+ * [x] vst1_u8_x3
+ * [x] vst1q_u8_x3
+ * [x] vst1_u16_x3
+ * [x] vst1q_u16_x3
+ * [x] vst1_u32_x3
+ * [x] vst1q_u32_x3
+ * [ ] vst1_f16_x3
+ * [ ] vst1q_f16_x3
+ * [x] vst1_f32_x3
+ * [x] vst1q_f32_x3
+ * [x] vst1_s64_x3
+ * [x] vst1_u64_x3
+ * [x] vst1q_s64_x3
+ * [x] vst1q_u64_x3
+ * [x] vst1_f64_x3
+ * [x] vst1q_f64_x3
+
+### st1_x4
+
+SIMDe currently implements 30 of 33 (90.91%) functions, not counting 12 which require currently unsupported types.
+
+ * [x] vst1_s8_x4
+ * [x] vst1_s16_x4
+ * [x] vst1_s32_x4
+ * [x] vst1_u8_x4
+ * [x] vst1_u16_x4
+ * [x] vst1_u32_x4
+ * [ ] vst1_f16_x4
+ * [x] vst1_f32_x4
+ * [x] vst1_s64_x4
+ * [x] vst1_u64_x4
+ * [x] vst1_f64_x4
+ * [x] vst1_s8_x4
+ * [x] vst1q_s8_x4
+ * [x] vst1_s16_x4
+ * [x] vst1q_s16_x4
+ * [x] vst1_s32_x4
+ * [x] vst1q_s32_x4
+ * [x] vst1_u8_x4
+ * [x] vst1q_u8_x4
+ * [x] vst1_u16_x4
+ * [x] vst1q_u16_x4
+ * [x] vst1_u32_x4
+ * [x] vst1q_u32_x4
+ * [ ] vst1_f16_x4
+ * [ ] vst1q_f16_x4
+ * [x] vst1_f32_x4
+ * [x] vst1q_f32_x4
+ * [x] vst1_s64_x4
+ * [x] vst1_u64_x4
+ * [x] vst1q_s64_x4
+ * [x] vst1q_u64_x4
+ * [x] vst1_f64_x4
+ * [x] vst1q_f64_x4
+
 ### st2_lane
 
 SIMDe currently implements 30 of 33 (90.91%) functions, not counting 12 which require currently unsupported types.
@@ -1540,7 +1654,7 @@ SIMDe currently implements 26 of 27 (96.30%) functions, not counting 7 which req
 
 ## Unimplemented Families
 
-There are currently 40 unimplemented families.
+There are currently 43 unimplemented families.
 
  * abdh (2 functions)
  * abdl_high (12 functions)
@@ -1640,9 +1754,6 @@ There are currently 40 unimplemented families.
  * sli_n (26 functions, plus 9 functions with unsupported types)
  * sm3 (14 functions)
  * sm4 (4 functions)
- * st1_x2 (33 functions, plus 12 functions with unsupported types)
- * st1_x3 (33 functions, plus 12 functions with unsupported types)
- * st1_x4 (33 functions, plus 12 functions with unsupported types)
  * subhn_high (12 functions)
  * sudot_lane (6 functions)
  * usdot (3 functions)
