@@ -56,7 +56,19 @@ special_cases = [
     {
         "name": "extract",
         "pattern": re.compile('^extract(i|f)(32x4|32x8|64x2|64x4)')
-    }
+    },
+    {
+        "name": "kand",
+        "pattern": re.compile('^kand')
+    },
+    {
+        "name": "knot",
+        "pattern": re.compile('^knot')
+    },
+    {
+        "name": "kxor",
+        "pattern": re.compile('^kxor')
+    },
 ]
 
 files = {}
