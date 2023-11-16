@@ -207,7 +207,7 @@ print("# Summary\n")
 
 
 
-print("TL;DR: SIMDe currently implements %d out of %d (%.2f%%) NEON functions.  If you don't bf16 types, it's %d / %d (%.2f%%).\n" % (
+print("TL;DR: SIMDe currently implements %d out of %d (%.2f%%) NEON functions.  If you don't count bf16 types, it's %d / %d (%.2f%%).\n" % (
   architectures["A64"]["implemented"],
   architectures["A64"]["total"],
   ((float(architectures["A64"]["implemented"]) / float(architectures["A64"]["total"])) * 100.0),
@@ -216,7 +216,7 @@ print("TL;DR: SIMDe currently implements %d out of %d (%.2f%%) NEON functions.  
   ((float(architectures["A64"]["implemented"]) / (float(architectures["A64"]["total"] - architectures["A64"]["unsupported"]))) * 100.0),
 ))
 
-print("SIMDe does not currently support bfloat16, so they are excluded from this list (though separate totals are often provided to be transparent about what was skipped.  We do plan to support these types in the future.\n")
+print("SIMDe does not currently support bfloat16 types, so they are excluded from this list (though separate totals are often provided to be transparent about what was skipped.  We do plan to support these types in the future.\n")
 
 print("# Functions by Architecture\n")
 
