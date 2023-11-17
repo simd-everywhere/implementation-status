@@ -1,8 +1,8 @@
 # Summary
 
-TL;DR: SIMDe currently implements 6443 out of 6670 (96.60%) NEON functions.  If you don't bf16 types, it's 6443 / 6466 (99.64%).
+TL;DR: SIMDe currently implements 6443 out of 6670 (96.60%) NEON functions.  If you don't count bf16 types, it's 6443 / 6466 (99.64%).
 
-SIMDe does not currently support bfloat16, so they are excluded from this list (though separate totals are often provided to be transparent about what was skipped.  We do plan to support these types in the future.
+SIMDe does not currently support bfloat16 types, so they are excluded from this list (though separate totals are often provided to be transparent about what was skipped.  We do plan to support these types in the future.
 
 # Functions by Architecture
 
