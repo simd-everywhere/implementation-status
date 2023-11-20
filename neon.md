@@ -1,49 +1,31 @@
 # Summary
 
-TL;DR: SIMDe currently implements 6443 out of 6670 (96.60%) NEON functions.  If you don't count bf16 types, it's 6443 / 6466 (99.64%).
-
-SIMDe does not currently support bfloat16 types, so they are excluded from this list (though separate totals are often provided to be transparent about what was skipped.  We do plan to support these types in the future.
+TL;DR: SIMDe currently implements 6670 out of 6670 (100.00%) NEON functions.
 
 # Functions by Architecture
 
-| Architecture | Functions | Functions with supported types | Implemented by SIMDe | Percent implemented |
-|--------------|----------:|-------------------------------:|---------------------:|--------------------:|
-|        ARMv7 |      3411 |                           3408 |                 3408 |             100.00% |
-|        ARMv8 |      4290 |                           4098 |                 4075 |              99.44% |
-|      AArch64 |      6670 |                           6466 |                 6443 |              99.64% |
+| Architecture | Functions | Implemented by SIMDe | Percent implemented |
+|--------------|----------:|---------------------:|--------------------:|
+|        ARMv7 |      3411 |                 3411 |             100.00% |
+|        ARMv8 |      4290 |                 4290 |             100.00% |
+|      AArch64 |      6670 |                 6670 |             100.00% |
 
 # Families
 
-There are 390 function families in NEON (based on how we define families).  Discounting functions which use unsupported types, SIMDe has completely implemented 385 (98.72%) and partially implemented another 1 (0.26%).
+There are 390 function families in NEON (based on how we define families).  SIMDe has completely implemented 390 (100.00%) and partially implemented another 0 (0.00%).
 
 ## Incomplete Families
 
-There are currently 1 incomplete families.
-
-### mmla
-
-SIMDe currently implements 5 of 7 (71.43%) functions.
-
- * [x] vmmlaq_s32
- * [x] vusmmlaq_s32
- * [ ] vbfmmlaq_f32
- * [x] vmmlaq_s32
- * [x] vmmlaq_u32
- * [x] vusmmlaq_s32
- * [ ] vbfmmlaq_f32
+There are currently 0 incomplete families.
 
 ## Unimplemented Families
 
-There are currently 1 unimplemented families.
+There are currently 0 unimplemented families.
 
- * bfdot (3 functions)
- * bfdot_lane (6 functions)
- * fmlal (4 functions)
- * fmlal_lane (8 functions)
 
 ## Complete Families
 
-SIMDe contains complete implementations of 385 functions families.
+SIMDe contains complete implementations of 390 functions families.
 
  * aba
  * abal
@@ -67,6 +49,8 @@ SIMDe contains complete implementations of 385 functions families.
  * aes
  * and
  * bcax
+ * bfdot
+ * bfdot_lane
  * bic
  * bsl
  * cadd_rot
@@ -105,16 +89,16 @@ SIMDe contains complete implementations of 385 functions families.
  * cmla_rot
  * cmla_rot_lane
  * cnt
- * combine (2 functions with unsupported types)
- * copy_lane (6 functions with unsupported types)
- * create (2 functions with unsupported types)
- * cvt (4 functions with unsupported types)
- * cvt_high (2 functions with unsupported types)
- * cvt_low (3 functions with unsupported types)
+ * combine
+ * copy_lane
+ * create
+ * cvt
+ * cvt_high
+ * cvt_low
  * cvt_n
  * cvta
- * cvtah (2 functions with unsupported types)
- * cvth (2 functions with unsupported types)
+ * cvtah
+ * cvth
  * cvth_n
  * cvtm
  * cvtmh
@@ -128,10 +112,10 @@ SIMDe contains complete implementations of 385 functions families.
  * divh
  * dot
  * dot_lane
- * dup_lane (6 functions with unsupported types)
- * dup_n (3 functions with unsupported types)
+ * dup_lane
+ * dup_n
  * dupb_lane
- * duph_lane (4 functions with unsupported types)
+ * duph_lane
  * eor
  * eor3
  * ext
@@ -140,7 +124,9 @@ SIMDe contains complete implementations of 385 functions families.
  * fma_n
  * fmah
  * fmah_lane
+ * fmlal
  * fmlal_high
+ * fmlal_lane
  * fmlal_lane_high
  * fmlal_lane_low
  * fmlal_low
@@ -153,26 +139,26 @@ SIMDe contains complete implementations of 385 functions families.
  * fms_n
  * fmsh
  * fmsh_lane
- * get_high (2 functions with unsupported types)
- * get_lane (3 functions with unsupported types)
- * get_low (2 functions with unsupported types)
+ * get_high
+ * get_lane
+ * get_low
  * hadd
  * hsub
- * ld1 (3 functions with unsupported types)
- * ld1_dup (3 functions with unsupported types)
- * ld1_lane (3 functions with unsupported types)
- * ld1_x2 (3 functions with unsupported types)
- * ld1_x3 (3 functions with unsupported types)
- * ld1_x4 (3 functions with unsupported types)
- * ld2 (3 functions with unsupported types)
- * ld2_dup (3 functions with unsupported types)
- * ld2_lane (3 functions with unsupported types)
- * ld3 (3 functions with unsupported types)
- * ld3_dup (3 functions with unsupported types)
- * ld3_lane (3 functions with unsupported types)
- * ld4 (3 functions with unsupported types)
- * ld4_dup (3 functions with unsupported types)
- * ld4_lane (3 functions with unsupported types)
+ * ld1
+ * ld1_dup
+ * ld1_lane
+ * ld1_x2
+ * ld1_x3
+ * ld1_x4
+ * ld2
+ * ld2_dup
+ * ld2_lane
+ * ld3
+ * ld3_dup
+ * ld3_lane
+ * ld4
+ * ld4_dup
+ * ld4_lane
  * ldr
  * max
  * maxh
@@ -204,6 +190,7 @@ SIMDe contains complete implementations of 385 functions families.
  * mlsl_high_n
  * mlsl_lane
  * mlsl_n
+ * mmla
  * mov_n
  * movl
  * movl_high
@@ -331,7 +318,7 @@ SIMDe contains complete implementations of 385 functions families.
  * recps
  * recpsh
  * recpxh
- * reinterpret (80 functions with unsupported types)
+ * reinterpret
  * rev16
  * rev32
  * rev64
@@ -365,7 +352,7 @@ SIMDe contains complete implementations of 385 functions families.
  * rsra_n
  * rsubhn
  * rsubhn_high
- * set_lane (3 functions with unsupported types)
+ * set_lane
  * sha1
  * sha1h
  * sha256
@@ -386,17 +373,17 @@ SIMDe contains complete implementations of 385 functions families.
  * sqrth
  * sra_n
  * sri_n
- * st1 (3 functions with unsupported types)
- * st1_lane (3 functions with unsupported types)
- * st1_x2 (3 functions with unsupported types)
- * st1_x3 (3 functions with unsupported types)
- * st1_x4 (3 functions with unsupported types)
- * st2 (3 functions with unsupported types)
- * st2_lane (3 functions with unsupported types)
- * st3 (3 functions with unsupported types)
- * st3_lane (3 functions with unsupported types)
- * st4 (3 functions with unsupported types)
- * st4_lane (3 functions with unsupported types)
+ * st1
+ * st1_lane
+ * st1_x2
+ * st1_x3
+ * st1_x4
+ * st2
+ * st2_lane
+ * st3
+ * st3_lane
+ * st4
+ * st4_lane
  * str
  * sub
  * subh
