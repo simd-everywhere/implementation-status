@@ -10,7 +10,6 @@ families = {}
 architectures = {}
 familyNames = {}
 unsupportedTypes = {
-  "bf16": []
 }
 
 family_overrides = {
@@ -99,11 +98,8 @@ def group_intrin(intrin, force=False):
   for component in name_components[1:]:
     unsupportedType = False
 
-    if component in ['s8', 'u8', 's16', 'u16', 's32', 'u32', 's64', 'u64', 'f16', 'f32', 'f64', 'p8', 'p16', 'p32', 'p64', 'p128']:
+    if component in ['s8', 'u8', 's16', 'u16', 's32', 'u32', 's64', 'u64', 'f16', 'f32', 'f64', 'p8', 'p16', 'p32', 'p64', 'p128', 'bf16']:
       pass
-    elif component in ['bf16']:
-      unsupportedTypes[component].append(intrin)
-      intrin["skip"] = True
     elif component in ['dup', 'high', 'low', 'n', 'x2', 'x3', 'x4']:
       family_name += '_' + component
     elif component in ['lane', 'laneq']:
@@ -207,21 +203,16 @@ print("# Summary\n")
 
 
 
-print("TL;DR: SIMDe currently implements %d out of %d (%.2f%%) NEON functions.  If you don't count bf16 types, it's %d / %d (%.2f%%).\n" % (
+print("TL;DR: SIMDe currently implements %d out of %d (%.2f%%) NEON functions.\n" % (
   architectures["A64"]["implemented"],
   architectures["A64"]["total"],
-  ((float(architectures["A64"]["implemented"]) / float(architectures["A64"]["total"])) * 100.0),
-  architectures["A64"]["implemented"],
-  architectures["A64"]["total"] - architectures["A64"]["unsupported"],
-  ((float(architectures["A64"]["implemented"]) / (float(architectures["A64"]["total"] - architectures["A64"]["unsupported"]))) * 100.0),
+  ((float(architectures["A64"]["implemented"]) / float(architectures["A64"]["total"])) * 100.0)
 ))
-
-print("SIMDe does not currently support bfloat16 types, so they are excluded from this list (though separate totals are often provided to be transparent about what was skipped.  We do plan to support these types in the future.\n")
 
 print("# Functions by Architecture\n")
 
-print('| Architecture | Functions | Functions with supported types | Implemented by SIMDe | Percent implemented |')
-print('|--------------|----------:|-------------------------------:|---------------------:|--------------------:|')
+print('| Architecture | Functions | Implemented by SIMDe | Percent implemented |')
+print('|--------------|----------:|---------------------:|--------------------:|')
 for arch in architectures.keys():
   print('| ', end='')
   if arch == "v7":
@@ -234,9 +225,8 @@ for arch in architectures.keys():
     print('%12s' % arch, end=' |')
 
   print('%10d' % (architectures[arch]["total"]), end=' |')
-  print('%31d' % (architectures[arch]["total"] - architectures[arch]["unsupported"]), end=' |')
   print('%21d' % (architectures[arch]["implemented"]), end=' |')
-  print('%19.2f%%' % ((float(architectures[arch]["implemented"]) / float(architectures[arch]["total"] - architectures[arch]["unsupported"])) * 100.0), end=' |')
+  print('%19.2f%%' % ((float(architectures[arch]["implemented"]) / float(architectures[arch]["total"])) * 100.0), end=' |')
 
   print('')
 print('')
@@ -257,7 +247,7 @@ for family_name in sorted(families):
 
 print("# Families\n")
 
-print("There are %d function families in NEON (based on how we define families).  Discounting functions which use unsupported types, SIMDe has completely implemented %d (%.2f%%) and partially implemented another %d (%.2f%%).\n" % (
+print("There are %d function families in NEON (based on how we define families).  SIMDe has completely implemented %d (%.2f%%) and partially implemented another %d (%.2f%%).\n" % (
   len(families),
   len(completeFamilies),
   (float(len(completeFamilies)) / float(len(families))) * 100.0,
