@@ -1,31 +1,379 @@
 # Summary
 
-TL;DR: SIMDe currently implements 6670 out of 6670 (100.00%) NEON functions.
+TL;DR: SIMDe currently implements 6608 out of 6670 (99.07%) NEON functions.
 
 # Functions by Architecture
 
 | Architecture | Functions | Implemented by SIMDe | Percent implemented |
 |--------------|----------:|---------------------:|--------------------:|
 |        ARMv7 |      3411 |                 3411 |             100.00% |
-|        ARMv8 |      4290 |                 4290 |             100.00% |
-|      AArch64 |      6670 |                 6670 |             100.00% |
+|        ARMv8 |      4290 |                 4258 |              99.25% |
+|      AArch64 |      6670 |                 6608 |              99.07% |
 
 # Families
 
-There are 390 function families in NEON (based on how we define families).  SIMDe has completely implemented 390 (100.00%) and partially implemented another 0 (0.00%).
+There are 390 function families in NEON (based on how we define families).  SIMDe has completely implemented 378 (96.92%) and partially implemented another 12 (3.08%).
 
 ## Incomplete Families
 
-There are currently 0 incomplete families.
+There are currently 12 incomplete families.
+
+### cvt
+
+SIMDe currently implements 53 of 56 (94.64%) functions.
+
+ * [x] vcvt_s32_f32
+ * [x] vcvt_u32_f32
+ * [x] vcvt_s64_f64
+ * [x] vcvt_u64_f64
+ * [x] vcvt_f32_s32
+ * [x] vcvt_f32_u32
+ * [x] vcvt_f64_s64
+ * [x] vcvt_f64_u64
+ * [x] vcvt_f16_f32
+ * [x] vcvt_f32_f64
+ * [x] vcvt_f32_f16
+ * [x] vcvt_f64_f32
+ * [x] vcvt_f16_s16
+ * [x] vcvt_f16_u16
+ * [ ] vcvt_s16_f16
+ * [x] vcvt_u16_f16
+ * [x] vcvt_f32_bf16
+ * [x] vcvt_bf16_f32
+ * [x] vcvt_s32_f32
+ * [x] vcvtq_s32_f32
+ * [x] vcvt_u32_f32
+ * [x] vcvtq_u32_f32
+ * [x] vcvts_s32_f32
+ * [x] vcvts_u32_f32
+ * [x] vcvt_s64_f64
+ * [x] vcvtq_s64_f64
+ * [x] vcvt_u64_f64
+ * [x] vcvtq_u64_f64
+ * [x] vcvtd_s64_f64
+ * [x] vcvtd_u64_f64
+ * [x] vcvt_f32_s32
+ * [x] vcvtq_f32_s32
+ * [x] vcvt_f32_u32
+ * [x] vcvtq_f32_u32
+ * [x] vcvts_f32_s32
+ * [x] vcvts_f32_u32
+ * [x] vcvt_f64_s64
+ * [x] vcvtq_f64_s64
+ * [x] vcvt_f64_u64
+ * [x] vcvtq_f64_u64
+ * [x] vcvtd_f64_s64
+ * [x] vcvtd_f64_u64
+ * [x] vcvt_f16_f32
+ * [x] vcvt_f32_f64
+ * [x] vcvt_f32_f16
+ * [x] vcvt_f64_f32
+ * [x] vcvt_f16_s16
+ * [x] vcvtq_f16_s16
+ * [x] vcvt_f16_u16
+ * [x] vcvtq_f16_u16
+ * [ ] vcvt_s16_f16
+ * [ ] vcvtq_s16_f16
+ * [x] vcvt_u16_f16
+ * [x] vcvtq_u16_f16
+ * [x] vcvt_f32_bf16
+ * [x] vcvt_bf16_f32
+
+### cvt_n
+
+SIMDe currently implements 41 of 44 (93.18%) functions.
+
+ * [x] vcvt_n_s32_f32
+ * [x] vcvt_n_u32_f32
+ * [x] vcvt_n_s64_f64
+ * [x] vcvt_n_u64_f64
+ * [x] vcvt_n_f32_s32
+ * [x] vcvt_n_f32_u32
+ * [x] vcvt_n_f64_s64
+ * [x] vcvt_n_f64_u64
+ * [x] vcvt_n_f16_s16
+ * [x] vcvt_n_f16_u16
+ * [ ] vcvt_n_s16_f16
+ * [x] vcvt_n_u16_f16
+ * [x] vcvt_n_s32_f32
+ * [x] vcvtq_n_s32_f32
+ * [x] vcvt_n_u32_f32
+ * [x] vcvtq_n_u32_f32
+ * [x] vcvts_n_s32_f32
+ * [x] vcvts_n_u32_f32
+ * [x] vcvt_n_s64_f64
+ * [x] vcvtq_n_s64_f64
+ * [x] vcvt_n_u64_f64
+ * [x] vcvtq_n_u64_f64
+ * [x] vcvtd_n_s64_f64
+ * [x] vcvtd_n_u64_f64
+ * [x] vcvt_n_f32_s32
+ * [x] vcvtq_n_f32_s32
+ * [x] vcvt_n_f32_u32
+ * [x] vcvtq_n_f32_u32
+ * [x] vcvts_n_f32_s32
+ * [x] vcvts_n_f32_u32
+ * [x] vcvt_n_f64_s64
+ * [x] vcvtq_n_f64_s64
+ * [x] vcvt_n_f64_u64
+ * [x] vcvtq_n_f64_u64
+ * [x] vcvtd_n_f64_s64
+ * [x] vcvtd_n_f64_u64
+ * [x] vcvt_n_f16_s16
+ * [x] vcvtq_n_f16_s16
+ * [x] vcvt_n_f16_u16
+ * [x] vcvtq_n_f16_u16
+ * [ ] vcvt_n_s16_f16
+ * [ ] vcvtq_n_s16_f16
+ * [x] vcvt_n_u16_f16
+ * [x] vcvtq_n_u16_f16
+
+### cvta
+
+SIMDe currently implements 19 of 22 (86.36%) functions.
+
+ * [x] vcvta_s32_f32
+ * [x] vcvta_u32_f32
+ * [x] vcvta_s64_f64
+ * [x] vcvta_u64_f64
+ * [ ] vcvta_s16_f16
+ * [x] vcvta_u16_f16
+ * [x] vcvta_s32_f32
+ * [x] vcvtaq_s32_f32
+ * [x] vcvta_u32_f32
+ * [x] vcvtaq_u32_f32
+ * [x] vcvtas_s32_f32
+ * [x] vcvtas_u32_f32
+ * [x] vcvta_s64_f64
+ * [x] vcvtaq_s64_f64
+ * [x] vcvta_u64_f64
+ * [x] vcvtaq_u64_f64
+ * [x] vcvtad_s64_f64
+ * [x] vcvtad_u64_f64
+ * [ ] vcvta_s16_f16
+ * [ ] vcvtaq_s16_f16
+ * [x] vcvta_u16_f16
+ * [x] vcvtaq_u16_f16
+
+### cvtah
+
+SIMDe currently implements 12 of 14 (85.71%) functions.
+
+ * [ ] vcvtah_s16_f16
+ * [x] vcvtah_s32_f16
+ * [x] vcvtah_s64_f16
+ * [x] vcvtah_u16_f16
+ * [x] vcvtah_u32_f16
+ * [x] vcvtah_u64_f16
+ * [x] vcvtah_f32_bf16
+ * [ ] vcvtah_s16_f16
+ * [x] vcvtah_s32_f16
+ * [x] vcvtah_s64_f16
+ * [x] vcvtah_u16_f16
+ * [x] vcvtah_u32_f16
+ * [x] vcvtah_u64_f16
+ * [x] vcvtah_f32_bf16
+
+### cvth
+
+SIMDe currently implements 24 of 26 (92.31%) functions.
+
+ * [x] vcvth_f16_s16
+ * [x] vcvth_f16_s32
+ * [x] vcvth_f16_s64
+ * [x] vcvth_f16_u16
+ * [x] vcvth_f16_u32
+ * [x] vcvth_f16_u64
+ * [ ] vcvth_s16_f16
+ * [x] vcvth_s32_f16
+ * [x] vcvth_s64_f16
+ * [x] vcvth_u16_f16
+ * [x] vcvth_u32_f16
+ * [x] vcvth_u64_f16
+ * [x] vcvth_bf16_f32
+ * [x] vcvth_f16_s16
+ * [x] vcvth_f16_s32
+ * [x] vcvth_f16_s64
+ * [x] vcvth_f16_u16
+ * [x] vcvth_f16_u32
+ * [x] vcvth_f16_u64
+ * [ ] vcvth_s16_f16
+ * [x] vcvth_s32_f16
+ * [x] vcvth_s64_f16
+ * [x] vcvth_u16_f16
+ * [x] vcvth_u32_f16
+ * [x] vcvth_u64_f16
+ * [x] vcvth_bf16_f32
+
+### cvth_n
+
+SIMDe currently implements 6 of 24 (25.00%) functions.
+
+ * [x] vcvth_n_f16_s16
+ * [ ] vcvth_n_f16_s32
+ * [ ] vcvth_n_f16_s64
+ * [x] vcvth_n_f16_u16
+ * [ ] vcvth_n_f16_u32
+ * [ ] vcvth_n_f16_u64
+ * [ ] vcvth_n_s16_f16
+ * [ ] vcvth_n_s32_f16
+ * [ ] vcvth_n_s64_f16
+ * [x] vcvth_n_u16_f16
+ * [ ] vcvth_n_u32_f16
+ * [ ] vcvth_n_u64_f16
+ * [x] vcvth_n_f16_s16
+ * [ ] vcvth_n_f16_s32
+ * [ ] vcvth_n_f16_s64
+ * [x] vcvth_n_f16_u16
+ * [ ] vcvth_n_f16_u32
+ * [ ] vcvth_n_f16_u64
+ * [ ] vcvth_n_s16_f16
+ * [ ] vcvth_n_s32_f16
+ * [ ] vcvth_n_s64_f16
+ * [x] vcvth_n_u16_f16
+ * [ ] vcvth_n_u32_f16
+ * [ ] vcvth_n_u64_f16
+
+### cvtm
+
+SIMDe currently implements 11 of 22 (50.00%) functions.
+
+ * [ ] vcvtm_s32_f32
+ * [x] vcvtm_u32_f32
+ * [ ] vcvtm_s64_f64
+ * [x] vcvtm_u64_f64
+ * [ ] vcvtm_s16_f16
+ * [x] vcvtm_u16_f16
+ * [ ] vcvtm_s32_f32
+ * [ ] vcvtmq_s32_f32
+ * [x] vcvtm_u32_f32
+ * [x] vcvtmq_u32_f32
+ * [ ] vcvtms_s32_f32
+ * [x] vcvtms_u32_f32
+ * [ ] vcvtm_s64_f64
+ * [ ] vcvtmq_s64_f64
+ * [x] vcvtm_u64_f64
+ * [x] vcvtmq_u64_f64
+ * [ ] vcvtmd_s64_f64
+ * [x] vcvtmd_u64_f64
+ * [ ] vcvtm_s16_f16
+ * [ ] vcvtmq_s16_f16
+ * [x] vcvtm_u16_f16
+ * [x] vcvtmq_u16_f16
+
+### cvtmh
+
+SIMDe currently implements 10 of 12 (83.33%) functions.
+
+ * [ ] vcvtmh_s16_f16
+ * [x] vcvtmh_s32_f16
+ * [x] vcvtmh_s64_f16
+ * [x] vcvtmh_u16_f16
+ * [x] vcvtmh_u32_f16
+ * [x] vcvtmh_u64_f16
+ * [ ] vcvtmh_s16_f16
+ * [x] vcvtmh_s32_f16
+ * [x] vcvtmh_s64_f16
+ * [x] vcvtmh_u16_f16
+ * [x] vcvtmh_u32_f16
+ * [x] vcvtmh_u64_f16
+
+### cvtn
+
+SIMDe currently implements 19 of 22 (86.36%) functions.
+
+ * [x] vcvtn_s32_f32
+ * [x] vcvtn_u32_f32
+ * [x] vcvtn_s64_f64
+ * [x] vcvtn_u64_f64
+ * [ ] vcvtn_s16_f16
+ * [x] vcvtn_u16_f16
+ * [x] vcvtn_s32_f32
+ * [x] vcvtnq_s32_f32
+ * [x] vcvtn_u32_f32
+ * [x] vcvtnq_u32_f32
+ * [x] vcvtns_s32_f32
+ * [x] vcvtns_u32_f32
+ * [x] vcvtn_s64_f64
+ * [x] vcvtnq_s64_f64
+ * [x] vcvtn_u64_f64
+ * [x] vcvtnq_u64_f64
+ * [x] vcvtnd_s64_f64
+ * [x] vcvtnd_u64_f64
+ * [ ] vcvtn_s16_f16
+ * [ ] vcvtnq_s16_f16
+ * [x] vcvtn_u16_f16
+ * [x] vcvtnq_u16_f16
+
+### cvtnh
+
+SIMDe currently implements 10 of 12 (83.33%) functions.
+
+ * [ ] vcvtnh_s16_f16
+ * [x] vcvtnh_s32_f16
+ * [x] vcvtnh_s64_f16
+ * [x] vcvtnh_u16_f16
+ * [x] vcvtnh_u32_f16
+ * [x] vcvtnh_u64_f16
+ * [ ] vcvtnh_s16_f16
+ * [x] vcvtnh_s32_f16
+ * [x] vcvtnh_s64_f16
+ * [x] vcvtnh_u16_f16
+ * [x] vcvtnh_u32_f16
+ * [x] vcvtnh_u64_f16
+
+### cvtp
+
+SIMDe currently implements 11 of 22 (50.00%) functions.
+
+ * [ ] vcvtp_s32_f32
+ * [x] vcvtp_u32_f32
+ * [ ] vcvtp_s64_f64
+ * [x] vcvtp_u64_f64
+ * [ ] vcvtp_s16_f16
+ * [x] vcvtp_u16_f16
+ * [ ] vcvtp_s32_f32
+ * [ ] vcvtpq_s32_f32
+ * [x] vcvtp_u32_f32
+ * [x] vcvtpq_u32_f32
+ * [ ] vcvtps_s32_f32
+ * [x] vcvtps_u32_f32
+ * [ ] vcvtp_s64_f64
+ * [ ] vcvtpq_s64_f64
+ * [x] vcvtp_u64_f64
+ * [x] vcvtpq_u64_f64
+ * [ ] vcvtpd_s64_f64
+ * [x] vcvtpd_u64_f64
+ * [ ] vcvtp_s16_f16
+ * [ ] vcvtpq_s16_f16
+ * [x] vcvtp_u16_f16
+ * [x] vcvtpq_u16_f16
+
+### cvtph
+
+SIMDe currently implements 10 of 12 (83.33%) functions.
+
+ * [ ] vcvtph_s16_f16
+ * [x] vcvtph_s32_f16
+ * [x] vcvtph_s64_f16
+ * [x] vcvtph_u16_f16
+ * [x] vcvtph_u32_f16
+ * [x] vcvtph_u64_f16
+ * [ ] vcvtph_s16_f16
+ * [x] vcvtph_s32_f16
+ * [x] vcvtph_s64_f16
+ * [x] vcvtph_u16_f16
+ * [x] vcvtph_u32_f16
+ * [x] vcvtph_u64_f16
 
 ## Unimplemented Families
 
-There are currently 0 unimplemented families.
+There are currently 12 unimplemented families.
 
 
 ## Complete Families
 
-SIMDe contains complete implementations of 390 functions families.
+SIMDe contains complete implementations of 378 functions families.
 
  * aba
  * abal
@@ -92,20 +440,8 @@ SIMDe contains complete implementations of 390 functions families.
  * combine
  * copy_lane
  * create
- * cvt
  * cvt_high
  * cvt_low
- * cvt_n
- * cvta
- * cvtah
- * cvth
- * cvth_n
- * cvtm
- * cvtmh
- * cvtn
- * cvtnh
- * cvtp
- * cvtph
  * cvtx
  * cvtx_high
  * div
